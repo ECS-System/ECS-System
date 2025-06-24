@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sky Opens Soon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./AGold.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="top-bar">
+        <img src="./AGold.png"  alt="A.Gold Resourcing Logo" class="logo-img">
+    </header>
+    <div class="container">
+        <main class="content">
+            <h1>The Sky Opens <span class="highlight">Soon</span></h1>
+            <p class="subtitle">
+                A new era of cosmic computation is nearly here -
+                precision without dependency, insight without limits.
+            </p>
+
+            <div class="countdown-timer" id="countdown">
+                <div class="timer-box">
+                    <div class="timer-label">DAYS</div>
+                    <div class="timer-value" id="days">00</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-label">HOURS</div>
+                    <div class="timer-value" id="hours">00</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-label">MINUTES</div>
+                    <div class="timer-value" id="minutes">00</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-label">SECONDS</div>
+                    <div class="timer-value" id="seconds">00</div>
+                </div>
+            </div>
+
+            <form class="email-form" id="notify-form">
+                <div class="input-wrapper">
+                     <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <input type="email" placeholder="Enter your email to get notified" required>
+                </div>
+                <button type="submit">SEND</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
