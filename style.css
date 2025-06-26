@@ -221,7 +221,7 @@ h1 {
         display: flex;
         justify-content: center;
         gap: 1rem;
-        margin-bottom: 4rem;
+        margin-bottom: .5rem;
         flex-wrap: wrap;
 }
 
