@@ -216,9 +216,14 @@ h1 {
     }
 
     .countdown-timer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-    }
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 4rem;
+        flex-wrap: wrap;
+}
 
     .timer-box {
         margin-bottom: 1rem;
@@ -227,11 +232,11 @@ h1 {
     }
 
     .timer-value {
-        font-size: 36px; 
+        font-size: 26px; 
     }
 
     .timer-label {
-        font-size: 20px;
+        font-size: 12px;
     }
     .email-form {
         width: 100%;
