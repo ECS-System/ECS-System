@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const countDownDate = new Date();
-    countDownDate.setDate(countDownDate.getDate() + 60);
+    const countDownDate = new Date("Aug 25, 2025 09:00:00");
     
     // Get HTML elements
     const daysEl = document.getElementById('days');
