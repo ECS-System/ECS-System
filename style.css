@@ -227,8 +227,8 @@ h1 {
 
     .timer-box {
         margin-bottom: 1rem;
-        padding: 1rem;
-        min-width: 100px;
+        padding: .5rem;
+        min-width: 50px;
     }
 
     .timer-value {
