@@ -1,59 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sky Opens Soon</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./AGold.png" type="image/x-icon">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECS System - Ephemeris Computational Space System</title>
+    <link rel="icon" type="image/x-icon" href="./Vector.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="logo"><img src="Vector.png" />ECS System</div>
+      <ul class="nav-links">
+        <li><a href="#services">Products</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#api">API Docs</a></li>
+      </ul>
+      <ul>
+        <li>
+          <button class="account-btn">
+            <i class="fa-solid fa-circle-user"></i> Account ▼
+          </button>
+        </li>
+      </ul>
+    </nav>
 
-    <header class="top-bar">
-        <img src="./AGold.png"  alt="A.Gold Resourcing Logo" class="logo-img">
-    </header>
-    <div class="container">
-        <main class="content">
-            <h1>The Sky Opens <span class="highlight">Soon</span></h1>
-            <p class="subtitle">
-                A new era of cosmic computation is nearly here -
-                precision without dependency, insight without limits.
-            </p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Ephemeris computational<br />space system</h1>
+        <p>
+          A unified platform delivering high-precision astronomical data and
+          APIs ephemerides, star catalogs, time standards, and trajectory
+          propagation for science, education, culture, and innovation worldwide.
+        </p>
+        <div class="hero-buttons" data-aos="flip-left">
+          <button class="btn btn-primary" onclick="scrollToSection('services')">
+            Get started <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button class="btn btn-secondary" onclick="scrollToSection('api')">
+            View documentation <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
 
-            <div class="countdown-timer" id="countdown">
-                <div class="timer-box">
-                    <div class="timer-label">DAYS</div>
-                    <div class="timer-value" id="days">00</div>
-                </div>
-                <div class="timer-box">
-                    <div class="timer-label">HOURS</div>
-                    <div class="timer-value" id="hours">00</div>
-                </div>
-                <div class="timer-box">
-                    <div class="timer-label">MINUTES</div>
-                    <div class="timer-value" id="minutes">00</div>
-                </div>
-                <div class="timer-box">
-                    <div class="timer-label">SECONDS</div>
-                    <div class="timer-value" id="seconds">00</div>
-                </div>
-            </div>
+    <!-- Core Services -->
+    <section id="services" class="section">
+      <h2 class="section-title">Core services</h2>
+      <p class="section-subtitle">
+        Comprehensive astronomical data services designed for scientific
+        research, education, and technical applications worldwide.
+      </p>
 
-            <form class="email-form" id="notify-form">
-                <div class="input-wrapper">
-                     <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <input type="email" placeholder="Enter your email to get notified" required>
-                </div>
-                <button type="submit">SEND</button>
-            </form>
-        </main>
-    </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-icon">
+            <img src="./Vector (1).png" alt="" srcset="" />
+          </div>
+          <h3>Ephemeris-as-a-Service</h3>
+          <p>
+            Real-time planetary positions, velocities, and celestial mechanics
+            data.
+          </p>
+          <ul>
+            <li>Planetary trajectories</li>
+            <li>Moon phases</li>
+            <li>Eclipses</li>
+            <li>Occultations</li>
+          </ul>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="service-card" data-aos="fade-down">
+          <div class="service-icon">
+            <img src="./solar_star-bold-duotone.png" alt="" srcset="" />
+          </div>
+          <h3>Star Catalog Service</h3>
+          <p>Cross-matched star queries from major astronomical databases</p>
+          <ul>
+            <li>Gaia/Hipparcos/Tycho data</li>
+            <li>Proper motions</li>
+            <li>Variable start tracking</li>
+            <li>Cross-referencing</li>
+          </ul>
+        </div>
 
-</body>
+        <div class="service-card" data-aos="fade-right">
+          <div class="service-icon">
+            <img src="./hugeicons_time-02.png" alt="" srcset="" />
+          </div>
+          <h3>Time & Frames Service</h3>
+          <p>Precise time conversions and coordinate system transformations.</p>
+          <ul>
+            <li>UTC-TT-TDB conversions</li>
+            <li>Leap second management</li>
+            <li>Precession/nutation</li>
+            <li>Aberration transforms</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-aos="fade-left">
+          <div class="service-icon">
+            <img src="./humbleicons_rocket.png" alt="" srcset="" />
+          </div>
+          <h3>Trajectory / Orbit Propagation</h3>
+          <p>
+            Advanced orbital mechanics for asteroids, comets, and spacecraft.
+          </p>
+          <ul>
+            <li>MPCORB integration</li>
+            <li>Kepler/DE models</li>
+            <li>Spacecraft tracking</li>
+            <li>Orbit prediction</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-icon">
+            <img src="./hugeicons_password-validation.png" alt="" srcset="" />
+          </div>
+          <h3>Validation & Gold Standard</h3>
+          <p>Reproducible comparisons against JPL Horizons reference data.</p>
+          <ul>
+            <li>JPL Horizons comparison</li>
+            <li>Data validation</li>
+            <li>Quality assurance</li>
+            <li>Reproducible results</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose ECS -->
+    <section class="section section-dark">
+      <h2 class="section-title">Why Choose ECS?</h2>
+      <p class="section-subtitle">
+        Built for precision, designed for scale. Trusted by the global
+        astronomical community.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up">
+          <div class="feature-icon">
+            <img src="./Group.png" alt="" srcset="" />
+          </div>
+          <h3>High Performance</h3>
+          <p>
+            Optimized algorithms deliver results in milliseconds with minimal
+            latency.
+          </p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-right">
+          <div class="feature-icon">
+            <img src="./Vector (2).png" alt="" srcset="" />
+          </div>
+          <h3>Data Integrity</h3>
+          <p>Rigorous validation ensures accuracy and reliability.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-left">
+          <div class="feature-icon">
+            <img src="./Vector (3).png" alt="" srcset="" />
+          </div>
+          <h3>Global Access</h3>
+          <p>24/7 availability with worldwide CDN distribution.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up">
+          <div class="feature-icon">
+            <img src="./Vector (4).png" alt="" srcset="" />
+          </div>
+          <h3>Comprehensive Data</h3>
+          <p>Integrated ephemerides, catalogs and reference frames.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-right">
+          <div class="feature-icon">
+            <img src="./clarity_update-line.png" alt="" srcset="" />
+          </div>
+          <h3>Real-time Updates</h3>
+          <p>Live data feeds for dynamic astronomical events.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-left">
+          <div class="feature-icon">
+            <img src="./hugeicons_global-education.png" alt="" srcset="" />
+          </div>
+          <h3>Educational Support</h3>
+          <p>Resources and tutorials for learning space science.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up">
+          <div class="feature-icon">
+            <img
+              src="./arcticons_calculator-basic-scientific-calculations.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <h3>Scientific Community</h3>
+          <p>Trusted by researchers and institutions globally.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-left">
+          <div class="feature-icon">
+            <img src="./carbon_model-alt.png" alt="" srcset="" />
+          </div>
+          <h3>Advanced Models</h3>
+          <p>State-of-the-art algorithms and computational models.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up">
+          <div class="feature-icon">
+            <img src="./healthicons_agriculture-outline.png" alt="" srcset="" />
+          </div>
+          <h3>Cultural Applications</h3>
+          <p>Supporting cultural astronomy and heritage projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- API Documentation -->
+    <section id="api" class="section">
+      <h2 class="section-title">API Documentation</h2>
+      <p class="section-subtitle">
+        RESTful APIs with comprehensive documentation, code examples, and
+        interactive testing.
+      </p>
+
+      <div class="api-tabs">
+        <button class="api-tab active" onclick="switchTab('ephemeris')">
+          Ephemeris
+        </button>
+        <button class="api-tab" onclick="switchTab('catalog')">
+          Star catalog
+        </button>
+        <button class="api-tab" onclick="switchTab('time')">
+          Time conversion
+        </button>
+      </div>
+
+      <div class="api-content">
+        <div id="ephemeris" class="api-section active">
+          <div class="api-info">
+            <h4>Planetary Ephemeris <span style="color: #ff6b35">GET</span></h4>
+            <p>Get real-time planetary positions and velocities</p>
+          </div>
+
+          <h4 style="margin-bottom: 1rem">Request</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+GET /GET "https://api.ecs.space/v1/ephemeris/planet?name=mars&date=2024-01-01T00:00:00Z" -H "API-Key: YOUR_API_KEY"</pre
+            >
+          </div>
+
+          <h4 style="margin: 2rem 0 1rem">Response</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+{
+  "body": "mars",
+  "time": "2024-01-01T00:00:00Z",
+  "reference": "SunV3",
+  "position": {
+    "X": -2.27948,
+    "Y": -0.93391,
+    "Z": 0.18946
+  },
+  "velocity": {
+    "X": -1.61,
+    "Y": -25.31,
+    "Z": -0.33
+  },
+  "distance": 2.13448,
+  "light_time": 740.3
+}</pre
+            >
+          </div>
+        </div>
+
+        <div id="catalog" class="api-section">
+          <div class="api-info">
+            <h4>Star Data Query <span style="color: #ff6b35">GET</span></h4>
+            <p>Access comprehensive star catalog data</p>
+          </div>
+
+          <h4 style="margin-bottom: 1rem">Request</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+GET "https://api.ecs.space/v1/stars?hipparcos_id=1234&epoch=J2000.0" -H "API-Key: YOUR_API_KEY"</pre
+            >
+          </div>
+
+          <h4 style="margin: 2rem 0 1rem">Response</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+{
+  "hipparcos_id": 1234,
+  "ra": "00:15:23.45",
+  "dec": "+45:32:11.2",
+  "magnitude": 4.56,
+  "proper_motion": {
+    "ra": 12.34,
+    "dec": -5.67
+  },
+  "parallax": 0.0234,
+  "spectral_type": "G2V"
+}</pre
+            >
+          </div>
+        </div>
+
+        <div id="time" class="api-section">
+          <div class="api-info">
+            <h4>Time Conversion <span style="color: #ff6b35">GET</span></h4>
+            <p>Convert between different time standards</p>
+          </div>
+
+          <h4 style="margin-bottom: 1rem">Request</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+GET "https://api.ecs.space/v1/time/convert?from=UTC&to=TT&time=2024-01-01T12:00:00Z" -H "API-Key: YOUR_API_KEY"</pre
+            >
+          </div>
+
+          <h4 style="margin: 2rem 0 1rem">Response</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+{
+  "from": "UTC",
+  "to": "TT",
+  "input_time": "2024-01-01T12:00:00Z",
+  "output_time": "2024-01-01T12:01:09.184Z",
+  "delta": 69.184,
+  "leap_seconds": 37
+}</pre
+            >
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem">
+        <button class="btn btn-primary">View Full Documentation <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content" data-aos="fade-down">
+        <div class="footer-section">
+          <div class="logo" style="margin-bottom: 1rem">ECS System</div>
+          <p>Delivering high-precision astronomical data worldwide.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>EXPLORE</h3>
+          <ul>
+            <li><a href="#">Ephemeris API</a></li>
+            <li><a href="#">Star Catalogs</a></li>
+            <li><a href="#">Time Services</a></li>
+            <li><a href="#">Orbit Propagation</a></li>
+            <li><a href="#">Validation Tools</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>RESOURCES</h3>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Developers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>SUPPORT</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Status Page</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Ephemeris Computational Space System. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+
+      function switchTab(tabName) {
+        // Update tab buttons
+        const tabs = document.querySelectorAll(".api-tab");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        event.target.classList.add("active");
+
+        // Update content sections
+        const sections = document.querySelectorAll(".api-section");
+        sections.forEach((section) => section.classList.remove("active"));
+        document.getElementById(tabName).classList.add("active");
+      }
+
+      function copyCode(btn) {
+        const codeBlock = btn.nextElementSibling;
+        const text = codeBlock.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          const originalText = btn.textContent;
+          btn.textContent = "Copied!";
+          setTimeout(() => {
+            btn.textContent = originalText;
+          }, 2000);
+        });
+      }
+
+      // Add smooth scroll behavior
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 150,
+        duration: 1250,
+        once: true,
+      });
+    </script>
+  </body>
 </html>
