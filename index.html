@@ -37,18 +37,21 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content" data-aos="fade-up">
-        <h1>Ephemeris computational<br />space system</h1>
+        <h1>
+          The Canonical Time Reconciliation Engine for Civil, Atomic, and
+          Astronomical Time
+        </h1>
         <p>
-          A unified platform delivering high-precision astronomical data and
-          APIs ephemerides, star catalogs, time standards, and trajectory
-          propagation for science, education, culture, and innovation worldwide.
+          ECS Time Spine reconciles UTC, TAI, GNSS, UT1, and relativistic time
+          scales into a single, auditable, provenance-aware temporal reference
+          for science, infrastructure, and governance.
         </p>
         <div class="hero-buttons" data-aos="flip-left">
           <button class="btn btn-primary" onclick="scrollToSection('services')">
-            Get started <i class="fa-solid fa-arrow-right"></i>
+            Try The API <i class="fa-solid fa-arrow-right"></i>
           </button>
           <button class="btn btn-secondary" onclick="scrollToSection('api')">
-            View documentation <i class="fa-solid fa-arrow-right"></i>
+            View Architecture Diagram <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </div>
@@ -240,10 +243,10 @@
 
       <div class="api-tabs">
         <button class="api-tab active" onclick="switchTab('ephemeris')">
-          Ephemeris
+          Ephemeris Compute
         </button>
         <button class="api-tab" onclick="switchTab('catalog')">
-          Star catalog
+          Ordinal Date
         </button>
         <button class="api-tab" onclick="switchTab('time')">
           Time conversion
@@ -253,15 +256,21 @@
       <div class="api-content">
         <div id="ephemeris" class="api-section active">
           <div class="api-info">
-            <h4>Planetary Ephemeris <span style="color: #ff6b35">GET</span></h4>
-            <p>Get real-time planetary positions and velocities</p>
+            <h4>
+              Universal Ephemeris Compute
+              <span style="color: #ff6b35">GET</span>
+            </h4>
+            <p>
+              Compute planetary, lunar, stellar, or asteroid/comet positions
+              using ECS ephemeris engines.
+            </p>
           </div>
 
           <h4 style="margin-bottom: 1rem">Request</h4>
           <div class="code-block">
             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
             <pre>
-GET /GET "https://api.ecs.space/v1/ephemeris/planet?name=mars&date=2024-01-01T00:00:00Z" -H "API-Key: YOUR_API_KEY"</pre
+GET /GET "https://api.ecs.space/v1/ephemeris/compute/body=mars&date=2025-01-01T00:00:00Z" -H "API-Key: YOUR_API_KEY"</pre
             >
           </div>
 
@@ -270,37 +279,45 @@ GET /GET "https://api.ecs.space/v1/ephemeris/planet?name=mars&date=2024-01-01T00
             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
             <pre>
 {
+  "model": "vsop87a",
+  "variant_id": "a",
   "body": "mars",
-  "time": "2024-01-01T00:00:00Z",
-  "reference": "SunV3",
-  "position": {
-    "X": -2.27948,
-    "Y": -0.93391,
-    "Z": 0.18946
-  },
-  "velocity": {
-    "X": -1.61,
-    "Y": -25.31,
-    "Z": -0.33
-  },
-  "distance": 2.13448,
-  "light_time": 740.3
-}</pre
+  "coord_mode": "xyz",
+  "components": [
+    "X",
+    "Y",
+    "Z"
+  ],
+  "frame": "heliocentric_ecliptic_j2000",
+  "epoch": "J2000.0",
+  "jd_tt": 2460676.500800741,
+  "values": [
+    -0.52169650642863,
+    1.5252317409075022,
+    0.04475609809823307
+  ],
+  "file_pattern": "vsop87a_{body}_xyz.npz",
+  "expected_accuracy_arcsec": "±1–2 (inner), ±3–5 (outer)"
+}
+</pre
             >
           </div>
         </div>
 
         <div id="catalog" class="api-section">
           <div class="api-info">
-            <h4>Star Data Query <span style="color: #ff6b35">GET</span></h4>
-            <p>Access comprehensive star catalog data</p>
+            <h4>Daily Time Feed <span style="color: #ff6b35">GET</span></h4>
+            <p>
+              Retrieve a published ECS Daily Time Feed record. The record is
+              immutable and returned exactly as published.
+            </p>
           </div>
 
           <h4 style="margin-bottom: 1rem">Request</h4>
           <div class="code-block">
             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
             <pre>
-GET "https://api.ecs.space/v1/stars?hipparcos_id=1234&epoch=J2000.0" -H "API-Key: YOUR_API_KEY"</pre
+GET "https://api.ecs.space/v1/time/daily?ordinal_date=YYYYMMDD" -H "API-Key: YOUR_API_KEY"</pre
             >
           </div>
 
@@ -309,17 +326,98 @@ GET "https://api.ecs.space/v1/stars?hipparcos_id=1234&epoch=J2000.0" -H "API-Key
             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
             <pre>
 {
-  "hipparcos_id": 1234,
-  "ra": "00:15:23.45",
-  "dec": "+45:32:11.2",
-  "magnitude": 4.56,
-  "proper_motion": {
-    "ra": 12.34,
-    "dec": -5.67
+  "publication": {
+    "iso_utc": "2025-12-23T00:00:00Z",
+    "ordinal_date": "2025357",
+    "time_contract": "ECS Time v1.0 (Published)"
   },
-  "parallax": 0.0234,
-  "spectral_type": "G2V"
-}</pre
+  "data": {
+    "input": {
+      "timestamp": "2025-12-23T00:00:00Z",
+      "system": "UTC"
+    },
+    "epoch_used": {
+      "name": "UTC Leap-Second Era Start",
+      "start": "1972-01-01T00:00:00Z",
+      "authority": "ITU / IERS"
+    },
+    "offsets_applied": {
+      "tai_minus_utc_seconds": 37,
+      "tt_minus_tai_seconds": 32.184,
+      "delta_t_seconds": 69.06778067350388
+    },
+    "input_system": "UTC",
+    "iso_utc": "2025-12-23T00:00:00Z",
+    "jd_utc": 2461032.5,
+    "jd_tai": 2461032.5004282407,
+    "jd_tt": 2461032.500800741,
+    "jd_ut1": 2461032.5000013453,
+    "jd_tdb": 2461032.500800737,
+    "jd_tcg": 2461032.500807353,
+    "jd_tcb": 2461032.500947843,
+    "vsop87_t": 0.02597536153521473,
+    "gmst_rad": 1.602046758128836,
+    "gmst_deg": 91.79051782339812,
+    "delta_t_seconds": 69.06778067350388,
+    "leap_seconds_total": 37,
+    "next_leap_second": null,
+    "previous_leap_second": "2017-01-01T00:00:00",
+    "dut1_seconds": 0.11623143628266543,
+    "xp_arcsec": 0.0038275431015346094,
+    "yp_arcsec": 0.2589297789413406,
+    "eop_status": {
+      "mode": "predicted",
+      "authoritative": false,
+      "policy": "ECS EOP Policy v1.0",
+      "source": "ECS Internal Predictor",
+      "model": "ECS Deterministic Harmonic v1.0",
+      "based_on_jd": 2461032.5,
+      "days_ahead": 0,
+      "uncertainty": {
+        "confidence": "1-sigma (68%)",
+        "dut1_seconds_1sigma": 0,
+        "xp_arcsec_1sigma": 0,
+        "yp_arcsec_1sigma": 0,
+        "dx_arcsec_1sigma": 0,
+        "dy_arcsec_1sigma": 0,
+        "xp_rad_1sigma": 0,
+        "yp_rad_1sigma": 0,
+        "dx_rad_1sigma": 0,
+        "dy_rad_1sigma": 0
+      },
+      "recommended_use": [
+        "simulation",
+        "forecasting",
+        "visualization",
+        "astrology"
+      ],
+      "excluded_use": [
+        "legal_timekeeping",
+        "civil_clock_discipline"
+      ],
+      "derived_quantity_uncertainty": null,
+      "reconciliation": {
+        "status": "provisional",
+        "replaces_when": "measured_eop_available",
+        "reconciliation_key": "EOP:2461032"
+      }
+    },
+    "eop_uncertainty": {
+      "confidence": "1-sigma (68%)",
+      "dut1_seconds_1sigma": 0,
+      "xp_arcsec_1sigma": 0,
+      "yp_arcsec_1sigma": 0,
+      "dx_arcsec_1sigma": 0,
+      "dy_arcsec_1sigma": 0,
+      "xp_rad_1sigma": 0,
+      "yp_rad_1sigma": 0,
+      "dx_rad_1sigma": 0,
+      "dy_rad_1sigma": 0
+    },
+    "ordinal_date": "2025357"
+  }
+}
+</pre
             >
           </div>
         </div>
@@ -327,7 +425,10 @@ GET "https://api.ecs.space/v1/stars?hipparcos_id=1234&epoch=J2000.0" -H "API-Key
         <div id="time" class="api-section">
           <div class="api-info">
             <h4>Time Conversion <span style="color: #ff6b35">GET</span></h4>
-            <p>Convert between different time standards</p>
+            <p>
+              Canonical ECS Time conversion endpoint. Calls orchestrator exactly
+              once.
+            </p>
           </div>
 
           <h4 style="margin-bottom: 1rem">Request</h4>
@@ -343,12 +444,69 @@ GET "https://api.ecs.space/v1/time/convert?from=UTC&to=TT&time=2024-01-01T12:00:
             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
             <pre>
 {
-  "from": "UTC",
-  "to": "TT",
-  "input_time": "2024-01-01T12:00:00Z",
-  "output_time": "2024-01-01T12:01:09.184Z",
-  "delta": 69.184,
-  "leap_seconds": 37
+  "engine": {
+    "name": "ECS Time Engine",
+    "version": "1.0.0"
+  },
+  "input": {
+    "timestamp": "2028-01-01T00:00:00Z",
+    "system": "GPS"
+  },
+  "epoch_used": {
+    "name": "GPS Epoch",
+    "start": "1980-01-06T00:00:00",
+    "authority": "U.S. Department of Defense"
+  },
+  "time_interpretation": {
+    "input_system": "GPS",
+    "conversion_note": "GPS Time converted to UTC via TAI (GPS = TAI − 19s; UTC derived using leap seconds)",
+    "net_offset_seconds": -17.999982833862305,
+    "net_offset_seconds_rounded": -18,
+    "rounding_policy": "human"
+  },
+  "input_timestamp": "2028-01-01T00:00:00Z",
+  "input_timestamp_expressed": "2027-12-31T23:59:42.000017Z",
+  "iso_utc": "2027-12-31T23:59:42.000017Z",
+  "input_system": "GPS",
+  "jd_utc": 2461771.499791667,
+  "jd_tai": 2461771.5002199076,
+  "jd_tt": 2461771.500592408,
+  "jd_ut1": 2461771.499795467,
+  "jd_tdb": 2461771.500592407,
+  "jd_tcg": 2461771.5005995347,
+  "jd_tcb": 2461771.5007509706,
+  "jd_gps": 2461771.5,
+  "jd_bdt": null,
+  "gmst_rad": 1.747242249473299,
+  "gmst_deg": 100.10960668176412,
+  "vsop87_t": 0.027998632696527966,
+  "delta_t_seconds": 68.85567158460617,
+  "dut1_seconds": 0.3283543170897749,
+  "xp_arcsec": 0.23574984319833608,
+  "yp_arcsec": 0.025623287329996438,
+  "leap_seconds_total": 37,
+  "next_leap_second": null,
+  "previous_leap_second": {
+    "jd_utc": 2457754.5,
+    "effective_iso_utc": "2017-01-01T00:00:00Z",
+    "announced": true,
+    "source": "IERS Bulletin C"
+  },
+  "ordinal_date": "2027365",
+  "gmst_sigma_rad": 0,
+  "gmst_anomaly_rad": 0,
+  "delta_t_sigma_seconds": 0,
+  "delta_t_anomaly_seconds": 0,
+  "dut1_sigma_seconds": 0,
+  "dut1_anomaly_seconds": 0,
+  "xp_sigma_arcsec": 0,
+  "yp_sigma_arcsec": 0,
+  "xp_anomaly_arcsec": 0,
+  "yp_anomaly_arcsec": 0,
+  "completeness": {
+    "ut1": true,
+    "gmst": true
+  }
 }</pre
             >
           </div>
@@ -356,7 +514,9 @@ GET "https://api.ecs.space/v1/time/convert?from=UTC&to=TT&time=2024-01-01T12:00:
       </div>
 
       <div style="text-align: center; margin-top: 3rem">
-        <button class="btn btn-primary">View Full Documentation <i class="fa-solid fa-arrow-right"></i></button>
+        <button class="btn btn-primary">
+          Read the Data Provenance Contract <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
     </section>
 
@@ -367,9 +527,15 @@ GET "https://api.ecs.space/v1/time/convert?from=UTC&to=TT&time=2024-01-01T12:00:
           <div class="logo" style="margin-bottom: 1rem">ECS System</div>
           <p>Delivering high-precision astronomical data worldwide.</p>
           <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="social-icon"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="social-icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
           </div>
         </div>
 
@@ -407,7 +573,7 @@ GET "https://api.ecs.space/v1/time/convert?from=UTC&to=TT&time=2024-01-01T12:00:
       </div>
 
       <div class="footer-bottom">
-        © 2025 Ephemeris Computational Space System. All rights reserved.
+        <p>&copy; <span id="currentYear"></span> Ephemeris Computational Space System. All rights reserved. </p>
       </div>
     </footer>
 
@@ -441,6 +607,7 @@ GET "https://api.ecs.space/v1/time/convert?from=UTC&to=TT&time=2024-01-01T12:00:
       }
 
       // Add smooth scroll behavior
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
