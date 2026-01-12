@@ -144,6 +144,20 @@ nav {
   line-height: 1.2;
 }
 
+.hero h5 {
+  font-family: "Bricolage Grotesque";
+  font-size: 18px;
+  color: #ff6b35;
+  background: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 .hero p {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.8);
