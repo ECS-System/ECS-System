@@ -1,2 +1,2 @@
 # comingsoon
-Basic coming soon website of AGold Resourcing
+Official website of AGold Resourcing
