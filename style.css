@@ -80,6 +80,7 @@ img {
 .text {
   font-size: 1.2rem;
   font-weight: 700;
+  padding-top: 15px;
 }
 
 /* Buttons */
@@ -956,6 +957,7 @@ img {
   font-size: 2rem;
   margin-top: 20px;
   line-height: 1.2;
+  padding-bottom: 15px;
 }
 .white-sub {
   color: rgba(255, 255, 255, 0.8);
