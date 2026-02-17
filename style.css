@@ -722,7 +722,7 @@ img {
   justify-content: space-evenly;
 }
 .history-flex p {
-  font-size: 1rem;
+  font-size: 2rem;
   color: var(--accent-orange);
   line-height: 1.5;
 }
