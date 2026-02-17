@@ -1198,6 +1198,107 @@ img {
   transform: translateY(-3px);
 }
 
+/* --- TEAM PAGE OVERHAUL --- */
+
+/* 1. Roles Grid */
+.roles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Columns */
+    gap: 0; /* No gap because we want borders to touch like a table */
+    border: 1px solid var(--border-color); /* Outer border */
+}
+
+.role-card {
+    background-color: var(--bg-color);
+    padding: 60px 40px;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Remove right border for even items (2nd column) */
+.role-card:nth-child(2n) {
+    border-right: none;
+}
+/* Remove bottom border for the last row (items 3 and 4) */
+.role-card:nth-child(3), .role-card:nth-child(4) {
+    border-bottom: none;
+}
+
+.role-card:hover {
+    background-color: rgba(0,0,0,0.02); /* Subtle hover */
+}
+[data-theme="dark"] .role-card:hover {
+    background-color: rgba(255,255,255,0.02);
+}
+
+.role-icon-wrapper {
+    margin-bottom: 25px;
+}
+
+/* Make the white logo orange using a filter */
+.orange-tint {
+    filter: invert(56%) sepia(66%) saturate(2222%) hue-rotate(339deg) brightness(93%) contrast(93%);
+    width: 35px;
+    height: auto;
+}
+/* In Dark Mode, if you want the logo white, disable the filter */
+[data-theme="dark"] .orange-tint {
+    filter: none;
+}
+
+.role-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.role-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* 2. CTA Banner (Large Orange Block) */
+.cta-banner {
+    background: linear-gradient(135deg, #C25E00 0%, #A04000 100%);
+    padding: 100px 40px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 4px; /* Optional, matches other cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-banner h2 {
+    font-size: 2rem;
+    max-width: 800px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.btn-cta-dark {
+    background-color: #3E1E08; /* Dark brown/black from design */
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-cta-dark:hover {
+    background-color: #5A2D0C;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
 /* =========================================
    9. GLOBAL RESPONSIVE RULES
    ========================================= */
@@ -1313,6 +1414,25 @@ img {
   .timeline-item:last-child {
     border-bottom: none;
   }
+
+  .roles-grid {
+        grid-template-columns: 1fr; /* 1 Column on mobile */
+        border: none; /* Remove table-like border */
+        gap: 20px;
+    }
+
+    .role-card {
+        border: 1px solid var(--border-color); /* Add full border back to cards */
+        border-radius: 4px;
+    }
+
+    .cta-banner {
+        padding: 60px 20px;
+    }
+    
+    .cta-banner h2 {
+        font-size: 1.2rem;
+    }
 
   /* History Logic */
   
