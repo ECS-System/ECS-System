@@ -754,7 +754,7 @@ img {
 }
 
 .timeline-item.active .card-body {
-    max-height: 400px;
+    max-height: 1000px;
     opacity: 1;
     margin-top: 20px;
     border-top: 1px solid var(--border-color);
@@ -1537,7 +1537,7 @@ img {
 }
 
 .expand-card.active .card-body {
-    max-height: 500px;
+    max-height: 1000px;
     opacity: 1;
 }
 
