@@ -28,7 +28,7 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   </head>
-  <body data-theme="light">
+  <body data-theme="dark">
 
     <nav class="navbar solid-nav"> 
         <div class="container nav-content">
@@ -102,135 +102,243 @@
         </h1>
         <p data-aos="fade-up" data-aos-delay="400">We help organisations prevent silent time and orbital computation errors in mission-critical systems through deterministic engineering and standards-aligned implementation.
         </p>
-        <!-- <a
-          href="#"
-          class="btn btn-primary"
-          data-aos="fade-up"
-          data-aos-delay="600"
-          >Explore what we do &rarr;</a
-        > -->
       </div>
     </header>
-
     <div class="section-divider"></div>
-<section class="what-we-do section-padding">
-      <div class="container">
-        <div class="section-header-center">
-          <span class="tag-label">What We Do</span>
-          <h2>
-            We help organisations prevent silent time and orbital computation
-            errors in mission critical systems through deterministic
-            engineering, standards aligned implementation, and reproducible
-            computational design.
-          </h2>
+
+    <section class="orange-section section-padding">
+    <div class="container">
+        <div class="orange-header" style="margin: 0 auto 60px;">
+            <span class="tag-label white-tag">The Problem</span>
+            <h2 class="white-text" style="font-size: 2.2rem; margin-top: 15px;">
+                Most software treats time as a timestamp and orbital models as utilities. In mission critical environments, this creates structural exposure:
+            </h2>
+            <p style="color: rgba(255,255,255,0.8); margin-top: 10px;">(Select an exposure to view technical details)</p>
         </div>
 
-        <div class="timeline-wrapper">
-          <div
-            class="timeline-line"
-            data-aos="zoom-in-right"
-            data-aos-duration="1500"
-          ></div>
-
-          <div class="timeline-grid">
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-              <!-- <h3>Celestial mechanics</h3> -->
-              <div class="timeline-marker">1</div>
-              <p>Deterministic time conversion</p>
+        <div class="exposure-grid">
+            <div class="expand-card dark-mode-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-header">
+                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon">
+                    <h3>Time Scale Mismatch</h3>
+                    <i class="fa-solid fa-plus toggle-icon"></i>
+                </div>
+                <div class="card-body">
+                    <p class="tech-detail">Inconsistent transformations between UTC, TAI, TT, and UT1.</p>
+                </div>
             </div>
 
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-              <!-- <h3>Space-time systems</h3> -->
-              <div class="timeline-marker">2</div>
-              <p>Standards-aligned modeling</p>
+            <div class="expand-card dark-mode-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-header">
+                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon">
+                    <h3>Sequence Breakage</h3>
+                    <i class="fa-solid fa-plus toggle-icon"></i>
+                </div>
+                <div class="card-body">
+                    <p class="tech-detail">Leap second handling divergence across distributed systems.</p>
+                </div>
             </div>
 
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
-              <!-- <h3>Scientific infrastructure</h3> -->
-              <div class="timeline-marker">3</div>
-              <p>Reproducible computational architecture</p>
+            <div class="expand-card dark-mode-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-header">
+                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon">
+                    <h3>Earth Rotation Drift</h3>
+                    <i class="fa-solid fa-plus toggle-icon"></i>
+                </div>
+                <div class="card-body">
+                    <p class="tech-detail">Earth orientation is not always consistent. It wobbles which does not make the data the same.</p>
+                </div>
             </div>
 
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
-              <!-- <h3>Scientific infrastructure</h3> -->
-              <div class="timeline-marker">4</div>
-              <p>Sovereign, dependency-aware system design</p>
+            <div class="expand-card dark-mode-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-header">
+                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon">
+                    <h3>Atomic vs. Dynamical Gaps</h3>
+                    <i class="fa-solid fa-plus toggle-icon"></i>
+                </div>
+                <div class="card-body">
+                    <p class="tech-detail">ΔT model mismatches (difference between atomic and dynamical time).</p>
+                </div>
             </div>
-          </div>
+
+            <div class="expand-card dark-mode-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-header">
+                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon">
+                    <h3>Reference Misalignment</h3>
+                    <i class="fa-solid fa-plus toggle-icon"></i>
+                </div>
+                <div class="card-body">
+                    <p class="tech-detail">Reference frame misalignment (ICRS, BCRS, GCRS, CIRS, TIRS, ITRF) divergence.</p>
+                </div>
+            </div>
+
+            <div class="expand-card dark-mode-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="600">
+                <div class="card-header">
+                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon">
+                    <h3>Correction Ambiguity</h3>
+                    <i class="fa-solid fa-plus toggle-icon"></i>
+                </div>
+                <div class="card-body">
+                    <p class="tech-detail">Predicted versus final correction ambiguity in historical replays.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exposure-conclusion" data-aos="zoom-in">
+            <p>These issues rarely fail loudly. They accumulate, becoming operational cost, scientific instability, audit exposure, or mission risk. We help organisations avoid hidden time and space calculation errors that can disrupt missions and research.</p>
+        </div>
+    </div>
+    </section>
+    <div class="section-divider"></div>
+
+    <section class="vision-section section-padding">
+      <div class="container">
+        <div class="vision-content" data-aos="zoom-in">
+          <span class="tag-label">Why It Matters</span>
+          <h2>
+            Errors in time handling and reference modeling do not announce
+            themselves.
+          </h2>
+            <h3>They Propagate</h3>
+            <ul>
+            <li><i class="fa-solid fa-star"></i>  
+              In high velocity systems, microsecond differences become
+              spatial displacement.
+            </li>
+            <li><i class="fa-solid fa-star"></i>  
+              In distributed platforms, invisible time assumptions break
+              replay integrity.
+            </li>
+            <li><i class="fa-solid fa-star"></i>  
+              In scientific environments, revision drift
+              compromises reproducibility.
+            </li>
+            </ul>
+            <br>
+            <br>
+            <h3>In Our World, Precision Is Perfection</h3>
+            <ul>
+            <li><i class="fa-solid fa-star"></i>  We make assumptions explicit.</li>
+            <li><i class="fa-solid fa-star"></i>  We make uncertainty visible.</li>
+            <li><i class="fa-solid fa-star"></i>  We make computation reproducible.</li>
+            <li><i class="fa-solid fa-star"></i>  
+              We design systems that remain stable across decades, not just
+              development cycles.
+            </li>
+            </ul>
         </div>
       </div>
     </section>
+    <div class="section-divider"></div>
+
+    <section class="what-we-do section-padding">
+    <div class="container">
+        <div class="section-header-center" data-aos="fade-up">
+            <span class="tag-label">What We Do</span>
+            <h2 style="max-width: 900px; margin: 0 auto 20px;">We help organisations prevent silent time and orbital computation errors in mission critical systems through deterministic engineering, standards aligned implementation, and reproducible computational design.
+
+            </h2>
+            <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">
+                We prevent silent time and orbital computation errors through standards-aligned engineering and reproducible computational design. <br>
+                <span style="font-size: 0.9rem; opacity: 0.7;">(Click a step to expand)</span>
+            </p>
+        </div>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-line" data-aos="zoom-in-right" data-aos-duration="1500"></div>
+            <div class="timeline-grid-4">
+                <div class="timeline-item expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker">1</div>
+                    <h3>Deterministic Time Conversion</h3>
+                    <div class="card-body">
+                        <p><strong>The Reality:</strong> We reconcile atomic, Earth, civil, and satellite time so systems operate on explicit facts, not assumptions.</p>
+                        <p class="tech-detail">Strict conversions across TAI, UT1, UTC, TT, and GMST.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down timeline-toggle"></i>
+                </div>
+
+                <div class="timeline-item expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker">2</div>
+                    <h3>Standards-Aligned Modelling</h3>
+                    <div class="card-body">
+                        <p><strong>The Reality:</strong> We implement the rigorous models mandated by global authorities, ensuring your system is physically defensible.</p>
+                        <p class="tech-detail">Aligned with IERS, IAU, SOFA, SPICE, and GNSS frameworks.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down timeline-toggle"></i>
+                </div>
+
+                <div class="timeline-item expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-marker">3</div>
+                    <h3>Reproducible computational architecture</h3>
+                    <div class="card-body">
+                        <p><strong>The Reality:</strong> Replay calculations from years ago using the exact data, rules, and conditions from that precise moment.</p>
+                        <p class="tech-detail">Complete versioning of datasets, ephemerides, and correction layers.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down timeline-toggle"></i>
+                </div>
+
+                <div class="timeline-item expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-marker">4</div>
+                    <h3>Sovereign, dependency-aware system design</h3>
+                    <div class="card-body">
+                        <p><strong>The Reality:</strong> Self-contained systems that run offline, eliminating fragile external dependencies and granting you ownership.</p>
+                        <p class="tech-detail">Dependency-aware architecture for long-horizon archival stability.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down timeline-toggle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <div class="section-divider"></div>
+
     <section class="orange-section section-padding">
       <div class="container">
         <div class="orange-header">
-          <span class="tag-label white-tag">The Problem</span>
+          <span class="tag-label white-tag">Engineering Implementation</span>
           <h2 class="white-text">
-            Most software treats time as a timestamp and orbital models as
-            utilities. In mission critical environments, this creates structural
-            exposure:
+            Beyond audit, we design deterministic infrastructure in three
+            domains:
           </h2>
         </div>
 
         <div class="expertise-grid">
           <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="100">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Inconsistent transformations between UTC, TAI, TT, and UT1</p>
+            <img src="../assets/brand-logo-white.png" alt="A-Gold Resourcing Logo" class="card-icon-corner brand-logo-icon"/>
+            <p>Space-Time Systems Engineering</p>
+            <ul>
+            <li><i class="fa-solid fa-arrow-right"></i> Time scale transformations (UTC, TAI, TT, UT1, GNSS)</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Atomic and rotational time reconciliation</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Earth Orientation Parameter integration</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Leap second authority modelling</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Long-horizon reproducibility architecture</li>
+            </ul>
           </div>
           <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="200">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Leap second handling divergence</p>
+            <img src="../assets/brand-logo-white.png" alt="A-Gold Resourcing Logo" class="card-icon-corner brand-logo-icon"/>
+            <p>Celestial Mechanics Infrastructure</p>
+            <ul>
+            <li><i class="fa-solid fa-arrow-right"></i> Analytical ephemeris implementation (VSOP87, DE-series, SPICE)</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Deterministic orbital propagation</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Standards aligned coordinate transformations</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Validation against established astronomical reference datasets</li>
+            </ul>
           </div>
           <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="300">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Earth orientation revision drift</p>
-          </div>
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="400">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>
-              ΔT model mismatches (difference between atomic and dynamical time)
-            </p>
-          </div>
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="500">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>
-              Reference frame misalignment (ICRS, BCRS, GCRS, CIRS, TIRS, ITRF) divergence
-            </p>
-          </div>
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="600">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Predicted versus final correction ambiguity</p>
+            <img src="../assets/brand-logo-white.png" alt="A-Gold Resourcing Logo" class="card-icon-corner brand-logo-icon"/>
+            <p>Computational Integrity Architecture</p>
+            <ul>
+            <li><i class="fa-solid fa-arrow-right"></i> Reference frame consistency enforcement</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Explicit uncertainty modelling</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Version-controlled correction layers</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Audit-ready computational pipelines</li>
+            </ul>
           </div>
         </div>
         <p class="text">
-          These issues rarely fail loudly. They accumulate, becoming operational
-          cost, scientific instability, audit exposure, or mission risk. We help
-          organisations avoid hidden time and space calculation errors that can
-          disrupt missions and research. Our work makes sure your systems stay
-          accurate and reliable, even as standards and data change.
+          Our implementations align with IERS, IAU, SOFA, SPICE, and GNSS
+          standards. We do not redefine standards. We implement them
+          deterministically and transparently.
         </p>
       </div>
     </section>
@@ -250,46 +358,25 @@
           <div class="focus-item" data-aos="fade-left" data-aos-delay="100">
             <div class="focus-number">1</div>
             <div class="focus-text">
-              <!-- <h3>Celestial mechanics</h3> -->
-              <p>
-                Computes planetary motion without reliance on third-party
-                runtime APIs (computational sovereignty).
-              </p>
+              <p>Computes planetary motion without reliance on third-party runtime APIs (computational sovereignty).</p>
             </div>
           </div>
-
           <div class="focus-item" data-aos="fade-left" data-aos-delay="200">
             <div class="focus-number">2</div>
             <div class="focus-text">
-              <!-- <h3>Space-time systems</h3> -->
-              <p>
-                No runtime dependency on external web services for ephemeris,
-                time scale, or Earth orientation calculations.
-              </p>
+              <p>No runtime dependency on external web services for ephemeris, time scale, or Earth orientation calculations.</p>
             </div>
           </div>
-
           <div class="focus-item" data-aos="fade-left" data-aos-delay="300">
             <div class="focus-number">3</div>
             <div class="focus-text">
-              <!-- <h3>Scientific infrastructure</h3> -->
-              <p>
-                Enables deterministic historical replay, operational resilience
-                in air-gapped environments, stability across vendor/API changes,
-                long-horizon archival reproducibility, and explicit standards
-                control.
-              </p>
+              <p>Enables deterministic historical replay, operational resilience in air-gapped environments, stability across vendor/API changes, long-horizon archival reproducibility, and explicit standards control.</p>
             </div>
           </div>
-
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="300">
+          <div class="focus-item" data-aos="fade-left" data-aos-delay="400">
             <div class="focus-number">4</div>
             <div class="focus-text">
-              <!-- <h3>Scientific infrastructure</h3> -->
-              <p>
-                ECS Systems is a standards-aligned, deterministic
-                implementation layer designed for continuity and auditability.
-              </p>
+              <p>ECS Systems is a standards-aligned, deterministic implementation layer designed for continuity and auditability.</p>
             </div>
           </div>
         </div>
@@ -300,13 +387,8 @@
     <section class="history-section section-padding">
       <div class="container">
         <div class="history-header" data-aos="zoom-in">
-          <span class="tag-label"
-            >Our Flagship Service: Time Integrity Audit</span
-          >
-          <h2>
-            A structured technical assessment of your system’s temporal and
-            orbital architecture.
-          </h2>
+          <span class="tag-label">Our Flagship Service: Time Integrity Audit</span>
+          <h2>A structured technical assessment of your system’s temporal and orbital architecture.</h2>
         </div>
 
         <div class="history-flex">
@@ -315,9 +397,7 @@
             <ul>
             <li><i class="fa-solid fa-star"></i> Time scale transformation pathways</li>
             <li><i class="fa-solid fa-star"></i> Leap second authority alignment</li>
-            <li><i class="fa-solid fa-star"></i> 
-              Earth Orientation Parameter integration and revision handling
-            </li>
+            <li><i class="fa-solid fa-star"></i> Earth Orientation Parameter integration and revision handling</li>
             <li><i class="fa-solid fa-star"></i> ΔT model consistency</li>
             <li><i class="fa-solid fa-star"></i> Reference frame coherence</li>
             <li><i class="fa-solid fa-star"></i> Predicted versus final data reconciliation</li>
@@ -336,256 +416,23 @@
             </ul>
           </div>
         </div>
-        <p class="text">
+        <p class="text text-center mt-4">
           Typical engagement: 2-4 weeks depending on system complexity.
         </p>
       </div>
     </section>
     <div class="section-divider"></div>
-    <section class="orange-section section-padding">
-      <div class="container">
-        <div class="orange-header">
-          <span class="tag-label white-tag">Engineering Implementation</span>
-          <h2 class="white-text">
-            Beyond audit, we design deterministic infrastructure in three
-            domains:
-          </h2>
-        </div>
 
-        <div class="expertise-grid">
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="100">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Space-Time Systems Engineering</p>
-            <ul>
-            <li><i class="fa-solid fa-arrow-right"></i> Time scale transformations (UTC, TAI, TT, UT1, GNSS)</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Atomic and rotational time reconciliation</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Earth Orientation Parameter integration</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Leap second authority modelling</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Long-horizon reproducibility architecture</li>
-            </ul>
-          </div>
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="200">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Celestial Mechanics Infrastructure</p>
-            <ul>
-            <li><i class="fa-solid fa-arrow-right"></i> 
-              Analytical ephemeris implementation (VSOP87, DE-series, SPICE)
-            </li>
-            <li><i class="fa-solid fa-arrow-right"></i> Deterministic orbital propagation</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Standards aligned coordinate transformations</li>
-            <li><i class="fa-solid fa-arrow-right"></i>
-              Validation against established astronomical reference datasets
-            </li>
-            </ul>
-          </div>
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="300">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Computational Integrity Architecture</p>
-            <ul>
-            <li><i class="fa-solid fa-arrow-right"></i> Reference frame consistency enforcement</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Explicit uncertainty modelling</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Version-controlled correction layers</li>
-            <li><i class="fa-solid fa-arrow-right"></i> Audit-ready computational pipelines</li>
-            </ul>
-          </div>
+    <section class="section-padding">
+        <div class="container">
+            <div class="cta-banner" data-aos="zoom-in">
+          <span class="tag-label white-tag">Engagement</span>
+                <h2 style="margin-top: 20px;">If your systems depend on time precision or orbital computation, they already depend on layered standards. Book a Meeting.</h2>
+                <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/edit" target="_blank" class="btn-cta-dark">Book a meeting &rarr;</a>
+            </div>
         </div>
-        <p class="text">
-          Our implementations align with IERS, IAU, SOFA, SPICE, and GNSS
-          standards. We do not redefine standards. We implement them
-          deterministically and transparently.
-        </p>
-      </div>
     </section>
     <div class="section-divider"></div>
-
-    <section class="vision-section section-padding">
-      <div class="container">
-        <div class="vision-content" data-aos="zoom-in">
-          <span class="tag-label">Why It Matters</span>
-          <h2>
-            Errors in time handling and reference modeling do not announce
-            themselves.
-          </h2>
-
-          
-            <h3>They Propagate</h3>
-            <ul>
-            <li><i class="fa-solid fa-star"></i>  
-              In high velocity systems, microsecond differences become
-              spatial displacement.
-            </li>
-            <li><i class="fa-solid fa-star"></i>  
-              In distributed platforms, invisible time assumptions break
-              replay integrity.
-            </li>
-            <li><i class="fa-solid fa-star"></i>  
-              In scientific environments, revision drift
-              compromises reproducibility.
-            </li>
-            </ul>
-            <br>
-            <br>
-          
-            <h3>Precision is not about perfection</h3>
-            <ul>
-            <li><i class="fa-solid fa-star"></i>  We make assumptions explicit.</li>
-            <li><i class="fa-solid fa-star"></i>  We make uncertainty visible.</li>
-            <li><i class="fa-solid fa-star"></i>  We make computation reproducible.</li>
-            <li><i class="fa-solid fa-star"></i>  
-              We design systems that remain stable across decades, not just
-              development cycles.
-            </li>
-            </ul>
-          
-        </div>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-    <section class="vision-section section-padding">
-      <div class="container">
-        <div class="vision-content" data-aos="zoom-in">
-          <span class="tag-label">Engagement</span>
-          <h2>
-            If your systems depend on time precision or orbital computation,
-            they already depend on layered standards. Book a Meeting.
-          </h2>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-    <!-- <section class="focus-areas section-padding">
-      <div class="container focus-grid">
-        <div class="focus-header">
-          <span class="tag-label">Our Focus Areas</span>
-          <h2>
-            Three critical domains that form the foundation of space science
-            computation.
-          </h2>
-        </div>
-
-        <div class="focus-list">
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="100">
-            <div class="focus-number">1</div>
-            <div class="focus-text">
-              <h3>Celestial mechanics</h3>
-              <p>
-                Planetary motion, orbital models, and validated astronomical
-                datasets.
-              </p>
-            </div>
-          </div>
-
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="200">
-            <div class="focus-number">2</div>
-            <div class="focus-text">
-              <h3>Space-time systems</h3>
-              <p>
-                Time standards, reference epochs, Earth orientation, and
-                long-term continuity.
-              </p>
-            </div>
-          </div>
-
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="300">
-            <div class="focus-number">3</div>
-            <div class="focus-text">
-              <h3>Scientific infrastructure</h3>
-              <p>
-                Coordinate systems, reference frames, numerical engines, and
-                data pipelines.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section class="work-section section-padding">
-      <div class="container centered-header">
-        <span class="pill-label">How we work</span>
-      </div>
-
-      <div class="container">
-        <div class="grid-row">
-          <div class="grid-col" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box">
-              <i class="fa-solid fa-atom"></i>
-            </div>
-            <h3>Grounded in physics</h3>
-            <p>We use established laws and peer-recognized models.</p>
-          </div>
-
-          <div class="grid-col" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box">
-              <i class="fa-regular fa-file-code"></i>
-            </div>
-            <h3>Transparent and reproducible</h3>
-            <p>Every computation is documented and traceable.</p>
-          </div>
-
-          <div class="grid-col" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <i class="fa-regular fa-circle-question"></i>
-            </div>
-            <h3>Explicit about uncertainty</h3>
-            <p>Predictions and assumptions are always declared.</p>
-          </div>
-
-          <div class="grid-col" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon-box">
-              <i class="fa-solid fa-bell-slash"></i>
-            </div>
-            <h3>No silent fallbacks</h3>
-            <p>If something is unknown, we say so.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-    <section class="core-principles">
-    <div class="container">
-        
-        <div class="principles-header" data-aos="zoom-in">
-            <h2>Core principles</h2>
-            <p>The beliefs that guide everything we do.</p>
-        </div>
-
-        <div class="principles-grid">
-            <div class="p-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="p-number">1</div>
-                <h3>Space science is cumulative</h3>
-            </div>
-
-            <div class="p-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="p-number">2</div>
-                <h3>Errors compound silently</h3>
-            </div>
-
-            <div class="p-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="p-number">3</div>
-                <h3>Infrastructure outlives individuals</h3>
-            </div>
-        </div>
-        
-    </div>
-</section> -->
-
     <footer class="site-footer">
       <div class="container footer-content">
         <div class="footer-left">
@@ -626,13 +473,14 @@
         </p>
         <div class="social-icons">
           <a
-            href="https://www.instagram.com/agoldresourcing?igsh=MW4yMnBxYWgyNWZmbQ%3D%3D&utm_source=qr"
+            href="https://www.instagram.com/agoldresourcing?igsh=MW4yMnBxYWgyNWZmbQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
             ><i class="fa-brands fa-instagram"></i
           ></a>
-          <a href="https://www.facebook.com/share/1DiniyiZ8G/?mibextid=wwXIfr"
+          <a href="https://www.facebook.com/share/1DiniyiZ8G/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
             ><i class="fa-brands fa-facebook-f"></i
           ></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
     </footer>

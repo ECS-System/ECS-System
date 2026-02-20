@@ -57,6 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- 5. EXPANDABLE CARDS LOGIC (The Problem/Solution section) ---
+    const expandCards = document.querySelectorAll('.expand-card');
+
+    expandCards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    });
+
 
     // --- 3. DYNAMIC YEAR ---
     const yearSpan = document.getElementById('current-year');

@@ -665,6 +665,137 @@ img {
   color: var(--text-secondary);
 }
 
+/* --- MERGED TIMELINE UPGRADE --- */
+
+/* Change to 4 columns to fit the 4 steps */
+.timeline-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    position: relative;
+    z-index: 1; /* Sits on top of the timeline line */
+}
+
+/* Base Timeline Item Styles */
+.timeline-item {
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 30px 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    border-color: var(--accent-orange);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] .timeline-item:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Adjust the line to intersect the markers perfectly */
+.timeline-line {
+    position: absolute;
+    top: 55px; /* Aligns with the center of the timeline marker */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 0;
+}
+
+/* Timeline Marker (The 1, 2, 3, 4 circles) */
+.timeline-marker {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    
+    /* Creates a "gap" in the line behind it */
+    box-shadow: 0 0 0 15px var(--bg-color); 
+}
+
+.timeline-item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+/* Chevron Icon at the bottom */
+.timeline-toggle {
+    display: block;
+    margin-top: 15px;
+    color: var(--accent-orange);
+    transition: transform 0.3s ease;
+}
+
+/* --- ACTIVE STATE LOGIC --- */
+.timeline-item.active {
+    border-color: var(--accent-orange);
+}
+
+.timeline-item.active .timeline-marker {
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: #ffffff;
+}
+
+.timeline-item.active .timeline-toggle {
+    transform: rotate(180deg);
+}
+
+/* Hidden Text Rules */
+.timeline-item .card-body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease;
+    text-align: left; /* Align text to the left for better reading */
+}
+
+.timeline-item.active .card-body {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+/* --- RESPONSIVE TIMELINE --- */
+@media (max-width: 1100px) {
+    .timeline-grid-4 {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on tablets */
+        gap: 40px;
+    }
+    .timeline-line {
+        display: none; /* Hide the line when it breaks into multiple rows */
+    }
+    .timeline-marker {
+        box-shadow: none; /* Remove the gap effect */
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-grid-4 {
+        grid-template-columns: 1fr; /* Stack vertically on phones */
+    }
+}
+
 /* History Section */
 .history-header {
   text-align: center;
@@ -1299,6 +1430,232 @@ img {
     color: #fff;
 }
 
+/* --- PROBLEM SECTION --- */
+.problem-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.problem-text h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.highlight-text {
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+.problem-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Risk List (Right Side) */
+.risk-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.risk-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.risk-item:hover {
+    transform: translateX(10px);
+    border-color: var(--accent-orange);
+}
+
+.risk-item i {
+    font-size: 1.5rem;
+    color: var(--accent-orange);
+    margin-top: 5px;
+}
+
+.risk-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.risk-item p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* --- SOLUTION SECTION (Expandable Cards) --- */
+.solution-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Columns */
+    gap: 20px;
+}
+
+.expand-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.expand-card:hover {
+    border-color: var(--accent-orange);
+    background-color: rgba(0,0,0,0.02);
+}
+[data-theme="dark"] .expand-card:hover {
+    background-color: rgba(255,255,255,0.02);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-header h3 {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.toggle-icon {
+    color: var(--text-secondary);
+    transition: transform 0.3s;
+}
+
+/* The Hidden Body */
+.card-body {
+    max-height: 0; /* Hidden by default */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.card-body p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.tech-detail {
+    font-size: 0.85rem !important;
+    color: var(--accent-orange) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-top: 15px !important;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+/* ACTIVE STATE (JS toggles this) */
+.expand-card.active {
+    border-color: var(--accent-orange);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.expand-card.active .card-body {
+    max-height: 300px; /* Enough to show content */
+    opacity: 1;
+}
+
+.expand-card.active .toggle-icon {
+    transform: rotate(45deg); /* Turns Plus into X */
+    color: var(--accent-orange);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .problem-layout { grid-template-columns: 1fr; }
+    .solution-grid { grid-template-columns: 1fr; }
+}
+/* --- MERGED EXPOSURE GRID --- */
+.exposure-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns to fit the 6 items cleanly */
+    gap: 20px;
+}
+
+/* Dark variant of the expand card to sit nicely on the orange background */
+.dark-mode-card {
+    background: rgba(60, 20, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff;
+}
+
+.dark-mode-card:hover {
+    background: rgba(60, 20, 0, 0.5) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.dark-mode-card .card-header h3 {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+}
+
+.dark-mode-card .toggle-icon {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dark-mode-card .tech-detail {
+    color: #ffffff !important;
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+    text-transform: none; /* Make it more readable */
+    font-weight: 400;
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+}
+
+/* Concluding Paragraph Styling */
+.exposure-conclusion {
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.15);
+    border-left: 4px solid #ffffff;
+    border-radius: 4px;
+}
+
+.exposure-conclusion p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .exposure-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .exposure-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .orange-header h2 {
+        font-size: 1.6rem !important;
+    }
+    .exposure-conclusion p {
+        font-size: 1.1rem;
+    }
+}
 /* =========================================
    9. GLOBAL RESPONSIVE RULES
    ========================================= */
