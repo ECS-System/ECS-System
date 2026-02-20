@@ -522,21 +522,6 @@ img {
     line-height: 1.4;
 }
 
-/* --- RESPONSIVE ADJUSTMENTS --- */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .core-principles {
-        padding-top: 100px; 
-    }
-    
-    .principles-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-}
-
 /* =========================================
    6. ABOUT PAGE SPECIFICS
    ========================================= */
@@ -776,25 +761,6 @@ img {
     padding-top: 15px;
 }
 
-/* --- RESPONSIVE TIMELINE --- */
-@media (max-width: 1100px) {
-    .timeline-grid-4 {
-        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on tablets */
-        gap: 40px;
-    }
-    .timeline-line {
-        display: none; /* Hide the line when it breaks into multiple rows */
-    }
-    .timeline-marker {
-        box-shadow: none; /* Remove the gap effect */
-    }
-}
-
-@media (max-width: 600px) {
-    .timeline-grid-4 {
-        grid-template-columns: 1fr; /* Stack vertically on phones */
-    }
-}
 
 /* History Section */
 .history-header {
@@ -1571,7 +1537,7 @@ img {
 }
 
 .expand-card.active .card-body {
-    max-height: 300px; /* Enough to show content */
+    max-height: 500px;
     opacity: 1;
 }
 
@@ -1638,32 +1604,36 @@ img {
     font-weight: 500;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .exposure-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
-    }
-}
-
-@media (max-width: 768px) {
-    .exposure-grid {
-        grid-template-columns: 1fr; /* 1 column on mobile */
-    }
-    .orange-header h2 {
-        font-size: 1.6rem !important;
-    }
-    .exposure-conclusion p {
-        font-size: 1.1rem;
-    }
-}
 /* =========================================
    9. GLOBAL RESPONSIVE RULES
    ========================================= */
+/* --- RESPONSIVE TIMELINE --- */
+@media (max-width: 1100px) {
+    .timeline-grid-4 {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on tablets */
+        gap: 40px;
+    }
+    .timeline-line {
+        display: none; /* Hide the line when it breaks into multiple rows */
+    }
+    .timeline-marker {
+        box-shadow: none; /* Remove the gap effect */
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-grid-4 {
+        grid-template-columns: 1fr; /* Stack vertically on phones */
+    }
+}
 @media (max-width: 992px) {
   .grid-row,
   .orange-grid {
     grid-template-columns: 1fr 1fr;
   }
+    .exposure-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    }
   .mission-container {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -1738,6 +1708,26 @@ img {
   .glossary-content h2 {
     font-size: 1rem;
   }
+    .exposure-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .orange-header h2 {
+        font-size: 1.6rem !important;
+    }
+    .exposure-conclusion p {
+        font-size: 1.1rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .core-principles {
+        padding-top: 100px; 
+    }
+    
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
 
   /* Footer Mobile */
   .footer-content,
