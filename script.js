@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 5. EXPANDABLE CARDS LOGIC (The Problem/Solution section) ---
-    const expandCards = document.querySelectorAll('.expand-card');
+    const expandCards = document.querySelectorAll('.expand-card, .why-card');
 
     expandCards.forEach(card => {
         card.addEventListener('click', function() {

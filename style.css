@@ -34,6 +34,12 @@
   box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg-color);
@@ -1544,6 +1550,238 @@ img {
 .expand-card.active .toggle-icon {
     transform: rotate(45deg); /* Turns Plus into X */
     color: var(--accent-orange);
+}
+/* --- BEYOND SPACE TIME GRID --- */
+.beyond-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.beyond-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.beyond-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-orange);
+}
+
+.beyond-card i {
+    font-size: 1.8rem;
+    color: var(--accent-orange);
+    margin-bottom: 15px;
+}
+
+.beyond-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* --- INDUSTRY PILL LIST (About Page) --- */
+.industry-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.industry-pill-list .pill {
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 50px; /* Makes them pill-shaped */
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+[data-theme="dark"] .industry-pill-list .pill {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* --- WHY SPACE TIME GRID (2x2 Layout) --- */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Space between cards */
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.why-card {
+    background: var(--bg-color);
+    /* Faint orange border to match design */
+    border: 1px solid rgba(230, 126, 34, 0.4); 
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.why-card:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+[data-theme="dark"] .why-card:hover {
+    background-color: rgba(255,255,255,0.02);
+}
+.why-card-body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes chevron down when expanded */
+}
+
+/* The Active (Expanded) State */
+.why-card.active {
+    border-color: var(--accent-orange); /* Highlights the border when open */
+}
+
+.why-card.active .why-card-body {
+    max-height: 1000px; /* Ceiling limit to allow text to flow naturally */
+    opacity: 1;
+}
+.why-number {
+    width: 45px;
+    height: 45px;
+    background: var(--accent-orange);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 auto 20px;
+}
+
+.why-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* The horizontal line across the card */
+.why-divider {
+    border: none;
+    border-top: 1px solid rgba(230, 126, 34, 0.2);
+    margin: 0 -40px 25px -40px;
+}
+
+.why-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    flex-grow: 1;
+    text-align: left;
+}
+
+.why-chevron {
+    color: var(--accent-orange);
+    margin-top: 30px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: transform 0.4s ease;
+}
+
+.why-card.active .why-chevron {
+    transform: rotate(180deg);
+}
+
+/* --- CONNECTING LINES (Desktop Only) --- */
+@media (min-width: 900px) {
+    /* Horizontal lines connecting Card 1 to 2, and Card 3 to 4 */
+    .why-card:nth-child(1)::after,
+    .why-card:nth-child(3)::after {
+        content: '';
+        position: absolute;
+        top: 25%; /* Aligns with the title section */
+        right: -40px; /* Spans the gap */
+        width: 40px;
+        height: 1px;
+        background: rgba(230, 126, 34, 0.4);
+    }
+
+    /* Vertical lines connecting Card 1 to 3, and Card 2 to 4 */
+    .why-card:nth-child(1)::before,
+    .why-card:nth-child(2)::before {
+        content: '';
+        position: absolute;
+        bottom: -40px; /* Spans the gap downwards */
+        left: 50%;
+        width: 1px;
+        height: 40px;
+        background: rgba(230, 126, 34, 0.4);
+    }
+}
+
+/* --- POST-GRID TEXT & QUOTE --- */
+.why-post-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.why-lead-text {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.why-conclusion-quote {
+    margin-top: 60px;
+    padding-top: 40px;
+    /* Clean top border separation */
+    border-top: 1px solid var(--border-color); 
+    text-align: left;
+}
+
+.why-conclusion-quote p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 900px) {
+    .why-grid {
+        grid-template-columns: 1fr; /* Stack into 1 column */
+        gap: 20px;
+    }
+    .why-card {
+        padding: 30px 20px;
+    }
+    .why-divider {
+        margin: 0 -20px 20px -20px;
+    }
+    .why-conclusion-quote p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .beyond-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .beyond-grid { grid-template-columns: 1fr; }
 }
 
 /* Responsive */
