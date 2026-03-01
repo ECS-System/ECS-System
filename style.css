@@ -1607,127 +1607,79 @@ img {
     background-color: rgba(255,255,255,0.05);
 }
 
-/* --- WHY SPACE TIME GRID (2x2 Layout) --- */
-.why-grid {
+/* --- SEAMLESS WHY SPACE TIME GRID (Static Design) --- */
+.why-seamless-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px; /* Space between cards */
+    gap: 0; /* No gap to create the seamless table look */
+    border: 1px solid var(--border-color); /* Outer bounding box */
     margin-bottom: 60px;
-    position: relative;
 }
 
 .why-card {
-    background: var(--bg-color);
-    /* Faint orange border to match design */
-    border: 1px solid rgba(230, 126, 34, 0.4); 
-    padding: 40px;
-    text-align: center;
-    position: relative;
-    border-radius: 4px;
+    background-color: var(--bg-color);
+    padding: 50px 40px;
+    border-right: 1px solid var(--border-color); /* Inner vertical line */
+    border-bottom: 1px solid var(--border-color); /* Inner horizontal line */
     display: flex;
     flex-direction: column;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    text-align: left; /* Align text to the left to match the logo */
+    transition: background-color 0.3s ease;
 }
 
+/* Remove right borders for the 2nd column */
+.why-card:nth-child(2n) {
+    border-right: none;
+}
+/* Remove bottom borders for the last row */
+.why-card:nth-child(3), .why-card:nth-child(4) {
+    border-bottom: none;
+}
+
+/* Subtle Hover State (Optional, keeps it feeling modern) */
 .why-card:hover {
     background-color: rgba(0,0,0,0.02);
 }
 [data-theme="dark"] .why-card:hover {
     background-color: rgba(255,255,255,0.02);
 }
-.why-card-body {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Pushes chevron down when expanded */
-}
 
-/* The Active (Expanded) State */
-.why-card.active {
-    border-color: var(--accent-orange); /* Highlights the border when open */
-}
-
-.why-card.active .why-card-body {
-    max-height: 1000px; /* Ceiling limit to allow text to flow naturally */
-    opacity: 1;
-}
-.why-number {
-    width: 45px;
-    height: 45px;
-    background: var(--accent-orange);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 auto 20px;
+.why-card .role-icon-wrapper {
+    margin-bottom: 25px;
 }
 
 .why-card h3 {
     font-size: 1.25rem;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: var(--text-primary);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
-}
-
-/* The horizontal line across the card */
-.why-divider {
-    border: none;
-    border-top: 1px solid rgba(230, 126, 34, 0.2);
-    margin: 0 -40px 25px -40px;
 }
 
 .why-card p {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-secondary);
-    flex-grow: 1;
-    text-align: left;
 }
 
-.why-chevron {
-    color: var(--accent-orange);
-    margin-top: 30px;
-    font-size: 1.2rem;
-    opacity: 0.7;
-    transition: transform 0.4s ease;
-}
-
-.why-card.active .why-chevron {
-    transform: rotate(180deg);
-}
-
-/* --- CONNECTING LINES (Desktop Only) --- */
-@media (min-width: 900px) {
-    /* Horizontal lines connecting Card 1 to 2, and Card 3 to 4 */
-    .why-card:nth-child(1)::after,
-    .why-card:nth-child(3)::after {
-        content: '';
-        position: absolute;
-        top: 25%; /* Aligns with the title section */
-        right: -40px; /* Spans the gap */
-        width: 40px;
-        height: 1px;
-        background: rgba(230, 126, 34, 0.4);
+/* Responsive Grid Adjustments */
+@media (max-width: 900px) {
+    .why-seamless-grid {
+        grid-template-columns: 1fr; /* Stack into 1 column */
+        border: none; /* Remove table border */
+        gap: 20px;
     }
-
-    /* Vertical lines connecting Card 1 to 3, and Card 2 to 4 */
-    .why-card:nth-child(1)::before,
-    .why-card:nth-child(2)::before {
-        content: '';
-        position: absolute;
-        bottom: -40px; /* Spans the gap downwards */
-        left: 50%;
-        width: 1px;
-        height: 40px;
-        background: rgba(230, 126, 34, 0.4);
+    .why-card {
+        border: 1px solid var(--border-color); /* Add full border back to individual cards */
+        border-radius: 4px;
+        padding: 30px 20px;
+    }
+    /* Reset the border removals for mobile */
+    .why-card:nth-child(2n),
+    .why-card:nth-child(3), 
+    .why-card:nth-child(4) {
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
     }
 }
 
