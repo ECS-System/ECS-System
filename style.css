@@ -1218,6 +1218,128 @@ img {
   color: var(--text-primary);
 }
 
+/* --- UNIFIED 17-ITEM RECTANGULAR GRID --- */
+.unified-rect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Columns matching the wireframe */
+    gap: 15px; /* Tight gap to fit all 17 cleanly */
+}
+
+/* Base Card Style */
+.rect-expand-card {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.rect-expand-card:hover {
+    background-color: rgba(0,0,0,0.02);
+    border-color: rgba(230, 126, 34, 0.4);
+}
+[data-theme="dark"] .rect-expand-card:hover {
+    background-color: rgba(255,255,255,0.02);
+}
+
+/* Header: Title and Plus Icon */
+.rect-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.rect-header h3 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* The Plus Icon */
+.rect-expand-card .toggle-icon {
+    color: var(--accent-orange);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hidden Body (Expands on Click) */
+.rect-body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease, margin-top 0.4s;
+}
+
+/* Inner Text Formatting */
+.rect-body p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.rect-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.rect-list li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.rect-list li::before {
+    content: '•';
+    color: var(--accent-orange);
+    position: absolute;
+    left: 0;
+}
+
+/* The highlighted concluding sentences */
+.rect-footer {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+
+/* --- ACTIVE (EXPANDED) STATE --- */
+.rect-expand-card.active {
+    border-color: var(--accent-orange);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.rect-expand-card.active .rect-body {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(230, 126, 34, 0.2); /* Thin orange line separates title from text */
+}
+
+/* Turn the Plus (+) into an 'X' */
+.rect-expand-card.active .toggle-icon {
+    transform: rotate(45deg); 
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .unified-rect-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}
+
 /* =========================================
    8. FOOTER
    ========================================= */
