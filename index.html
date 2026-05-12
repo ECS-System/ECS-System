@@ -122,10 +122,14 @@
       <div class="container hero-content">
         <div class="tag" data-aos="fade-down">A Gold Resourcing</div>
         <h1 data-aos="fade-up" data-aos-delay="200">
-           Specialist Engineering Consultancy in High Integrity Space Time Systems, Governance & Digital Transformation
+          Specialist Engineering Consultancy in High Integrity Space Time
+          Systems, Governance & Digital Transformation
         </h1>
         <p data-aos="fade-up" data-aos-delay="400">
-          We help organisations prevent silent system drift, reconciliation instability and transformation fragility in mission-critical environments through deterministic engineering, governance-led digital transformation and standards-aligned implementation.
+          We help organisations prevent silent system drift, reconciliation
+          instability and transformation fragility in mission-critical
+          environments through deterministic engineering, governance-led digital
+          transformation and standards-aligned implementation.
         </p>
       </div>
     </header>
@@ -361,12 +365,13 @@
       </div>
     </section>
     <div class="section-divider"></div>
-<section class="what-we-do section-padding">
+    <section class="what-we-do section-padding">
       <div class="container">
         <div class="section-header-center" data-aos="fade-up">
           <span class="tag-label">What We Do</span>
           <h2 style="max-width: 900px; margin: 0 auto 20px">
-            We design deterministic space time infrastructure for organisations where precision is not optional.
+            We design deterministic space time infrastructure for organisations
+            where precision is not optional.
           </h2>
           <p
             style="
@@ -481,25 +486,38 @@
           </div>
         </div>
         <div class="why-post-content" data-aos="fade-up" data-aos-delay="200">
-            
           <h2>Broader Digital Transformation Capability</h2>
-            <p class="why-lead-text">
-                While our origins are in high Integrity space time engineering, the underlying discipline that defines our work is governance led digital transformation.  We apply structured, standards aligned, risk controlled implementation methodologies to complex digital environments  translating technical change into operational improvement.
-            </p>
+          <p class="why-lead-text">
+            While our origins are in high Integrity space time engineering, the
+            underlying discipline that defines our work is governance led
+            digital transformation.  We apply structured, standards aligned,
+            risk controlled implementation methodologies to complex digital
+            environments  translating technical change into operational
+            improvement.
+          </p>
 
-            <div class="principles-apply-box">
-                <h4 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--accent-orange); font-weight: 500;">
-                    This includes
-                </h4>
-                <div class="industry-pill-list">
-                    <span class="pill">Digital maturity assessment</span>
-                    <span class="pill">Transformation programme governance</span>
-                    <span class="pill">Systems modernisation</span>
-                    <span class="pill">Structured implementation planning across public and private sector organisations.</span>
-                </div>
+          <div class="principles-apply-box">
+            <h4
+              style="
+                margin-bottom: 20px;
+                font-size: 1.1rem;
+                color: var(--accent-orange);
+                font-weight: 500;
+              "
+            >
+              This includes
+            </h4>
+            <div class="industry-pill-list">
+              <span class="pill">Digital maturity assessment</span>
+              <span class="pill">Transformation programme governance</span>
+              <span class="pill">Systems modernisation</span>
+              <span class="pill"
+                >Structured implementation planning across public and private
+                sector organisations.</span
+              >
             </div>
+          </div>
         </div>
-
       </div>
     </section>
     <div class="section-divider"></div>
@@ -553,8 +571,6 @@
       </div>
     </section>
     <div class="section-divider"></div>
-
-    
 
     <section class="orange-section section-padding">
       <div class="container">
@@ -784,6 +800,231 @@
     </section>
     <div class="section-divider"></div>
 
+    <section id="api" class="section modern-api-section" data-aos="fade-up">
+      <div class="api-header-centered">
+        <h2 class="section-title">API Documentation</h2>
+        <p class="section-subtitle">
+          RESTful APIs with comprehensive documentation, code examples,<br />
+          and interactive testing.
+        </p>
+      </div>
+
+      <div class="modern-tabs-container">
+        <div class="modern-tabs-pill">
+          <button
+            class="modern-tab active"
+            onclick="switchModernTab('ephemeris', this)"
+          >
+            Compute Time
+          </button>
+          <button class="modern-tab" onclick="switchModernTab('catalog', this)">
+            Full Scientific Date
+          </button>
+          <button class="modern-tab" onclick="switchModernTab('time', this)">
+            Validate Dataset
+          </button>
+        </div>
+      </div>
+
+      <div class="api-card-modern">
+        <div
+          id="content-ephemeris"
+          class="modern-tab-content"
+          style="display: block"
+        >
+          <div class="api-card-header">
+            <h3>Compute Time <span class="badge-get">POST</span></h3>
+            <!-- <p>Get real-time planetary positions and velocities</p> -->
+          </div>
+          <div class="api-code-group">
+            <div class="code-label-row">
+              <span class="code-label">Request</span>
+              <button
+                class="icon-copy-btn"
+                onclick="copyCode(this)"
+                aria-label="Copy code"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+            <div class="modern-code-block single-line">
+              <code
+                >curl -X POST
+                "https://www.ecssys.com/docs#/default/compute_time_time_compute_post"
+                \ -H "A...</code
+              >
+            </div>
+          </div>
+          <div class="api-code-group">
+            <div class="code-label-row">
+              <span class="code-label">Response</span>
+            </div>
+            <div class="modern-code-block multi-line">
+              <pre><code>{
+  "input": "2026-01-01T00:00:00Z",
+  "utc": "2026-01-01T00:00:00+00:00",
+  "tai": "2026-01-01T00:00:37+00:00",
+  "tt": "2026-01-01T00:01:09.184000+00:00",
+  "tdb": "2026-01-01T00:01:09.183919+00:00",
+  "gps": "2026-01-01T00:00:18+00:00",
+  "jd_utc": 2461041.5,
+  "jd_tt": 2461041.500800741,
+  "tai_minus_utc": 37
+}
+</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="content-catalog"
+          class="modern-tab-content"
+          style="display: none"
+        >
+          <div class="api-card-header">
+            <h3>Full Scientific Date <span class="badge-get">POST</span></h3>
+            <!-- <p>Access comprehensive star catalog data</p> -->
+          </div>
+          <div class="api-code-group">
+            <div class="code-label-row">
+              <span class="code-label">Request</span>
+              <button
+                class="icon-copy-btn"
+                onclick="copyCode(this)"
+                aria-label="Copy code"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+            <div class="modern-code-block single-line">
+              <code
+                >curl -X POST
+                "https://www.ecssys.com/docs#/default/get_full_state_time_state_full_post"</code
+              >
+            </div>
+          </div>
+          <div class="api-code-group">
+            <div class="code-label-row">
+              <span class="code-label">Response</span>
+            </div>
+            <div class="modern-code-block multi-line">
+              <pre><code>{
+  "input": "2026-01-01T00:00:00Z",
+  "source": {
+    "dataset": "TAI_UTC_RECONCILED",
+    "model": "time_state_aware",
+    "data_product": "ECS_UNIFIED_LEAP_SECOND_TIME_AUTHORITY",
+    "method": "mathematical_time_engine_reconciled_with_dataset",
+    "source_authorities": [
+      "IERS_BULLETIN_C",
+      "IANA_TZDB_LEAPSECONDS",
+      "USNO_TAI_UTC"
+    ],
+    "as_of": "2026-04-24T11:49:09.383871Z",
+    "generated_at": "2026-04-24T11:49:09.501860Z",
+    "status": "ok",
+    "dataset_id": "ecs.time.leap_seconds.authority.v1",
+    "dataset_version": null,
+    "content_hash": null,
+    "canonical_schema": null,
+    "source_policy": null,
+    "traceability_endpoint": "/time/leapseconds/report"
+  },
+  "scales": {
+    "utc": "2026-01-01T00:00:00+00:00",
+    "tai": "2026-01-01T00:00:37+00:00",
+    "tt": "2026-01-01T00:01:09.184000+00:00",
+    "tdb": "2026-01-01T00:01:09.183919+00:00",
+    "gps": "2026-01-01T00:00:18+00:00"
+  },
+  "julian": {
+    "jd_utc": 2461041.5,
+    "jd_tt": 2461041.500800741
+  },
+  "offsets": {
+    "tai_minus_utc": 37,
+    "tt_minus_tai": 32.184,
+    "gps_minus_tai": -19
+  },
+  "derived": {
+    "t_tt_centuries": 0.2600000219230912,
+    "seconds_since_j2000": 820497669.1840142
+  }
+}
+</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div id="content-time" class="modern-tab-content" style="display: none">
+          <div class="api-card-header">
+            <h3>Validate Dataset <span class="badge-get">GET</span></h3>
+            <!-- <p>Convert between different time standards</p> -->
+          </div>
+          <div class="api-code-group">
+            <div class="code-label-row">
+              <span class="code-label">Request</span>
+              <button
+                class="icon-copy-btn"
+                onclick="copyCode(this)"
+                aria-label="Copy code"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+            <div class="modern-code-block single-line">
+              <code
+                >curl -X GET
+                "https://www.ecssys.com/docs#/default/validate_dataset_time_validate_get"</code
+              >
+            </div>
+          </div>
+          <div class="api-code-group">
+            <div class="code-label-row">
+              <span class="code-label">Response</span>
+            </div>
+            <div class="modern-code-block multi-line">
+              <pre><code>{
+  "timestamp": "2026-01-01T00:00:00Z",
+  "dataset": "TAI_UTC_RECONCILED",
+  "valid": true,
+  "active_segment": {
+    "effective_from": "2017-01-01T00:00:00Z",
+    "tai_minus_utc": 37,
+    "segment_type": "step",
+    "source": "IANA"
+  },
+  "computed": {
+    "tai_minus_utc": 37,
+    "utc": "2026-01-01T00:00:00+00:00",
+    "tai": "2026-01-01T00:00:37+00:00"
+  },
+  "coverage": {
+    "covered_by_dataset": true,
+    "is_future": false,
+    "uses_announced_event": false
+  },
+  "traceability_endpoint": "/time/leapseconds/query"
+}
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="api-bottom-cta">
+        <button
+          class="btn-provenance-contract"
+          onclick="scrollToSection('provenance')"
+        >
+          Read the Data Provenance Contract
+          <span class="icon-circle-arrow"
+            ><i class="fa-solid fa-arrow-up-right"></i
+          ></span>
+        </button>
+      </div>
+    </section>
+
     <section class="orange-section section-padding">
       <div class="container">
         <div class="cta-banner" data-aos="zoom-in">
@@ -861,7 +1102,10 @@
             rel="noopener noreferrer"
             ><i class="fa-brands fa-tiktok"></i
           ></a>
-          <a href="https://www.linkedin.com/company/a-gold-resourcing/" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://www.linkedin.com/company/a-gold-resourcing/"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="fa-brands fa-linkedin-in"></i
           ></a>
         </div>

@@ -1784,6 +1784,171 @@ img {
     color: var(--text-secondary);
 }
 
+/* --- Modern API Section Styles --- */
+.modern-api-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.api-header-centered {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.api-header-centered .section-subtitle {
+  color: #4b5563; /* Subtle grey */
+  line-height: 1.5;
+}
+
+/* Pill Tabs */
+.modern-tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.modern-tabs-pill {
+  display: inline-flex;
+  background-color: #f3f4f6; /* Light grey container */
+  border-radius: 50px;
+  padding: 0.35rem;
+}
+
+.modern-tab {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modern-tab.active {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Modern Card Layout */
+.api-card-modern {
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  margin-bottom: 3rem;
+}
+
+.api-card-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge-get {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.api-card-header p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* Code Blocks */
+.api-code-group {
+  margin-bottom: 1.5rem;
+}
+
+.code-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.code-label {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.icon-copy-btn {
+  background: none;
+  border: none;
+  color: #111827; /* Dark icon */
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.modern-code-block {
+  background-color: #f4f4f5; /* Light grey matching image */
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.modern-code-block code {
+  font-family: 'Courier New', Courier, monospace; /* Or your preferred monospace */
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+/* Specific spacing for the JSON tree */
+.modern-code-block.multi-line pre {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* Bottom CTA Button */
+.api-bottom-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.btn-provenance-contract {
+  background-color: #d35400; /* Matching the burnt orange */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem; /* More padding on right to account for circle */
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-provenance-contract:hover {
+  background-color: #b94a00;
+}
+
+.icon-circle-arrow {
+  background-color: white;
+  color: #d35400;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Responsive Grid Adjustments */
 @media (max-width: 900px) {
     .why-seamless-grid {

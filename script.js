@@ -1,3 +1,14 @@
+function switchModernTab(tabId, clickedButton) {
+  const tabs = document.querySelectorAll('.modern-tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  clickedButton.classList.add('active');
+
+  const contents = document.querySelectorAll('.modern-tab-content');
+  contents.forEach(content => content.style.display = 'none');
+
+  document.getElementById('content-' + tabId).style.display = 'block';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     
     const body = document.body;
