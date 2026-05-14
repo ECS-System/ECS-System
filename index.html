@@ -62,6 +62,7 @@
         <div class="nav-links desktop-only">
           <a href="/about/">About</a>
           <a href="/team/">Team</a>
+          <a href="/developers/">Developers</a>
         </div>
 
         <div class="nav-actions desktop-only">
@@ -133,6 +134,211 @@
         </p>
       </div>
     </header>
+    <section
+      id="telemetry"
+      class="section"
+      style="background-color: #0f172a; padding: 4rem 1rem"
+    >
+      <div style="max-width: 1000px; margin: 0 auto">
+        <div
+          style="
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          "
+        >
+          <div>
+            <h2 style="color: white; font-size: 1.5rem; margin-bottom: 0.5rem">
+              Live Time Reconciliation Engine
+            </h2>
+            <p style="color: #94a3b8; font-size: 0.9rem">
+              Polling POST /time/compute
+            </p>
+          </div>
+          <div
+            id="telemetry-status"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              color: #10b981;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+          >
+            <span
+              style="
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                background: #10b981;
+                border-radius: 50%;
+                box-shadow: 0 0 8px #10b981;
+              "
+            ></span>
+            LIVE DATA
+          </div>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+          "
+        >
+          <!-- UTC -->
+          <div
+            style="
+              background: #1e293b;
+              padding: 1.5rem;
+              border-radius: 8px;
+              border: 1px solid #334155;
+            "
+          >
+            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
+              UTC (Coordinated Universal)
+            </div>
+            <div
+              id="val-utc"
+              style="
+                color: #38bdf8;
+                font-family: monospace;
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+              "
+            >
+              Awaiting data...
+            </div>
+            <div
+              id="val-jd-utc"
+              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
+            >
+              JD: --
+            </div>
+          </div>
+
+          <!-- TAI -->
+          <div
+            style="
+              background: #1e293b;
+              padding: 1.5rem;
+              border-radius: 8px;
+              border: 1px solid #334155;
+            "
+          >
+            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
+              TAI (International Atomic)
+            </div>
+            <div
+              id="val-tai"
+              style="
+                color: #f472b6;
+                font-family: monospace;
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+              "
+            >
+              Awaiting data...
+            </div>
+            <div
+              id="off-tai"
+              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
+            >
+              Offset: --
+            </div>
+          </div>
+
+          <!-- GPS -->
+          <div
+            style="
+              background: #1e293b;
+              padding: 1.5rem;
+              border-radius: 8px;
+              border: 1px solid #334155;
+            "
+          >
+            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
+              GPS Time
+            </div>
+            <div
+              id="val-gps"
+              style="
+                color: #10b981;
+                font-family: monospace;
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+              "
+            >
+              Awaiting data...
+            </div>
+            <div
+              id="off-gps"
+              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
+            >
+              Offset: --
+            </div>
+          </div>
+
+          <!-- TT -->
+          <div
+            style="
+              background: #1e293b;
+              padding: 1.5rem;
+              border-radius: 8px;
+              border: 1px solid #334155;
+            "
+          >
+            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
+              TT (Terrestrial Time)
+            </div>
+            <div
+              id="val-tt"
+              style="
+                color: #fbbf24;
+                font-family: monospace;
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+              "
+            >
+              Awaiting data...
+            </div>
+            <div
+              id="val-jd-tt"
+              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
+            >
+              JD: --
+            </div>
+          </div>
+
+          <!-- TDB -->
+          <div
+            style="
+              background: #1e293b;
+              padding: 1.5rem;
+              border-radius: 8px;
+              border: 1px solid #334155;
+            "
+          >
+            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
+              TDB (Barycentric)
+            </div>
+            <div
+              id="val-tdb"
+              style="
+                color: #a78bfa;
+                font-family: monospace;
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+              "
+            >
+              Awaiting data...
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="section-divider"></div>
 
     <section class="orange-section section-padding">
@@ -898,8 +1104,9 @@
             </div>
             <div class="modern-code-block single-line">
               <code
-                >curl -X POST
-                "https://www.ecssys.com/docs#/default/get_full_state_time_state_full_post"</code
+                >curl -X POST "https://www.ecssys.com/docs/time/state/full" \ -H
+                "Content-Type: application/json" \ -d '{ "timestamp":
+                "2026-01-01T00:00:00Z" }'</code
               >
             </div>
           </div>
@@ -1043,6 +1250,7 @@
       </div>
     </section>
     <div class="section-divider"></div>
+
     <footer class="site-footer">
       <div class="container footer-content">
         <div class="footer-left">
@@ -1119,6 +1327,87 @@
         duration: 1000,
         once: true,
         offset: 100,
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        async function fetchTimeSpineData() {
+          try {
+            const currentTimestamp = new Date().toISOString();
+            const apiUrl = "https://www.ecssys.com/time/compute";
+
+            const response = await fetch(apiUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ timestamp: currentTimestamp }),
+            });
+
+            if (!response.ok) throw new Error("Network Error");
+
+            const data = await response.json();
+            updateUI(data, true);
+          } catch (error) {
+            // FALLBACK: Simulate data if network drops or CORS fails
+            const now = new Date();
+
+            // Calculate mock Julian Date dynamically based on current time
+            const jdUtcBase = now.getTime() / 86400000 + 2440587.5;
+
+            const mockData = {
+              utc: now.toISOString(),
+              tai: new Date(now.getTime() + 37000).toISOString(),
+              gps: new Date(now.getTime() + 18000).toISOString(),
+              tt: new Date(now.getTime() + 69184).toISOString(),
+              tdb: new Date(now.getTime() + 69185).toISOString(),
+              tai_minus_utc: 37,
+              jd_utc: jdUtcBase,
+              jd_tt: jdUtcBase + 69.184 / 86400,
+            };
+
+            updateUI(mockData, false);
+          }
+        }
+
+        function updateUI(data, isLive) {
+          // Helper to strip out everything but the time (HH:MM:SS.sss)
+          const formatTime = (isoStr) => {
+            if (!isoStr) return "--:--:--";
+            return isoStr.split("T")[1].split("+")[0].replace("Z", "");
+          };
+
+          // Update Clocks
+          document.getElementById("val-utc").textContent = formatTime(data.utc);
+          document.getElementById("val-tai").textContent = formatTime(data.tai);
+          document.getElementById("val-gps").textContent = formatTime(data.gps);
+          document.getElementById("val-tt").textContent = formatTime(data.tt);
+          document.getElementById("val-tdb").textContent = formatTime(data.tdb);
+
+          // Update Offsets
+          document.getElementById("off-tai").textContent =
+            `Offset: +${data.tai_minus_utc}s (from UTC)`;
+          document.getElementById("off-gps").textContent =
+            `Offset: -19s (from TAI)`;
+
+          // Update Julian Dates (formatting to 5 decimal places to match your JSON)
+          document.getElementById("val-jd-utc").textContent =
+            `JD: ${data.jd_utc.toFixed(5)}`;
+          document.getElementById("val-jd-tt").textContent =
+            `JD: ${data.jd_tt.toFixed(5)}`;
+
+          // Status Indicator Logic
+          const statusEl = document.getElementById("telemetry-status");
+          if (isLive) {
+            statusEl.innerHTML = `<span style="display: inline-block; width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span> LIVE DATA`;
+            statusEl.style.color = "#10b981";
+          } else {
+            statusEl.innerHTML = `<span style="display: inline-block; width: 8px; height: 8px; background: #fbbf24; border-radius: 50%; box-shadow: 0 0 8px #fbbf24;"></span> SIMULATION MODE`;
+            statusEl.style.color = "#fbbf24";
+          }
+        }
+
+        // Run immediately, then poll every 1 second for a smooth ticking clock
+        fetchTimeSpineData();
+        setInterval(fetchTimeSpineData, 1000);
       });
     </script>
   </body>

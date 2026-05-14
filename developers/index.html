@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Documentation | ECS Time Spine</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="shortcut icon" href="../AGR LOGO PNG.png" type="image/x-icon" />
+
+    <!-- Swagger UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swagger-ui-dist@5.0.0/swagger-ui.css"
+    />
+
+    <!-- FontAwesome for the home icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <style>
+      /* Reset and Custom ECS Header */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      .ecs-navbar {
+        background-color: #0f172a;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .ecs-navbar .logo {
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .ecs-navbar .back-btn {
+        color: #d35400;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .ecs-navbar .back-btn:hover {
+        color: #e67e22;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="ecs-navbar">
+      <a href="#" class="logo">
+        <!-- You can insert your image 38.png logo here if desired -->
+        ECS System
+      </a>
+      <a href="/" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Homepage
+      </a>
+    </nav>
+    <div id="redoc-container"></div>
+
+    <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+    <script>
+      Redoc.init(
+        "./swagger.json",
+        {
+          theme: { colors: { primary: { main: "#d35400" } } },
+          hideDownloadButton: true,
+        },
+        document.getElementById("redoc-container"),
+      );
+    </script>
+  </body>
+</html>
