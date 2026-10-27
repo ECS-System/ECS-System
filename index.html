@@ -1,624 +1,576 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A-Gold Resourcing | Data Strategy, Sorting & Classification</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="./AGR LOGO PNG.png" type="image/x-icon" />
-    <meta
-      name="description"
-      content="Not all data is worth extracting. A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and eliminate infrastructure waste."
-    />
-    <meta
-      name="keywords"
-      content="Data Strategy, Data Triage, Cloud Cost Optimization, High Integrity Systems, Data Classification, Digital Transformation"
-    />
-    <meta name="author" content="A-Gold Resourcing" />
-    <meta name="robots" content="index, follow" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.agoldresourcing.co.uk/" />
-    <meta property="og:title" content="A-Gold Resourcing | Not all data is worth extracting" />
-    <meta
-      property="og:description"
-      content="We get, sort, and classify your data to help your organisation save money and maximize time."
-    />
-    <meta
-      property="og:image"
-      content="https://www.agoldresourcing.co.uk/assets/AGR.jpeg"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body data-theme="light">
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="container nav-content">
-        <a href="/" class="logo-link">
-          <img
-            src="./AGOLD RESOURCING BRANDING 1 1.png"
-            alt="A-Gold Resourcing Logo"
-            class="nav-logo logo-light"
-          />
-          <img
-            src="./AGOLD RESOURCING BRANDING png 1.png"
-            alt="A-Gold Resourcing Logo"
-            class="nav-logo logo-dark"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A-Gold Resourcing | Data Strategy, Sorting & Classification</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="./AGR LOGO PNG.png" type="image/x-icon" />
+  <meta name="description"
+    content="Not all data is worth extracting. A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and eliminate infrastructure waste." />
+  <meta name="keywords"
+    content="Data Strategy, Data Triage, Cloud Cost Optimization, High Integrity Systems, Data Classification, Digital Transformation" />
+  <meta name="author" content="A-Gold Resourcing" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.agoldresourcing.co.uk/" />
+  <meta property="og:title" content="A-Gold Resourcing | Not all data is worth extracting" />
+  <meta property="og:description"
+    content="We get, sort, and classify your data to help your organisation save money and maximize time." />
+  <meta property="og:image" content="https://www.agoldresourcing.co.uk/assets/AGR.jpeg" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body data-theme="light">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="/" class="logo-link">
+        <img src="./AGOLD RESOURCING BRANDING png 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-light" />
+        <img src="./AGOLD RESOURCING BRANDING 1 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-dark" />
+      </a>
+
+      <div class="nav-links desktop-only">
+        <a href="#methodology" onclick="scrollToSection('methodology')">How We Work</a>
+        <a href="/about/">About</a>
+        <a href="/team/">Team</a>
+        <a href="/developers/">Developers</a>
+      </div>
+
+      <div class="nav-actions desktop-only">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fa-regular fa-sun icon-sun"></i>
+          <i class="fa-regular fa-moon icon-moon"></i>
+        </button>
+        <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform" target="_blank"
+          rel="noopener noreferrer" class="btn btn-primary">
+          Book an Assessment <i class="fa-solid fa-arrow-right"></i>
         </a>
+      </div>
 
-        <div class="nav-links desktop-only">
-          <a href="#simulator" onclick="scrollToSection('simulator')">Simulator</a>
-          <a href="#problem" onclick="scrollToSection('problem')">The Problem</a>
-          <a href="#methodology" onclick="scrollToSection('methodology')">How We Work</a>
-          <a href="#precision" onclick="scrollToSection('precision')">Precision Heritage</a>
-          <a href="/about/">About</a>
-          <a href="/team/">Team</a>
-          <a href="/developers/">Developers</a>
-        </div>
+      <button class="hamburger" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </button>
+    </div>
 
-        <div class="nav-actions desktop-only">
-          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
-            <i class="fa-regular fa-sun icon-sun"></i>
-            <i class="fa-regular fa-moon icon-moon"></i>
-          </button>
-          <a
-            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-          >
-            Book an Assessment <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu">
+      <div class="mobile-nav-links">
+        <a href="#methodology">How We Work</a>
+        <a href="/about/">About</a>
+        <a href="/team/">Team</a>
+        <a href="/developers/">Developers</a>
+      </div>
 
-        <button class="hamburger" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars open-icon"></i>
-          <i class="fa-solid fa-xmark close-icon"></i>
+      <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform" target="_blank"
+        rel="noopener noreferrer" class="btn btn-primary">
+        Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <div
+        style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border-color);">
+        <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Switch Appearance:</span>
+        <button id="mobile-theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fa-regular fa-sun icon-sun"></i>
+          <i class="fa-regular fa-moon icon-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="pill-badge" data-aos="fade-down">
+        <span class="badge-dot"></span>
+        Data Strategy & Precision Triage
+      </div>
+
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+        Not all data is worth extracting.<br />
+        <span class="highlight-text">We get, sort, and classify data to save money and maximize time.</span>
+      </h1>
+
+      <p class="hero-lead" data-aos="fade-up" data-aos-delay="200">
+        Organisations burn millions storing, transforming, and querying bloated data they never use. We engineer
+        precision triage architectures that eliminate low-yield noise at ingestion—slashing infrastructure bills,
+        freeing engineering time, and delivering deterministic clarity.
+      </p>
+
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform" target="_blank"
+          rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          Book a Pipeline Assessment <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="btn btn-secondary btn-lg" onclick="scrollToSection('simulator')">
+          <i class="fa-solid fa-play" style="color: var(--accent-orange);"></i> View Interactive Simulator
         </button>
       </div>
 
-      <!-- Mobile Navigation Drawer -->
-      <div class="mobile-menu">
-        <div class="mobile-nav-links">
-          <a href="#simulator">Live Simulator</a>
-          <a href="#problem">The Problem</a>
-          <a href="#methodology">How We Work</a>
-          <a href="#precision">Precision Heritage</a>
-          <a href="/about/">About</a>
-          <a href="/team/">Team</a>
-          <a href="/developers/">Developers</a>
+      <!-- Key Metrics Ribbon -->
+      <div class="hero-stats-ribbon" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-item">
+          <div class="stat-value">74%</div>
+          <div class="stat-label">Average Redundant Noise Filtered</div>
         </div>
-
-        <a
-          href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          Book an Assessment <i class="fa-solid fa-arrow-right"></i>
-        </a>
-
-        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border-color);">
-          <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Switch Appearance:</span>
-          <button id="mobile-theme-toggle" class="theme-btn" aria-label="Toggle theme">
-            <i class="fa-regular fa-sun icon-sun"></i>
-            <i class="fa-regular fa-moon icon-moon"></i>
-          </button>
+        <div class="stat-item">
+          <div class="stat-value">$42k+</div>
+          <div class="stat-label">Avg. Annual Cloud Storage Saved</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">10x</div>
+          <div class="stat-label">Faster Query & Audit Verification</div>
         </div>
       </div>
-    </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="container hero-content">
-        <div class="pill-badge" data-aos="fade-down">
+  <!-- Section 1: Live Interactive Data Pipeline Simulator -->
+  <section id="simulator" class="section-padding bg-subtle-section">
+    <div class="container">
+      <div class="text-center" style="max-width: 820px; margin: 0 auto 48px;" data-aos="fade-up">
+        <div class="pill-badge">
           <span class="badge-dot"></span>
-          Data Strategy & Precision Triage
+          Real-Time Interactive Architecture
         </div>
-
-        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-          Not all data is worth extracting.<br />
-          <span class="highlight-text">We get, sort, and classify data to save money and maximize time.</span>
-        </h1>
-
-        <p class="hero-lead" data-aos="fade-up" data-aos-delay="200">
-          Organisations burn millions storing, transforming, and querying bloated data they never use. We engineer precision triage architectures that eliminate low-yield noise at ingestion—slashing infrastructure bills, freeing engineering time, and delivering deterministic clarity.
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+          Watch Triage in Action: Stop Ingesting Waste
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          See how our triage model evaluates raw streaming data in real time, discarding costly non-essential noise
+          before it hits your data warehouse, and indexing only high-integrity signals.
         </p>
-
-        <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-          <a
-            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary btn-lg"
-          >
-            Book a Pipeline Assessment <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <button
-            class="btn btn-secondary btn-lg"
-            onclick="scrollToSection('simulator')"
-          >
-            <i class="fa-solid fa-play" style="color: var(--accent-orange);"></i> View Interactive Simulator
-          </button>
-        </div>
-
-        <!-- Key Metrics Ribbon -->
-        <div class="hero-stats-ribbon" data-aos="fade-up" data-aos-delay="400">
-          <div class="stat-item">
-            <div class="stat-value">74%</div>
-            <div class="stat-label">Average Redundant Noise Filtered</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">$42k+</div>
-            <div class="stat-label">Avg. Annual Cloud Storage Saved</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">10x</div>
-            <div class="stat-label">Faster Query & Audit Verification</div>
-          </div>
-        </div>
       </div>
-    </header>
 
-    <!-- Section 1: Live Interactive Data Pipeline Simulator -->
-    <section id="simulator" class="section-padding bg-subtle-section">
-      <div class="container">
-        <div class="text-center" style="max-width: 820px; margin: 0 auto 48px;" data-aos="fade-up">
-          <div class="pill-badge">
-            <span class="badge-dot"></span>
-            Real-Time Interactive Architecture
+      <!-- Simulator Widget -->
+      <div class="simulator-container" data-aos="zoom-in" data-aos-delay="100">
+        <div class="simulator-header">
+          <div class="simulator-title-group">
+            <h3>
+              <i class="fa-solid fa-bolt" style="color: var(--accent-orange);"></i>
+              ECS Data Triage Engine Simulator
+            </h3>
+            <span class="status-live-indicator">
+              <span class="dot"></span> LIVE SIMULATION STREAM
+            </span>
           </div>
-          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
-            Watch Triage in Action: Stop Ingesting Waste
-          </h2>
-          <p style="color: var(--text-secondary); font-size: 1.05rem;">
-            See how our triage model evaluates raw streaming data in real time, discarding costly non-essential noise before it hits your data warehouse, and indexing only high-integrity signals.
-          </p>
+
+          <div class="simulator-controls">
+            <button id="sim-toggle-stream" class="btn btn-secondary btn-sm">
+              <i class="fa-solid fa-pause"></i> Pause Stream
+            </button>
+          </div>
         </div>
 
-        <!-- Simulator Widget -->
-        <div class="simulator-container" data-aos="zoom-in" data-aos-delay="100">
-          <div class="simulator-header">
-            <div class="simulator-title-group">
-              <h3>
-                <i class="fa-solid fa-bolt" style="color: var(--accent-orange);"></i>
-                ECS Data Triage Engine Simulator
-              </h3>
-              <span class="status-live-indicator">
-                <span class="dot"></span> LIVE SIMULATION STREAM
-              </span>
-            </div>
-
-            <div class="simulator-controls">
-              <button id="sim-toggle-stream" class="btn btn-secondary btn-sm">
-                <i class="fa-solid fa-pause"></i> Pause Stream
-              </button>
-            </div>
+        <!-- KPI Realtime Metrics Bar -->
+        <div class="simulator-kpi-bar">
+          <div class="kpi-cell">
+            <div class="kpi-label">Packets Ingested</div>
+            <div id="kpi-ingested" class="kpi-number">1,240</div>
           </div>
-
-          <!-- KPI Realtime Metrics Bar -->
-          <div class="simulator-kpi-bar">
-            <div class="kpi-cell">
-              <div class="kpi-label">Packets Ingested</div>
-              <div id="kpi-ingested" class="kpi-number">1,240</div>
-            </div>
-            <div class="kpi-cell">
-              <div class="kpi-label">Noise Discarded</div>
-              <div id="kpi-filtered-pct" class="kpi-number highlight-crimson">74.2%</div>
-            </div>
-            <div class="kpi-cell">
-              <div class="kpi-label">Cloud Spend Saved</div>
-              <div id="kpi-cost-saved" class="kpi-number highlight-emerald">$34,500</div>
-            </div>
-            <div class="kpi-cell">
-              <div class="kpi-label">Engineering Hours Saved</div>
-              <div id="kpi-hours-saved" class="kpi-number highlight-orange">284 hrs</div>
-            </div>
+          <div class="kpi-cell">
+            <div class="kpi-label">Noise Discarded</div>
+            <div id="kpi-filtered-pct" class="kpi-number highlight-crimson">74.2%</div>
           </div>
+          <div class="kpi-cell">
+            <div class="kpi-label">Cloud Spend Saved</div>
+            <div id="kpi-cost-saved" class="kpi-number highlight-emerald">$34,500</div>
+          </div>
+          <div class="kpi-cell">
+            <div class="kpi-label">Engineering Hours Saved</div>
+            <div id="kpi-hours-saved" class="kpi-number highlight-orange">284 hrs</div>
+          </div>
+        </div>
 
-          <!-- 3-Stage Pipeline Display -->
-          <div class="pipeline-stages-grid">
-            <!-- Stage 1 -->
-            <div class="pipeline-stage">
-              <div class="stage-header">
-                <div class="stage-title">
-                  <span class="pill-tag pill-tag-blue">STAGE 1</span>
-                  <strong>GET</strong> (Capture at Source)
-                </div>
-                <i class="fa-solid fa-cloud-arrow-down" style="color: var(--accent-blue);"></i>
+        <!-- 3-Stage Pipeline Display -->
+        <div class="pipeline-stages-grid">
+          <!-- Stage 1 -->
+          <div class="pipeline-stage">
+            <div class="stage-header">
+              <div class="stage-title">
+                <span class="pill-tag pill-tag-blue">STAGE 1</span>
+                <strong>GET</strong> (Capture at Source)
               </div>
-              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
-                Intercepting incoming telemetry, webhooks, and raw database events.
-              </p>
-              <div id="stream-ingest" class="stage-stream-box"></div>
+              <i class="fa-solid fa-cloud-arrow-down" style="color: var(--accent-blue);"></i>
             </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
+              Intercepting incoming telemetry, webhooks, and raw database events.
+            </p>
+            <div id="stream-ingest" class="stage-stream-box"></div>
+          </div>
 
-            <!-- Stage 2 -->
-            <div class="pipeline-stage">
-              <div class="stage-header">
-                <div class="stage-title">
-                  <span class="pill-tag pill-tag-crimson">STAGE 2</span>
-                  <strong>SORT</strong> (Evaluate & Discard)
-                </div>
-                <i class="fa-solid fa-filter" style="color: var(--accent-orange);"></i>
+          <!-- Stage 2 -->
+          <div class="pipeline-stage">
+            <div class="stage-header">
+              <div class="stage-title">
+                <span class="pill-tag pill-tag-crimson">STAGE 2</span>
+                <strong>SORT</strong> (Evaluate & Discard)
               </div>
-              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
-                Checking strict utility: Discarding zero-delta duplicate noise.
-              </p>
-              <div id="stream-filter" class="stage-stream-box"></div>
+              <i class="fa-solid fa-filter" style="color: var(--accent-orange);"></i>
             </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
+              Checking strict utility: Discarding zero-delta duplicate noise.
+            </p>
+            <div id="stream-filter" class="stage-stream-box"></div>
+          </div>
 
-            <!-- Stage 3 -->
-            <div class="pipeline-stage">
-              <div class="stage-header">
-                <div class="stage-title">
-                  <span class="pill-tag pill-tag-emerald">STAGE 3</span>
-                  <strong>CLASSIFY</strong> (Structure & Index)
-                </div>
-                <i class="fa-solid fa-check-double" style="color: var(--accent-emerald);"></i>
+          <!-- Stage 3 -->
+          <div class="pipeline-stage">
+            <div class="stage-header">
+              <div class="stage-title">
+                <span class="pill-tag pill-tag-emerald">STAGE 3</span>
+                <strong>CLASSIFY</strong> (Structure & Index)
               </div>
-              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
-                Routing verified high-value records into canonical, audit-ready schemas.
-              </p>
-              <div id="stream-classify" class="stage-stream-box"></div>
+              <i class="fa-solid fa-check-double" style="color: var(--accent-emerald);"></i>
             </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
+              Routing verified high-value records into canonical, audit-ready schemas.
+            </p>
+            <div id="stream-classify" class="stage-stream-box"></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Section 2: The Problem ("Cost of Blind Extraction") -->
-    <section id="problem" class="section-padding">
-      <div class="container">
-        <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
-          <div class="pill-badge">
-            <span class="badge-dot"></span>
-            The Problem We Solve
-          </div>
-          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
-            The Expensive Fallacy: "Extract Everything Now, Figure It Out Later"
-          </h2>
-          <p style="color: var(--text-secondary); font-size: 1.05rem;">
-            Legacy data teams dump raw streams indiscriminately into data lakes. When 70% of that data delivers zero business or operational insight, you inherit three permanent handicaps:
-          </p>
+  <!-- Section 2: The Problem ("Cost of Blind Extraction") -->
+  <section id="problem" class="section-padding">
+    <div class="container">
+      <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+        <div class="pill-badge">
+          <span class="badge-dot"></span>
+          The Problem We Solve
         </div>
-
-        <div class="problem-grid">
-          <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="problem-icon icon-crimson">
-              <i class="fa-solid fa-receipt"></i>
-            </div>
-            <h3>Ballooning Cloud & Storage Bills</h3>
-            <p>
-              Paying exponentially for BigQuery, Snowflake, and AWS S3 storage filled with duplicate sensor pings, unchanged cache states, and redundant logs. You pay to store it, transform it, and backup what nobody reads.
-            </p>
-          </div>
-
-          <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="problem-icon icon-amber">
-              <i class="fa-solid fa-hourglass-half"></i>
-            </div>
-            <h3>Wasted Engineering Bandwidth</h3>
-            <p>
-              Your most valuable software and data engineers spend hundreds of hours writing ad-hoc clean-up scripts, debugging noisy pipelines, and waiting on bloated query scans instead of building core product features.
-            </p>
-          </div>
-
-          <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="problem-icon icon-blue">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <h3>Silent Drift & Audit Fragility</h3>
-            <p>
-              More data does not equal more truth. Without strict classification at the boundary, disparate services use contradictory timestamp formats and conflicting schemas, breaking historical reconciliation when audited.
-            </p>
-          </div>
-        </div>
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+          The Expensive Fallacy: "Extract Everything Now, Figure It Out Later"
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          Legacy data teams dump raw streams indiscriminately into data lakes. When 70% of that data delivers zero
+          business or operational insight, you inherit three permanent handicaps:
+        </p>
       </div>
-    </section>
 
-    <!-- Section 3: Our 3-Step Methodology -->
-    <section id="methodology" class="section-padding bg-subtle-section">
-      <div class="container">
-        <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
-          <div class="pill-badge">
-            <span class="badge-dot"></span>
-            How We Work
+      <div class="problem-grid">
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="problem-icon icon-crimson">
+            <i class="fa-solid fa-receipt"></i>
           </div>
-          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
-            Get &bull; Sort &bull; Classify
-          </h2>
-          <p style="color: var(--text-secondary); font-size: 1.05rem;">
-            We engineer intelligent triage points at your system boundary so your organization stores only defensible, actionable signal.
-          </p>
-        </div>
-
-        <div class="method-grid">
-          <!-- Step 1 -->
-          <div class="method-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="method-step-num">01</div>
-            <h3>GET</h3>
-            <p>
-              <strong>Precision Ingestion.</strong> We audit your operational data interfaces to identify exactly what data is generated, who consumes it, and what tangible decision or compliance rule it supports.
-            </p>
-            <ul class="method-highlights">
-              <li><i class="fa-solid fa-check"></i> Source interface audit</li>
-              <li><i class="fa-solid fa-check"></i> Elimination of blind scrapers</li>
-              <li><i class="fa-solid fa-check"></i> Sovereign boundary capture</li>
-            </ul>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="method-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="method-step-num">02</div>
-            <h3>SORT</h3>
-            <p>
-              <strong>Noise Elimination.</strong> We enforce rigorous triage criteria before persistence. If data is redundant, identical to the previous state, or transient, it is purged at zero storage penalty.
-            </p>
-            <ul class="method-highlights">
-              <li><i class="fa-solid fa-check"></i> Pre-storage deduplication</li>
-              <li><i class="fa-solid fa-check"></i> Zero-delta state filtering</li>
-              <li><i class="fa-solid fa-check"></i> Immediate cloud cost reduction</li>
-            </ul>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="method-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="method-step-num">03</div>
-            <h3>CLASSIFY</h3>
-            <p>
-              <strong>Deterministic Structuring.</strong> The high-value payload that survives is tagged, version-controlled, and mapped into immutable canonical schemas ready for instantaneous querying and audit defence.
-            </p>
-            <ul class="method-highlights">
-              <li><i class="fa-solid fa-check"></i> Canonical schema mapping</li>
-              <li><i class="fa-solid fa-check"></i> Immutable audit indexing</li>
-              <li><i class="fa-solid fa-check"></i> Fast, predictable query replays</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: Proof of Extreme Precision (Space-Time Heritage) -->
-    <section id="precision" class="section-padding">
-      <div class="container">
-        <div class="heritage-box" data-aos="fade-up">
-          <div class="heritage-text">
-            <div class="pill-badge" style="margin-bottom: 12px;">
-              <span class="badge-dot"></span>
-              Engineering Heritage
-            </div>
-            <h2>Born in High-Integrity Celestial Mechanics</h2>
-            <p>
-              Our principles were forged in systems where time differences of a few microseconds turn into hundreds of meters of orbital error. Through our internal <strong>ECS Systems</strong> framework, we compute planetary motion, leap-second reconciliation, and astronomical coordinate frames deterministically without external third-party API dependencies.
-            </p>
-            <p>
-              If our engineering can resolve multi-authority atomic time (TAI), terrestrial dynamical time (TT), and Earth orientation wobbles to microsecond certainty, imagine the precision and discipline we bring to sorting and classifying your enterprise data.
-            </p>
-            <div class="heritage-badge-list">
-              <span class="heritage-pill">IERS & IAU Aligned</span>
-              <span class="heritage-pill">SOFA & SPICE Standards</span>
-              <span class="heritage-pill">Deterministic Historical Replay</span>
-              <span class="heritage-pill">Zero Runtime Vendor Lock-in</span>
-            </div>
-          </div>
-
-          <div class="heritage-card-preview">
-            <h4>Live Capability Proof</h4>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
-              Inspect our high-precision developer specifications or view full API models for deterministic time reconciliation:
-            </p>
-            <div style="background-color: var(--bg-muted); padding: 14px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.775rem; margin-bottom: 16px;">
-              <span style="color: var(--accent-orange);">POST</span> /time/compute<br />
-              <span style="color: var(--text-muted);">&rarr; Resolves UTC, TAI, TT, GPS, TDB deterministically</span>
-            </div>
-            <a href="/developers/" class="btn btn-secondary btn-sm" style="width: 100%;">
-              Open Developer Specs <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 5: Applied Areas (Expandable Exposure Cards) -->
-    <section class="section-padding bg-subtle-section">
-      <div class="container">
-        <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
-          <div class="pill-badge">
-            <span class="badge-dot"></span>
-            Applied Industry Impact
-          </div>
-          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
-            Where Triage & Classification Save Critical Value
-          </h2>
-          <p style="color: var(--text-secondary); font-size: 1.05rem;">
-            Click to explore how deterministic data sorting eliminates exposure in high-stakes sectors.
-          </p>
-        </div>
-
-        <div class="exposure-grid">
-          <!-- Card 1 -->
-          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-header">
-              <h3>Financial Ledgers & Clearing: Timestamp Defensibility</h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p>
-                Financial platforms waste massive compute replaying unindexed transaction streams. We design timestamp defensibility frameworks that eliminate settlement ambiguity and ensure transactional replay integrity under regulatory scrutiny.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-header">
-              <h3>Healthcare Interoperability: FHIR, TEFCA & NHS Spine</h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p>
-                Patient data streams are rife with duplicate demographic and sensor pings. We enforce canonical schema mapping, authority-traceable data exchange, and version-locked API governance across GP Connect, Epic, and NHS Spine architectures.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-header">
-              <h3>Public Sector & Councils: Defensible Statutory Reporting</h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p>
-                We implement governance-aligned data transformation models that prevent drift between policy intent and IT implementation, ensuring statutory data reporting remains auditable and defensible.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-header">
-              <h3>Critical Infrastructure & Energy Grids: Sub-Cycle Sync</h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p>
-                Smart meters and distributed substation monitors generate terabytes of uninformative status pings. We discard the noise at the edge while preserving sub-cycle phase variance records for safety investigations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 6: Consultation Call to Action -->
-    <section class="section-padding cta-section">
-      <div class="container">
-        <div class="cta-banner" data-aos="zoom-in">
-          <div class="pill-badge" style="margin-bottom: 16px;">
-            <span class="badge-dot"></span>
-            Stop Wasting Resources
-          </div>
-          <h2>Ready to Stop Paying to Extract and Store Useless Data?</h2>
+          <h3>Ballooning Cloud & Storage Bills</h3>
           <p>
-            Book a 30-minute discovery assessment with our senior architecture team. We will review your current ingestion pipelines and identify where triage can save direct infrastructure budget and unlock engineering velocity.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary btn-lg"
-          >
-            Book Your Assessment <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <div>
-          <a href="/" class="logo-link">
-            <img
-              src="./AGOLD RESOURCING BRANDING 1 1.png"
-              alt="A-Gold Resourcing Logo"
-              class="nav-logo logo-light"
-            />
-            <img
-              src="./AGOLD RESOURCING BRANDING png 1.png"
-              alt="A-Gold Resourcing Logo"
-              class="nav-logo logo-dark"
-            />
-          </a>
-          <p class="footer-desc">
-            A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and ensure deterministic system integrity in mission-critical environments.
+            Paying exponentially for BigQuery, Snowflake, and AWS S3 storage filled with duplicate sensor pings,
+            unchanged cache states, and redundant logs. You pay to store it, transform it, and backup what nobody reads.
           </p>
         </div>
 
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#simulator">Simulator</a></li>
-            <li><a href="#problem">The Problem</a></li>
-            <li><a href="#methodology">How We Work</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/team/">Team & Values</a></li>
-            <li><a href="/developers/">Developer Docs</a></li>
-          </ul>
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="problem-icon icon-amber">
+            <i class="fa-solid fa-hourglass-half"></i>
+          </div>
+          <h3>Wasted Engineering Bandwidth</h3>
+          <p>
+            Your most valuable software and data engineers spend hundreds of hours writing ad-hoc clean-up scripts,
+            debugging noisy pipelines, and waiting on bloated query scans instead of building core product features.
+          </p>
         </div>
 
-        <div class="footer-col">
-          <h4>Consultation</h4>
-          <ul>
-            <li>
-              <a
-                href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Book an Assessment</a
-              >
-            </li>
-            <li><a href="mailto:info@agoldresourcing.co.uk">info@agoldresourcing.co.uk</a></li>
-          </ul>
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="problem-icon icon-blue">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Silent Drift & Audit Fragility</h3>
+          <p>
+            More data does not equal more truth. Without strict classification at the boundary, disparate services use
+            contradictory timestamp formats and conflicting schemas, breaking historical reconciliation when audited.
+          </p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="container footer-bottom">
-        <p>
-          &copy; <span id="current-year"></span> A-Gold Resourcing Ltd. All rights reserved.
+  <!-- Section 3: Our 3-Step Methodology -->
+  <section id="methodology" class="section-padding bg-subtle-section">
+    <div class="container">
+      <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+        <div class="pill-badge">
+          <span class="badge-dot"></span>
+          How We Work
+        </div>
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+          Get &bull; Sort &bull; Classify
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          We engineer intelligent triage points at your system boundary so your organization stores only defensible,
+          actionable signal.
         </p>
-        <div class="social-icons">
-          <a
-            href="https://www.linkedin.com/company/a-gold-resourcing/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            ><i class="fa-brands fa-linkedin-in"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/agoldresourcing"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/share/1DiniyiZ8G/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.tiktok.com/@agoldresourcing"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok"
-            ><i class="fa-brands fa-tiktok"></i
-          ></a>
+      </div>
+
+      <div class="method-grid">
+        <!-- Step 1 -->
+        <div class="method-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="method-step-num">01</div>
+          <h3>GET</h3>
+          <p>
+            <strong>Precision Ingestion.</strong> We audit your operational data interfaces to identify exactly what
+            data is generated, who consumes it, and what tangible decision or compliance rule it supports.
+          </p>
+          <ul class="method-highlights">
+            <li><i class="fa-solid fa-check"></i> Source interface audit</li>
+            <li><i class="fa-solid fa-check"></i> Elimination of blind scrapers</li>
+            <li><i class="fa-solid fa-check"></i> Sovereign boundary capture</li>
+          </ul>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="method-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="method-step-num">02</div>
+          <h3>SORT</h3>
+          <p>
+            <strong>Noise Elimination.</strong> We enforce rigorous triage criteria before persistence. If data is
+            redundant, identical to the previous state, or transient, it is purged at zero storage penalty.
+          </p>
+          <ul class="method-highlights">
+            <li><i class="fa-solid fa-check"></i> Pre-storage deduplication</li>
+            <li><i class="fa-solid fa-check"></i> Zero-delta state filtering</li>
+            <li><i class="fa-solid fa-check"></i> Immediate cloud cost reduction</li>
+          </ul>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="method-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="method-step-num">03</div>
+          <h3>CLASSIFY</h3>
+          <p>
+            <strong>Deterministic Structuring.</strong> The high-value payload that survives is tagged,
+            version-controlled, and mapped into immutable canonical schemas ready for instantaneous querying and audit
+            defence.
+          </p>
+          <ul class="method-highlights">
+            <li><i class="fa-solid fa-check"></i> Canonical schema mapping</li>
+            <li><i class="fa-solid fa-check"></i> Immutable audit indexing</li>
+            <li><i class="fa-solid fa-check"></i> Fast, predictable query replays</li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="./script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 80,
-      });
-    </script>
-  </body>
+  <!-- Section 4: Proof of Extreme Precision (Space-Time Heritage) -->
+  <section id="precision" class="section-padding">
+    <div class="container">
+      <div class="heritage-box" data-aos="fade-up">
+        <div class="heritage-text">
+          <div class="pill-badge" style="margin-bottom: 12px;">
+            <span class="badge-dot"></span>
+            Engineering Heritage
+          </div>
+          <h2>Born in High-Integrity Celestial Mechanics</h2>
+          <p>
+            Our principles were forged in systems where time differences of a few microseconds turn into hundreds of
+            meters of orbital error. Through our internal <strong>ECS Systems</strong> framework, we compute planetary
+            motion, leap-second reconciliation, and astronomical coordinate frames deterministically without external
+            third-party API dependencies.
+          </p>
+          <p>
+            If our engineering can resolve multi-authority atomic time (TAI), terrestrial dynamical time (TT), and Earth
+            orientation wobbles to microsecond certainty, imagine the precision and discipline we bring to sorting and
+            classifying your enterprise data.
+          </p>
+          <div class="heritage-badge-list">
+            <span class="heritage-pill">IERS & IAU Aligned</span>
+            <span class="heritage-pill">SOFA & SPICE Standards</span>
+            <span class="heritage-pill">Deterministic Historical Replay</span>
+            <span class="heritage-pill">Zero Runtime Vendor Lock-in</span>
+          </div>
+        </div>
+
+        <div class="heritage-card-preview">
+          <h4>Live Capability Proof</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Inspect our high-precision developer specifications or view full API models for deterministic time
+            reconciliation:
+          </p>
+          <div
+            style="background-color: var(--bg-muted); padding: 14px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.775rem; margin-bottom: 16px;">
+            <span style="color: var(--accent-orange);">POST</span> /time/compute<br />
+            <span style="color: var(--text-muted);">&rarr; Resolves UTC, TAI, TT, GPS, TDB deterministically</span>
+          </div>
+          <a href="/developers/" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Open Developer Specs <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Applied Areas (Expandable Exposure Cards) -->
+  <section class="section-padding bg-subtle-section">
+    <div class="container">
+      <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+        <div class="pill-badge">
+          <span class="badge-dot"></span>
+          Applied Industry Impact
+        </div>
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+          Where Triage & Classification Save Critical Value
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          Click to explore how deterministic data sorting eliminates exposure in high-stakes sectors.
+        </p>
+      </div>
+
+      <div class="exposure-grid">
+        <!-- Card 1 -->
+        <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-header">
+            <h3>Financial Ledgers & Clearing: Timestamp Defensibility</h3>
+            <i class="fa-solid fa-plus toggle-icon"></i>
+          </div>
+          <div class="card-body">
+            <p>
+              Financial platforms waste massive compute replaying unindexed transaction streams. We design timestamp
+              defensibility frameworks that eliminate settlement ambiguity and ensure transactional replay integrity
+              under regulatory scrutiny.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-header">
+            <h3>Healthcare Interoperability: FHIR, TEFCA & NHS Spine</h3>
+            <i class="fa-solid fa-plus toggle-icon"></i>
+          </div>
+          <div class="card-body">
+            <p>
+              Patient data streams are rife with duplicate demographic and sensor pings. We enforce canonical schema
+              mapping, authority-traceable data exchange, and version-locked API governance across GP Connect, Epic, and
+              NHS Spine architectures.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-header">
+            <h3>Public Sector & Councils: Defensible Statutory Reporting</h3>
+            <i class="fa-solid fa-plus toggle-icon"></i>
+          </div>
+          <div class="card-body">
+            <p>
+              We implement governance-aligned data transformation models that prevent drift between policy intent and IT
+              implementation, ensuring statutory data reporting remains auditable and defensible.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-header">
+            <h3>Critical Infrastructure & Energy Grids: Sub-Cycle Sync</h3>
+            <i class="fa-solid fa-plus toggle-icon"></i>
+          </div>
+          <div class="card-body">
+            <p>
+              Smart meters and distributed substation monitors generate terabytes of uninformative status pings. We
+              discard the noise at the edge while preserving sub-cycle phase variance records for safety investigations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Consultation Call to Action -->
+  <section class="section-padding cta-section">
+    <div class="container">
+      <div class="cta-banner" data-aos="zoom-in">
+        <div class="pill-badge" style="margin-bottom: 16px;">
+          <span class="badge-dot"></span>
+          Stop Wasting Resources
+        </div>
+        <h2>Ready to Stop Paying to Extract and Store Useless Data?</h2>
+        <p>
+          Book a 30-minute discovery assessment with our senior architecture team. We will review your current ingestion
+          pipelines and identify where triage can save direct infrastructure budget and unlock engineering velocity.
+        </p>
+        <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform" target="_blank"
+          rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          Book Your Assessment <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a href="/" class="logo-link">
+          <img src="./AGOLD RESOURCING BRANDING png 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-light" />
+          <img src="./AGOLD RESOURCING BRANDING 1 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-dark" />
+        </a>
+        <p class="footer-desc">
+          A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and ensure
+          deterministic system integrity in mission-critical environments.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#simulator">Simulator</a></li>
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="#methodology">How We Work</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/team/">Team & Values</a></li>
+          <li><a href="/developers/">Developer Docs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Consultation</h4>
+        <ul>
+          <li>
+            <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+              target="_blank" rel="noopener noreferrer">Book an Assessment</a>
+          </li>
+          <li><a href="mailto:info@agoldresourcing.co.uk">info@agoldresourcing.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        &copy; <span id="current-year"></span> A-Gold Resourcing Ltd. All rights reserved.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/a-gold-resourcing/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/agoldresourcing" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1DiniyiZ8G/" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@agoldresourcing" target="_blank" rel="noopener noreferrer"
+          aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 80,
+    });
+  </script>
+</body>
+
 </html>
