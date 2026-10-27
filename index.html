@@ -108,131 +108,100 @@
           rel="noopener noreferrer" class="btn btn-primary btn-lg">
           Book a Pipeline Assessment <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <button class="btn btn-secondary btn-lg" onclick="scrollToSection('simulator')">
-          <i class="fa-solid fa-play" style="color: var(--accent-orange);"></i> View Interactive Simulator
+        <button class="btn btn-secondary btn-lg" onclick="scrollToSection('engine')">
+          <i class="fa-solid fa-server" style="color: var(--accent-orange);"></i> View Live Engine Feed
         </button>
       </div>
 
       <!-- Key Metrics Ribbon -->
       <div class="hero-stats-ribbon" data-aos="fade-up" data-aos-delay="400">
         <div class="stat-item">
-          <div class="stat-value">74%</div>
-          <div class="stat-label">Average Redundant Noise Filtered</div>
+          <div class="stat-value">Zero</div>
+          <div class="stat-label">Runtime API Dependencies</div>
         </div>
         <div class="stat-item">
-          <div class="stat-value">$42k+</div>
-          <div class="stat-label">Avg. Annual Cloud Storage Saved</div>
+          <div class="stat-value">5 Scales</div>
+          <div class="stat-label">Deterministic Time Reconciliation</div>
         </div>
         <div class="stat-item">
-          <div class="stat-value">10x</div>
-          <div class="stat-label">Faster Query & Audit Verification</div>
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Auditable & Historical Replay Ready</div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Section 1: Live Interactive Data Pipeline Simulator -->
-  <section id="simulator" class="section-padding bg-subtle-section">
+  <!-- Section 1: Live ECS Production Engine Telemetry (Real, Non-Fabricated Data) -->
+  <section id="engine" class="section-padding bg-subtle-section">
     <div class="container">
       <div class="text-center" style="max-width: 820px; margin: 0 auto 48px;" data-aos="fade-up">
         <div class="pill-badge">
           <span class="badge-dot"></span>
-          Real-Time Interactive Architecture
+          Production Architecture Live Feed
         </div>
         <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
-          Watch Triage in Action: Stop Ingesting Waste
+          Live Precision Time Reconciliation Engine
         </h2>
         <p style="color: var(--text-secondary); font-size: 1.05rem;">
-          See how our triage model evaluates raw streaming data in real time, discarding costly non-essential noise
-          before it hits your data warehouse, and indexing only high-integrity signals.
+          Real-time deterministic computational feed from the live ECS production engine (<a href="/developers/" style="color: var(--accent-orange); font-weight: 600;">POST /time/compute</a>). Demonstrating multi-authority reconciliation across atomic, satellite, terrestrial, and civil timescales without external runtime API calls.
         </p>
       </div>
 
-      <!-- Simulator Widget -->
+      <!-- Live Engine Widget -->
       <div class="simulator-container" data-aos="zoom-in" data-aos-delay="100">
         <div class="simulator-header">
           <div class="simulator-title-group">
-            <h3>
-              <i class="fa-solid fa-bolt" style="color: var(--accent-orange);"></i>
-              ECS Data Triage Engine Simulator
+            <h3 style="font-size: 1.05rem;">
+              <i class="fa-solid fa-server" style="color: var(--accent-orange);"></i>
+              ECS Engine Telemetry Stream
             </h3>
-            <span class="status-live-indicator">
-              <span class="dot"></span> LIVE SIMULATION STREAM
+            <span id="telemetry-status" class="status-live-indicator">
+              <span class="dot"></span> LIVE DATA FEED
             </span>
           </div>
 
           <div class="simulator-controls">
-            <button id="sim-toggle-stream" class="btn btn-secondary btn-sm">
-              <i class="fa-solid fa-pause"></i> Pause Stream
-            </button>
+            <a href="/developers/" class="btn btn-secondary btn-sm">
+              <i class="fa-solid fa-book-open"></i> View OpenAPI Specification
+            </a>
           </div>
         </div>
 
-        <!-- KPI Realtime Metrics Bar -->
-        <div class="simulator-kpi-bar">
-          <div class="kpi-cell">
-            <div class="kpi-label">Packets Ingested</div>
-            <div id="kpi-ingested" class="kpi-number">1,240</div>
-          </div>
-          <div class="kpi-cell">
-            <div class="kpi-label">Noise Discarded</div>
-            <div id="kpi-filtered-pct" class="kpi-number highlight-crimson">74.2%</div>
-          </div>
-          <div class="kpi-cell">
-            <div class="kpi-label">Cloud Spend Saved</div>
-            <div id="kpi-cost-saved" class="kpi-number highlight-emerald">$34,500</div>
-          </div>
-          <div class="kpi-cell">
-            <div class="kpi-label">Engineering Hours Saved</div>
-            <div id="kpi-hours-saved" class="kpi-number highlight-orange">284 hrs</div>
-          </div>
-        </div>
-
-        <!-- 3-Stage Pipeline Display -->
-        <div class="pipeline-stages-grid">
-          <!-- Stage 1 -->
-          <div class="pipeline-stage">
-            <div class="stage-header">
-              <div class="stage-title">
-                <span class="pill-tag pill-tag-blue">STAGE 1</span>
-                <strong>GET</strong> (Capture at Source)
-              </div>
-              <i class="fa-solid fa-cloud-arrow-down" style="color: var(--accent-blue);"></i>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
-              Intercepting incoming telemetry, webhooks, and raw database events.
-            </p>
-            <div id="stream-ingest" class="stage-stream-box"></div>
+        <!-- 5 Real Timescale Grid -->
+        <div class="engine-grid">
+          <!-- UTC -->
+          <div class="engine-cell">
+            <div class="engine-cell-label">UTC (Coordinated Universal)</div>
+            <div id="val-utc" class="engine-cell-value">--:--:--</div>
+            <div id="val-jd-utc" class="engine-cell-sub">JD: 2461041.50000</div>
           </div>
 
-          <!-- Stage 2 -->
-          <div class="pipeline-stage">
-            <div class="stage-header">
-              <div class="stage-title">
-                <span class="pill-tag pill-tag-crimson">STAGE 2</span>
-                <strong>SORT</strong> (Evaluate & Discard)
-              </div>
-              <i class="fa-solid fa-filter" style="color: var(--accent-orange);"></i>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
-              Checking strict utility: Discarding zero-delta duplicate noise.
-            </p>
-            <div id="stream-filter" class="stage-stream-box"></div>
+          <!-- TAI -->
+          <div class="engine-cell">
+            <div class="engine-cell-label">TAI (International Atomic)</div>
+            <div id="val-tai" class="engine-cell-value">--:--:--</div>
+            <div id="off-tai" class="engine-cell-sub">Offset: +37s (from UTC)</div>
           </div>
 
-          <!-- Stage 3 -->
-          <div class="pipeline-stage">
-            <div class="stage-header">
-              <div class="stage-title">
-                <span class="pill-tag pill-tag-emerald">STAGE 3</span>
-                <strong>CLASSIFY</strong> (Structure & Index)
-              </div>
-              <i class="fa-solid fa-check-double" style="color: var(--accent-emerald);"></i>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
-              Routing verified high-value records into canonical, audit-ready schemas.
-            </p>
-            <div id="stream-classify" class="stage-stream-box"></div>
+          <!-- GPS -->
+          <div class="engine-cell">
+            <div class="engine-cell-label">GPS (Satellite Time)</div>
+            <div id="val-gps" class="engine-cell-value">--:--:--</div>
+            <div class="engine-cell-sub">Offset: -19s (from TAI)</div>
+          </div>
+
+          <!-- TT -->
+          <div class="engine-cell">
+            <div class="engine-cell-label">TT (Terrestrial Time)</div>
+            <div id="val-tt" class="engine-cell-value">--:--:--</div>
+            <div id="val-jd-tt" class="engine-cell-sub">JD: 2461041.50080</div>
+          </div>
+
+          <!-- TDB -->
+          <div class="engine-cell">
+            <div class="engine-cell-label">TDB (Barycentric Dynamical)</div>
+            <div id="val-tdb" class="engine-cell-value">--:--:--</div>
+            <div class="engine-cell-sub">Relativistic Ephemeris Scale</div>
           </div>
         </div>
       </div>

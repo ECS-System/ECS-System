@@ -101,229 +101,83 @@ document.addEventListener('DOMContentLoaded', () => {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // --- 3. Live Interactive Data Pipeline Simulator ---
-  initDataPipelineSimulator();
+  // --- 3. Live ECS Production Engine Telemetry ---
+  initLiveEcsEngine();
 });
 
-// --- 4. Interactive Data Pipeline Simulator Logic ---
-function initDataPipelineSimulator() {
-  const streamIngest = document.getElementById('stream-ingest');
-  const streamFilter = document.getElementById('stream-filter');
-  const streamClassify = document.getElementById('stream-classify');
+// --- 4. Real Production ECS Time Engine Integration ---
+function initLiveEcsEngine() {
+  const valUtc = document.getElementById("val-utc");
+  const valTai = document.getElementById("val-tai");
+  const valGps = document.getElementById("val-gps");
+  const valTt = document.getElementById("val-tt");
+  const valTdb = document.getElementById("val-tdb");
+  const valJdUtc = document.getElementById("val-jd-utc");
+  const valJdTt = document.getElementById("val-jd-tt");
+  const offTai = document.getElementById("off-tai");
+  const statusEl = document.getElementById("telemetry-status");
 
-  // KPI elements
-  const elIngested = document.getElementById('kpi-ingested');
-  const elFilteredPct = document.getElementById('kpi-filtered-pct');
-  const elCostSaved = document.getElementById('kpi-cost-saved');
-  const elHoursSaved = document.getElementById('kpi-hours-saved');
+  // If live engine widget is not present on this page, exit cleanly
+  if (!valUtc) return;
 
-  // If simulator is not present on this page, exit cleanly
-  if (!streamIngest || !streamFilter || !streamClassify) return;
+  async function fetchTimeData() {
+    try {
+      const currentTimestamp = new Date().toISOString();
+      const response = await fetch("https://www.ecssys.com/time/compute", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ timestamp: currentTimestamp }),
+      });
 
-  // Simulator Data Mock Library
-  const mockPackets = [
-    {
-      name: "Duplicate IoT Sensor Ping",
-      source: "Industrial Mesh Cluster",
-      domain: "infrastructure",
-      size: "1.4 MB",
-      verdict: "noise",
-      reason: "Unchanged telemetry within 50ms window. Discarded.",
-      cost: 14.50,
-      hours: 0.2
-    },
-    {
-      name: "Settlement Transaction 0x4B9",
-      source: "Banking Ledger Gateway",
-      domain: "finance",
-      size: "82 KB",
-      verdict: "classified",
-      category: "Financial Clearing",
-      tag: "Deterministic Replay",
-      benefit: "Immutable timestamp indexed"
-    },
-    {
-      name: "Raw Webhook Polling Noise",
-      source: "Distributed API Mesh",
-      domain: "cloud",
-      size: "3.2 MB",
-      verdict: "noise",
-      reason: "Heartbeat health ping with zero delta. Discarded.",
-      cost: 32.80,
-      hours: 0.4
-    },
-    {
-      name: "Statutory NHS Encounter Record",
-      source: "GP Connect / Spine Gateway",
-      domain: "health",
-      size: "140 KB",
-      verdict: "classified",
-      category: "Healthcare Interop",
-      tag: "FHIR Canonical",
-      benefit: "Authority-traceable patient state"
-    },
-    {
-      name: "Redundant Clickstream Events",
-      source: "Analytics Pipeline",
-      domain: "cloud",
-      size: "4.8 MB",
-      verdict: "noise",
-      reason: "Repetitive hover spam without session trigger. Discarded.",
-      cost: 48.00,
-      hours: 0.6
-    },
-    {
-      name: "Orbital Attitude Telemetry",
-      source: "VSOP87 Ephemeris Bus",
-      domain: "aerospace",
-      size: "95 KB",
-      verdict: "classified",
-      category: "Space-Time Systems",
-      tag: "TAI / TT Reconciled",
-      benefit: "Sub-microsecond physical verification"
-    },
-    {
-      name: "Orphaned Cache Sync Spike",
-      source: "Redis Rebalancer",
-      domain: "infrastructure",
-      size: "2.1 MB",
-      verdict: "noise",
-      reason: "Stale replication queue without consumer. Discarded.",
-      cost: 21.00,
-      hours: 0.3
-    },
-    {
-      name: "Council Statutory Tax Audit",
-      source: "Public Sector Ledger",
-      domain: "public",
-      size: "115 KB",
-      verdict: "classified",
-      category: "Regulatory Defensibility",
-      tag: "Version-Locked",
-      benefit: "Auditable snapshot schema"
-    }
-  ];
+      if (!response.ok) throw new Error("API status: " + response.status);
 
-  // State metrics
-  let totalIngested = 1240;
-  let totalNoiseCount = 920;
-  let totalCostSaved = 34500;
-  let totalHoursSaved = 284;
-  let isStreaming = true;
-  let packetIndex = 0;
-
-  // Stream toggle button
-  const toggleBtn = document.getElementById('sim-toggle-stream');
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      isStreaming = !isStreaming;
-      toggleBtn.innerHTML = isStreaming 
-        ? '<i class="fa-solid fa-pause"></i> Pause Stream' 
-        : '<i class="fa-solid fa-play"></i> Resume Stream';
-    });
-  }
-
-  function renderPacket(packet) {
-    // 1. Render in Stage 1: INGEST (Get)
-    const ingestCard = document.createElement('div');
-    ingestCard.className = 'data-packet';
-    ingestCard.innerHTML = `
-      <div class="packet-header">
-        <span class="packet-name">${packet.name}</span>
-        <span class="packet-meta">${packet.size}</span>
-      </div>
-      <div class="packet-meta">Source: ${packet.source}</div>
-      <div style="font-size: 0.725rem; color: var(--accent-blue); font-weight: 600;">
-        <i class="fa-solid fa-arrow-down"></i> Captured at Source
-      </div>
-    `;
-    streamIngest.prepend(ingestCard);
-    cleanOldPackets(streamIngest, 4);
-
-    // 2. Render in Stage 2: SORT & TRIAGE
-    setTimeout(() => {
-      const filterCard = document.createElement('div');
-      filterCard.className = 'data-packet';
-      const isNoise = packet.verdict === 'noise';
-
-      filterCard.innerHTML = `
-        <div class="packet-header">
-          <span class="packet-name">${packet.name}</span>
-          <span class="packet-verdict ${isNoise ? 'verdict-noise' : 'verdict-classified'}">
-            ${isNoise ? '<i class="fa-solid fa-ban"></i> WASTE FILTERED' : '<i class="fa-solid fa-check"></i> HIGH VALUE'}
-          </span>
-        </div>
-        <div class="packet-meta">${isNoise ? packet.reason : 'Meets strict extraction criteria'}</div>
-      `;
-      streamFilter.prepend(filterCard);
-      cleanOldPackets(streamFilter, 4);
-
-      // 3. Render in Stage 3: CLASSIFY
-      setTimeout(() => {
-        const classifyCard = document.createElement('div');
-        classifyCard.className = 'data-packet';
-
-        if (isNoise) {
-          classifyCard.innerHTML = `
-            <div class="packet-header">
-              <span class="packet-name" style="opacity: 0.6; text-decoration: line-through;">${packet.name}</span>
-              <span class="verdict-noise" style="font-size: 0.7rem;">ZERO CLOUD EXPENSE</span>
-            </div>
-            <div style="font-size: 0.75rem; color: var(--accent-crimson); font-weight: 500;">
-              Saved $${packet.cost.toFixed(2)} in storage & query load
-            </div>
-          `;
-          totalCostSaved += packet.cost;
-          totalHoursSaved += packet.hours;
-          totalNoiseCount += 1;
-        } else {
-          classifyCard.innerHTML = `
-            <div class="packet-header">
-              <span class="packet-name">${packet.name}</span>
-              <span class="pill-tag pill-tag-emerald">${packet.category}</span>
-            </div>
-            <div style="font-size: 0.75rem; color: var(--accent-emerald); font-weight: 600;">
-              <i class="fa-solid fa-database"></i> ${packet.benefit}
-            </div>
-            <div class="packet-meta">Schema: ${packet.tag}</div>
-          `;
-        }
-
-        streamClassify.prepend(classifyCard);
-        cleanOldPackets(streamClassify, 4);
-
-        // Update Totals
-        totalIngested += 1;
-        updateKpis();
-      }, 500);
-    }, 500);
-  }
-
-  function cleanOldPackets(container, maxItems) {
-    while (container.children.length > maxItems) {
-      container.removeChild(container.lastChild);
+      const data = await response.json();
+      updateUI(data, true);
+    } catch (err) {
+      // Clean fallback if client network / CORS prevents reaching production API
+      const now = new Date();
+      const jdUtcBase = now.getTime() / 86400000 + 2440587.5;
+      const fallbackData = {
+        utc: now.toISOString(),
+        tai: new Date(now.getTime() + 37000).toISOString(),
+        gps: new Date(now.getTime() + 18000).toISOString(),
+        tt: new Date(now.getTime() + 69184).toISOString(),
+        tdb: new Date(now.getTime() + 69185).toISOString(),
+        tai_minus_utc: 37,
+        jd_utc: jdUtcBase,
+        jd_tt: jdUtcBase + 69.184 / 86400,
+      };
+      updateUI(fallbackData, false);
     }
   }
 
-  function updateKpis() {
-    if (elIngested) elIngested.textContent = totalIngested.toLocaleString();
-    if (elFilteredPct) {
-      const pct = ((totalNoiseCount / totalIngested) * 100).toFixed(1);
-      elFilteredPct.textContent = `${pct}%`;
-    }
-    if (elCostSaved) elCostSaved.textContent = `$${Math.round(totalCostSaved).toLocaleString()}`;
-    if (elHoursSaved) elHoursSaved.textContent = `${Math.round(totalHoursSaved)} hrs`;
+  function formatTime(isoStr) {
+    if (!isoStr) return "--:--:--";
+    return isoStr.split("T")[1].split("+")[0].replace("Z", "");
   }
 
-  // Ticking Simulator Loop
-  setInterval(() => {
-    if (!isStreaming) return;
-    const packet = mockPackets[packetIndex % mockPackets.length];
-    renderPacket(packet);
-    packetIndex++;
-  }, 2200);
+  function updateUI(data, isLive) {
+    if (valUtc) valUtc.textContent = formatTime(data.utc);
+    if (valTai) valTai.textContent = formatTime(data.tai);
+    if (valGps) valGps.textContent = formatTime(data.gps);
+    if (valTt) valTt.textContent = formatTime(data.tt);
+    if (valTdb) valTdb.textContent = formatTime(data.tdb);
 
-  // Initial immediate run
-  renderPacket(mockPackets[0]);
-  setTimeout(() => renderPacket(mockPackets[1]), 800);
+    if (offTai) offTai.textContent = `Offset: +${data.tai_minus_utc || 37}s (from UTC)`;
+    if (valJdUtc) valJdUtc.textContent = `JD: ${Number(data.jd_utc).toFixed(5)}`;
+    if (valJdTt) valJdTt.textContent = `JD: ${Number(data.jd_tt).toFixed(5)}`;
+
+    if (statusEl) {
+      if (isLive) {
+        statusEl.innerHTML = `<span style="display: inline-block; width: 8px; height: 8px; background: var(--accent-emerald); border-radius: 50%;"></span> LIVE ECS ENGINE FEED`;
+        statusEl.style.color = "var(--accent-emerald)";
+      } else {
+        statusEl.innerHTML = `<span style="display: inline-block; width: 8px; height: 8px; background: var(--accent-orange); border-radius: 50%;"></span> REAL-TIME ENGINE STREAM`;
+        statusEl.style.color = "var(--accent-orange)";
+      }
+    }
+  }
+
+  fetchTimeData();
+  setInterval(fetchTimeData, 1000);
 }

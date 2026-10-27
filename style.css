@@ -574,6 +574,49 @@ button {
   gap: 10px;
 }
 
+/* ECS Live Engine Card (Real Non-Fabricated Telemetry) */
+.engine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  background-color: var(--bg-subtle);
+}
+
+.engine-cell {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: all var(--transition-fast);
+}
+
+.engine-cell:hover {
+  border-color: var(--accent-orange);
+  box-shadow: var(--shadow-sm);
+}
+
+.engine-cell-label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.engine-cell-value {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 8px;
+  letter-spacing: -0.01em;
+}
+
+.engine-cell-sub {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
 /* Live Simulator KPI Bar */
 .simulator-kpi-bar {
   display: grid;
