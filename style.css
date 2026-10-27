@@ -7,8 +7,8 @@
    1. Design Tokens & CSS Variables
    -------------------------------------------------------------------------- */
 :root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Inter', sans-serif;
   
   --max-width: 1200px;
   --header-height: 76px;
@@ -111,6 +111,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 html {
@@ -185,12 +186,10 @@ button {
   width: 100%;
 }
 
-/* Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-orange) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+/* Highlight Accent Text (Solid Minimalist) */
+.highlight-text {
+  color: var(--accent-orange);
+  display: inline;
 }
 
 /* --------------------------------------------------------------------------
@@ -442,7 +441,7 @@ button {
   padding-bottom: 80px;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 0%, var(--accent-orange-light) 0%, transparent 60%);
+  background-color: var(--bg-page);
 }
 
 .hero-content {
@@ -846,7 +845,7 @@ button {
    10. Proof of Precision (Space-Time Heritage Callout)
    -------------------------------------------------------------------------- */
 .heritage-box {
-  background: linear-gradient(135deg, var(--bg-subtle) 0%, var(--bg-card) 100%);
+  background-color: var(--bg-subtle);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 48px;
@@ -975,7 +974,7 @@ button {
    -------------------------------------------------------------------------- */
 .cta-section {
   text-align: center;
-  background: radial-gradient(circle at 50% 50%, var(--accent-orange-light) 0%, var(--bg-page) 70%);
+  background-color: var(--bg-page);
 }
 
 .cta-banner {
@@ -1080,7 +1079,7 @@ button {
   padding-top: calc(var(--header-height) + 64px);
   padding-bottom: 56px;
   text-align: center;
-  background: radial-gradient(circle at 50% 0%, var(--accent-orange-light) 0%, transparent 50%);
+  background-color: var(--bg-subtle);
 }
 
 .subpage-hero h1 {
