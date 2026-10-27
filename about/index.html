@@ -1,296 +1,280 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | A-Gold Resourcing</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="shortcut icon" href="../AGR LOGO PNG.png" type="image/x-icon" />
-    <meta
-      name="description"
-      content="Learn about A-Gold Resourcing: why not all data is worth extracting, and how our Get, Sort, Classify methodology saves enterprise organisations millions in cloud costs."
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body data-theme="light">
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container nav-content">
-        <a href="/" class="logo-link">
-          <img
-            src="../AGOLD RESOURCING BRANDING 1 1.png"
-            alt="A-Gold Resourcing Logo"
-            class="nav-logo logo-light"
-          />
-          <img
-            src="../AGOLD RESOURCING BRANDING png 1.png"
-            alt="A-Gold Resourcing Logo"
-            class="nav-logo logo-dark"
-          />
-        </a>
 
-        <div class="nav-links desktop-only">
-          <a href="/">Home</a>
-          <a href="/about/" class="active">About</a>
-          <a href="/team/">Team</a>
-          <a href="/developers/">Developers</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | A-Gold Resourcing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="shortcut icon" href="../AGR LOGO PNG.png" type="image/x-icon" />
+  <meta name="description"
+    content="Learn about A-Gold Resourcing: why not all data is worth extracting, and how our Get, Sort, Classify methodology saves enterprise organisations millions in cloud costs." />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
 
-        <div class="nav-actions desktop-only">
-          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
-            <i class="fa-regular fa-sun icon-sun"></i>
-            <i class="fa-regular fa-moon icon-moon"></i>
-          </button>
-          <a
-            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-          >
-            Book an Assessment <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
+<body data-theme="light">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="/" class="logo-link">
+        <img src="../AGOLD RESOURCING BRANDING png 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-light" />
+        <img src="../AGOLD RESOURCING BRANDING 1 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-dark" />
+      </a>
 
-        <button class="hamburger" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars open-icon"></i>
-          <i class="fa-solid fa-xmark close-icon"></i>
-        </button>
+      <div class="nav-links desktop-only">
+        <a href="/">Home</a>
+        <a href="/about/" class="active">About</a>
+        <a href="/team/">Team</a>
+        <a href="/developers/">Developers</a>
       </div>
 
-      <div class="mobile-menu">
-        <div class="mobile-nav-links">
-          <a href="/">Home</a>
-          <a href="/about/">About</a>
-          <a href="/team/">Team</a>
-          <a href="/developers/">Developers</a>
-        </div>
-
-        <a
-          href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
+      <div class="nav-actions desktop-only">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fa-regular fa-sun icon-sun"></i>
+          <i class="fa-regular fa-moon icon-moon"></i>
+        </button>
+        <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform" target="_blank"
+          rel="noopener noreferrer" class="btn btn-primary">
           Book an Assessment <i class="fa-solid fa-arrow-right"></i>
         </a>
-
-        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border-color);">
-          <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Appearance:</span>
-          <button id="mobile-theme-toggle" class="theme-btn" aria-label="Toggle theme">
-            <i class="fa-regular fa-sun icon-sun"></i>
-            <i class="fa-regular fa-moon icon-moon"></i>
-          </button>
-        </div>
       </div>
-    </nav>
 
-    <!-- Subpage Hero -->
-    <header class="subpage-hero">
-      <div class="container">
-        <div class="pill-badge" data-aos="fade-down">
-          <span class="badge-dot"></span>
-          Our Thesis & Philosophy
-        </div>
-        <h1 data-aos="fade-up" data-aos-delay="100">
-          Why Not All Data Is Worth Extracting
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-          The prevailing dogma in tech has been "ingest everything." The result? Bloated data lakes, runaway cloud bills, and engineers buried under noisy logs. We engineer the antidote: high-integrity triage that captures only actionable signal.
-        </p>
+      <button class="hamburger" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </button>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/team/">Team</a>
+        <a href="/developers/">Developers</a>
       </div>
-    </header>
 
-    <div class="section-divider"></div>
+      <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform" target="_blank"
+        rel="noopener noreferrer" class="btn btn-primary">
+        Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+      </a>
 
-    <!-- The Economics of Triage -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="heritage-box" style="margin-bottom: 64px;" data-aos="fade-up">
-          <div class="heritage-text">
-            <h2>The Economic Reality of Data</h2>
-            <p>
-              In computing, every byte stored incurs compound costs: network ingress fees, tier-one storage, indexing CPU cycles, backup redundancy, and query scan overheads.
-            </p>
-            <p>
-              When 70% to 80% of generated data consists of identical state pings, uninformative heartbeats, or unindexed noise, businesses are essentially subsidizing digital landfill. We help organisations systematically identify what data creates revenue, defends against audit, or informs operational decisions—and triage away the rest.
-            </p>
-          </div>
-          <div class="heritage-card-preview">
-            <h4>The Triage Formula</h4>
-            <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem;">
-              <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
-                <strong style="color: var(--accent-orange);">1. Ingest (Get):</strong> Identify true operational triggers.
-              </div>
-              <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
-                <strong style="color: var(--accent-crimson);">2. Filter (Sort):</strong> Drop zero-delta redundancy.
-              </div>
-              <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
-                <strong style="color: var(--accent-emerald);">3. Index (Classify):</strong> Structure canonical value.
-              </div>
+      <div
+        style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border-color);">
+        <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Appearance:</span>
+        <button id="mobile-theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fa-regular fa-sun icon-sun"></i>
+          <i class="fa-regular fa-moon icon-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Subpage Hero -->
+  <header class="subpage-hero">
+    <div class="container">
+      <div class="pill-badge" data-aos="fade-down">
+        <span class="badge-dot"></span>
+        Our Thesis & Philosophy
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="100">
+        Why Not All Data Is Worth Extracting
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        The prevailing dogma in tech has been "ingest everything." The result? Bloated data lakes, runaway cloud bills,
+        and engineers buried under noisy logs. We engineer the antidote: high-integrity triage that captures only
+        actionable signal.
+      </p>
+    </div>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- The Economics of Triage -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="heritage-box" style="margin-bottom: 64px;" data-aos="fade-up">
+        <div class="heritage-text">
+          <h2>The Economic Reality of Data</h2>
+          <p>
+            In computing, every byte stored incurs compound costs: network ingress fees, tier-one storage, indexing CPU
+            cycles, backup redundancy, and query scan overheads.
+          </p>
+          <p>
+            When 70% to 80% of generated data consists of identical state pings, uninformative heartbeats, or unindexed
+            noise, businesses are essentially subsidizing digital landfill. We help organisations systematically
+            identify what data creates revenue, defends against audit, or informs operational decisions—and triage away
+            the rest.
+          </p>
+        </div>
+        <div class="heritage-card-preview">
+          <h4>The Triage Formula</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem;">
+            <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
+              <strong style="color: var(--accent-orange);">1. Ingest (Get):</strong> Identify true operational triggers.
+            </div>
+            <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
+              <strong style="color: var(--accent-crimson);">2. Filter (Sort):</strong> Drop zero-delta redundancy.
+            </div>
+            <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
+              <strong style="color: var(--accent-emerald);">3. Index (Classify):</strong> Structure canonical value.
             </div>
           </div>
         </div>
-
-        <div class="text-center" style="max-width: 800px; margin: 0 auto 48px;" data-aos="fade-up">
-          <div class="pill-badge">
-            <span class="badge-dot"></span>
-            Cross-Sector Triage
-          </div>
-          <h2 style="font-size: 2.2rem; font-weight: 800;">
-            Where Our Triage Principles Apply
-          </h2>
-          <p style="color: var(--text-secondary);">
-            Whether managing planetary orbital ephemerides or high-volume financial settlement records, the requirement is the same: reproducible clarity at minimum waste.
-          </p>
-        </div>
-
-        <!-- 6 Major Sectors Grid -->
-        <div class="beyond-grid" data-aos="fade-up" data-aos-delay="100">
-          <div class="beyond-card">
-            <i class="fa-solid fa-landmark"></i>
-            <h3>Financial & Clearing Networks</h3>
-            <p>
-              Eliminate noisy duplicate pings from transaction journals while guaranteeing immutable timestamp defensibility and reconciliation stability for regulatory audits.
-            </p>
-          </div>
-
-          <div class="beyond-card">
-            <i class="fa-solid fa-hospital-user"></i>
-            <h3>Healthcare & Clinical Interoperability</h3>
-            <p>
-              Enforce canonical FHIR schemas and discard repetitive health-check noise across Epic, TEFCA, and NHS Spine gateway integrations.
-            </p>
-          </div>
-
-          <div class="beyond-card">
-            <i class="fa-solid fa-building-columns"></i>
-            <h3>Public Sector & Statutory Governance</h3>
-            <p>
-              Align digital platforms with statutory mandates, preventing drift between policy intent and IT implementation while reducing council infrastructure costs.
-            </p>
-          </div>
-
-          <div class="beyond-card">
-            <i class="fa-solid fa-satellite"></i>
-            <h3>Aerospace & Space-Time Infrastructure</h3>
-            <p>
-              Our internal ECS Systems engine computes analytical ephemerides (VSOP87, DE-series) and multi-scale time transformations without fragile runtime third-party API dependencies.
-            </p>
-          </div>
-
-          <div class="beyond-card">
-            <i class="fa-solid fa-bolt-lightning"></i>
-            <h3>Energy Grids & Smart Infrastructure</h3>
-            <p>
-              Filter terabytes of routine smart meter pings at the edge while capturing critical sub-cycle phase variance records for grid stability.
-            </p>
-          </div>
-
-          <div class="beyond-card">
-            <i class="fa-solid fa-microchip"></i>
-            <h3>Sovereign & High-Assurance AI</h3>
-            <p>
-              Clean, reproducible data inputs are the prerequisite for defensible AI models. We ensure training sets are free of duplicate bias and drift.
-            </p>
-          </div>
-        </div>
       </div>
-    </section>
 
-    <!-- Consultation CTA -->
-    <section class="section-padding cta-section bg-subtle-section">
-      <div class="container">
-        <div class="cta-banner" data-aos="zoom-in">
-          <div class="pill-badge" style="margin-bottom: 16px;">
-            <span class="badge-dot"></span>
-            Take Action
-          </div>
-          <h2>Ready to Audit Your Ingestion Architecture?</h2>
+      <div class="text-center" style="max-width: 800px; margin: 0 auto 48px;" data-aos="fade-up">
+        <div class="pill-badge">
+          <span class="badge-dot"></span>
+          Cross-Sector Triage
+        </div>
+        <h2 style="font-size: 2.2rem; font-weight: 800;">
+          Where Our Triage Principles Apply
+        </h2>
+        <p style="color: var(--text-secondary);">
+          Whether managing planetary orbital ephemerides or high-volume financial settlement records, the requirement is
+          the same: reproducible clarity at minimum waste.
+        </p>
+      </div>
+
+      <!-- 6 Major Sectors Grid -->
+      <div class="beyond-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="beyond-card">
+          <i class="fa-solid fa-landmark"></i>
+          <h3>Financial & Clearing Networks</h3>
           <p>
-            Schedule a confidential 30-minute consultation with our engineering team to evaluate your current data spend and discover where triage can immediately reduce overhead.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary btn-lg"
-          >
-            Book an Assessment <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <div>
-          <a href="/" class="logo-link">
-            <img
-              src="../AGOLD RESOURCING BRANDING 1 1.png"
-              alt="A-Gold Resourcing Logo"
-              class="nav-logo logo-light"
-            />
-            <img
-              src="../AGOLD RESOURCING BRANDING png 1.png"
-              alt="A-Gold Resourcing Logo"
-              class="nav-logo logo-dark"
-            />
-          </a>
-          <p class="footer-desc">
-            A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and ensure deterministic system integrity.
+            Eliminate noisy duplicate pings from transaction journals while guaranteeing immutable timestamp
+            defensibility and reconciliation stability for regulatory audits.
           </p>
         </div>
 
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/team/">Team & Values</a></li>
-            <li><a href="/developers/">Developer Docs</a></li>
-          </ul>
+        <div class="beyond-card">
+          <i class="fa-solid fa-hospital-user"></i>
+          <h3>Healthcare & Clinical Interoperability</h3>
+          <p>
+            Enforce canonical FHIR schemas and discard repetitive health-check noise across Epic, TEFCA, and NHS Spine
+            gateway integrations.
+          </p>
         </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li>
-              <a
-                href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Book an Assessment</a
-              >
-            </li>
-            <li><a href="mailto:info@agoldresourcing.co.uk">info@agoldresourcing.co.uk</a></li>
-          </ul>
+        <div class="beyond-card">
+          <i class="fa-solid fa-building-columns"></i>
+          <h3>Public Sector & Statutory Governance</h3>
+          <p>
+            Align digital platforms with statutory mandates, preventing drift between policy intent and IT
+            implementation while reducing council infrastructure costs.
+          </p>
+        </div>
+
+        <div class="beyond-card">
+          <i class="fa-solid fa-satellite"></i>
+          <h3>Aerospace & Space-Time Infrastructure</h3>
+          <p>
+            Our internal ECS Systems engine computes analytical ephemerides (VSOP87, DE-series) and multi-scale time
+            transformations without fragile runtime third-party API dependencies.
+          </p>
+        </div>
+
+        <div class="beyond-card">
+          <i class="fa-solid fa-bolt-lightning"></i>
+          <h3>Energy Grids & Smart Infrastructure</h3>
+          <p>
+            Filter terabytes of routine smart meter pings at the edge while capturing critical sub-cycle phase variance
+            records for grid stability.
+          </p>
+        </div>
+
+        <div class="beyond-card">
+          <i class="fa-solid fa-microchip"></i>
+          <h3>Sovereign & High-Assurance AI</h3>
+          <p>
+            Clean, reproducible data inputs are the prerequisite for defensible AI models. We ensure training sets are
+            free of duplicate bias and drift.
+          </p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="container footer-bottom">
-        <p>&copy; <span id="current-year"></span> A-Gold Resourcing Ltd. All rights reserved.</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/company/a-gold-resourcing/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/agoldresourcing" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/share/1DiniyiZ8G/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.tiktok.com/@agoldresourcing" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+  <!-- Consultation CTA -->
+  <section class="section-padding cta-section bg-subtle-section">
+    <div class="container">
+      <div class="cta-banner" data-aos="zoom-in">
+        <div class="pill-badge" style="margin-bottom: 16px;">
+          <span class="badge-dot"></span>
+          Take Action
         </div>
+        <h2>Ready to Audit Your Ingestion Architecture?</h2>
+        <p>
+          Schedule a confidential 30-minute consultation with our engineering team to evaluate your current data spend
+          and discover where triage can immediately reduce overhead.
+        </p>
+        <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform" target="_blank"
+          rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="../script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true, offset: 80 });
-    </script>
-  </body>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a href="/" class="logo-link">
+          <img src="../AGOLD RESOURCING BRANDING png 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-light" />
+          <img src="../AGOLD RESOURCING BRANDING 1 1.png" alt="A-Gold Resourcing Logo" class="nav-logo logo-dark" />
+        </a>
+        <p class="footer-desc">
+          A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and ensure
+          deterministic system integrity.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/team/">Team & Values</a></li>
+          <li><a href="/developers/">Developer Docs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>
+            <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+              target="_blank" rel="noopener noreferrer">Book an Assessment</a>
+          </li>
+          <li><a href="mailto:info@agoldresourcing.co.uk">info@agoldresourcing.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> A-Gold Resourcing Ltd. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/a-gold-resourcing/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/agoldresourcing" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1DiniyiZ8G/" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@agoldresourcing" target="_blank" rel="noopener noreferrer"
+          aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+  </script>
+</body>
+
 </html>
