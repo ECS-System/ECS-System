@@ -3,81 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A-Gold Resourcing</title>
+    <title>A-Gold Resourcing | Data Strategy, Sorting & Classification</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./AGR LOGO PNG.png" type="image/x-icon" />
     <meta
       name="description"
-      content="The deterministic computational foundations for celestial mechanics, time systems, and reference frameworks in mission-critical engineering environments."
+      content="Not all data is worth extracting. A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and eliminate infrastructure waste."
     />
     <meta
       name="keywords"
-      content="Space Science, Orbital Mechanics, Timekeeping, Astronomy, Software Engineering, Infrastructure"
+      content="Data Strategy, Data Triage, Cloud Cost Optimization, High Integrity Systems, Data Classification, Digital Transformation"
     />
     <meta name="author" content="A-Gold Resourcing" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.agoldresourcing.co.uk/" />
-    <meta property="og:title" content="A-Gold Resourcing" />
+    <meta property="og:title" content="A-Gold Resourcing | Not all data is worth extracting" />
     <meta
       property="og:description"
-      content="Building the reference frames that allow humanity to navigate the stars with precision and certainty."
+      content="We get, sort, and classify your data to help your organisation save money and maximize time."
     />
     <meta
       property="og:image"
       content="https://www.agoldresourcing.co.uk/assets/AGR.jpeg"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
   </head>
-  <body data-theme="dark">
-    <nav class="navbar solid-nav">
+  <body data-theme="light">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
       <div class="container nav-content">
-        <div class="logo">
-          <a href="/" class="logo-link">
-            <img
-              src="./AGOLD RESOURCING BRANDING 1 1.png"
-              alt="A Gold Resourcing Logo"
-            />
-          </a>
-        </div>
+        <a href="/" class="logo-link">
+          <img
+            src="./AGOLD RESOURCING BRANDING 1 1.png"
+            alt="A-Gold Resourcing Logo"
+            class="nav-logo logo-light"
+          />
+          <img
+            src="./AGOLD RESOURCING BRANDING png 1.png"
+            alt="A-Gold Resourcing Logo"
+            class="nav-logo logo-dark"
+          />
+        </a>
 
         <div class="nav-links desktop-only">
+          <a href="#simulator" onclick="scrollToSection('simulator')">Simulator</a>
+          <a href="#problem" onclick="scrollToSection('problem')">The Problem</a>
+          <a href="#methodology" onclick="scrollToSection('methodology')">How We Work</a>
+          <a href="#precision" onclick="scrollToSection('precision')">Precision Heritage</a>
           <a href="/about/">About</a>
           <a href="/team/">Team</a>
           <a href="/developers/">Developers</a>
         </div>
 
         <div class="nav-actions desktop-only">
-          <button id="theme-toggle" class="theme-btn">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
             <i class="fa-regular fa-sun icon-sun"></i>
             <i class="fa-regular fa-moon icon-moon"></i>
           </button>
-          <button class="btn-book">
-            <a
-              href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/edit"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Book a Meeting <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </button>
+          <a
+            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
 
         <button class="hamburger" aria-label="Toggle Menu">
@@ -86,25 +86,30 @@
         </button>
       </div>
 
+      <!-- Mobile Navigation Drawer -->
       <div class="mobile-menu">
         <div class="mobile-nav-links">
+          <a href="#simulator">Live Simulator</a>
+          <a href="#problem">The Problem</a>
+          <a href="#methodology">How We Work</a>
+          <a href="#precision">Precision Heritage</a>
           <a href="/about/">About</a>
           <a href="/team/">Team</a>
-          <!-- <a href="#" class="mobile-account">Account</a> -->
+          <a href="/developers/">Developers</a>
         </div>
 
-        <button class="btn-book">
-          <a
-            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/edit"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Book a Meeting <i class="fa-solid fa-arrow-right"></i
-          ></a>
-        </button>
+        <a
+          href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
-        <div class="mobile-nav-actions">
-          <span>Switch Theme:</span>
-          <button id="mobile-theme-toggle" class="theme-btn">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border-color);">
+          <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Switch Appearance:</span>
+          <button id="mobile-theme-toggle" class="theme-btn" aria-label="Toggle theme">
             <i class="fa-regular fa-sun icon-sun"></i>
             <i class="fa-regular fa-moon icon-moon"></i>
           </button>
@@ -112,1302 +117,507 @@
       </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-      <div class="video-container">
-        <video autoplay muted loop playsinline class="bg-video">
-          <source src="assets/earth-logo.mp4" type="video/mp4" />
-        </video>
-        <div class="video-overlay"></div>
-      </div>
-
       <div class="container hero-content">
-        <div class="tag" data-aos="fade-down">A Gold Resourcing</div>
-        <h1 data-aos="fade-up" data-aos-delay="200">
-          Specialist Engineering Consultancy in High Integrity Space Time
-          Systems, Governance & Digital Transformation
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="400">
-          We help organisations prevent silent system drift, reconciliation
-          instability and transformation fragility in mission-critical
-          environments through deterministic engineering, governance-led digital
-          transformation and standards-aligned implementation.
-        </p>
-      </div>
-    </header>
-    <section
-      id="telemetry"
-      class="section"
-      style="background-color: #0f172a; padding: 4rem 1rem"
-    >
-      <div style="max-width: 1000px; margin: 0 auto">
-        <div
-          style="
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-          "
-        >
-          <div>
-            <h2 style="color: white; font-size: 1.5rem; margin-bottom: 0.5rem">
-              Live Time Reconciliation Engine
-            </h2>
-            <p style="color: #94a3b8; font-size: 0.9rem">
-              Polling POST /time/compute
-            </p>
-          </div>
-          <div
-            id="telemetry-status"
-            style="
-              display: flex;
-              align-items: center;
-              gap: 0.5rem;
-              color: #10b981;
-              font-size: 0.85rem;
-              font-weight: 600;
-            "
-          >
-            <span
-              style="
-                display: inline-block;
-                width: 8px;
-                height: 8px;
-                background: #10b981;
-                border-radius: 50%;
-                box-shadow: 0 0 8px #10b981;
-              "
-            ></span>
-            LIVE DATA
-          </div>
+        <div class="pill-badge" data-aos="fade-down">
+          <span class="badge-dot"></span>
+          Data Strategy & Precision Triage
         </div>
 
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-          "
-        >
-          <!-- UTC -->
-          <div
-            style="
-              background: #1e293b;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #334155;
-            "
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+          Not all data is worth extracting.<br />
+          <span class="gradient-text">We get, sort, and classify data to save money and maximize time.</span>
+        </h1>
+
+        <p class="hero-lead" data-aos="fade-up" data-aos-delay="200">
+          Organisations burn millions storing, transforming, and querying bloated data they never use. We engineer precision triage architectures that eliminate low-yield noise at ingestion—slashing infrastructure bills, freeing engineering time, and delivering deterministic clarity.
+        </p>
+
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+          <a
+            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-lg"
           >
-            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
-              UTC (Coordinated Universal)
+            Book a Pipeline Assessment <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button
+            class="btn btn-secondary btn-lg"
+            onclick="scrollToSection('simulator')"
+          >
+            <i class="fa-solid fa-play" style="color: var(--accent-orange);"></i> View Interactive Simulator
+          </button>
+        </div>
+
+        <!-- Key Metrics Ribbon -->
+        <div class="hero-stats-ribbon" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-item">
+            <div class="stat-value">74%</div>
+            <div class="stat-label">Average Redundant Noise Filtered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">$42k+</div>
+            <div class="stat-label">Avg. Annual Cloud Storage Saved</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">10x</div>
+            <div class="stat-label">Faster Query & Audit Verification</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section 1: Live Interactive Data Pipeline Simulator -->
+    <section id="simulator" class="section-padding bg-subtle-section">
+      <div class="container">
+        <div class="text-center" style="max-width: 820px; margin: 0 auto 48px;" data-aos="fade-up">
+          <div class="pill-badge">
+            <span class="badge-dot"></span>
+            Real-Time Interactive Architecture
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+            Watch Triage in Action: Stop Ingesting Waste
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 1.05rem;">
+            See how our triage model evaluates raw streaming data in real time, discarding costly non-essential noise before it hits your data warehouse, and indexing only high-integrity signals.
+          </p>
+        </div>
+
+        <!-- Simulator Widget -->
+        <div class="simulator-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="simulator-header">
+            <div class="simulator-title-group">
+              <h3>
+                <i class="fa-solid fa-bolt" style="color: var(--accent-orange);"></i>
+                ECS Data Triage Engine Simulator
+              </h3>
+              <span class="status-live-indicator">
+                <span class="dot"></span> LIVE SIMULATION STREAM
+              </span>
             </div>
-            <div
-              id="val-utc"
-              style="
-                color: #38bdf8;
-                font-family: monospace;
-                font-size: 1.2rem;
-                margin-top: 0.5rem;
-              "
-            >
-              Awaiting data...
-            </div>
-            <div
-              id="val-jd-utc"
-              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
-            >
-              JD: --
+
+            <div class="simulator-controls">
+              <button id="sim-toggle-stream" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-pause"></i> Pause Stream
+              </button>
             </div>
           </div>
 
-          <!-- TAI -->
-          <div
-            style="
-              background: #1e293b;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #334155;
-            "
-          >
-            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
-              TAI (International Atomic)
+          <!-- KPI Realtime Metrics Bar -->
+          <div class="simulator-kpi-bar">
+            <div class="kpi-cell">
+              <div class="kpi-label">Packets Ingested</div>
+              <div id="kpi-ingested" class="kpi-number">1,240</div>
             </div>
-            <div
-              id="val-tai"
-              style="
-                color: #f472b6;
-                font-family: monospace;
-                font-size: 1.2rem;
-                margin-top: 0.5rem;
-              "
-            >
-              Awaiting data...
+            <div class="kpi-cell">
+              <div class="kpi-label">Noise Discarded</div>
+              <div id="kpi-filtered-pct" class="kpi-number highlight-crimson">74.2%</div>
             </div>
-            <div
-              id="off-tai"
-              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
-            >
-              Offset: --
+            <div class="kpi-cell">
+              <div class="kpi-label">Cloud Spend Saved</div>
+              <div id="kpi-cost-saved" class="kpi-number highlight-emerald">$34,500</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-label">Engineering Hours Saved</div>
+              <div id="kpi-hours-saved" class="kpi-number highlight-orange">284 hrs</div>
             </div>
           </div>
 
-          <!-- GPS -->
-          <div
-            style="
-              background: #1e293b;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #334155;
-            "
-          >
-            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
-              GPS Time
+          <!-- 3-Stage Pipeline Display -->
+          <div class="pipeline-stages-grid">
+            <!-- Stage 1 -->
+            <div class="pipeline-stage">
+              <div class="stage-header">
+                <div class="stage-title">
+                  <span class="pill-tag pill-tag-blue">STAGE 1</span>
+                  <strong>GET</strong> (Capture at Source)
+                </div>
+                <i class="fa-solid fa-cloud-arrow-down" style="color: var(--accent-blue);"></i>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
+                Intercepting incoming telemetry, webhooks, and raw database events.
+              </p>
+              <div id="stream-ingest" class="stage-stream-box"></div>
             </div>
-            <div
-              id="val-gps"
-              style="
-                color: #10b981;
-                font-family: monospace;
-                font-size: 1.2rem;
-                margin-top: 0.5rem;
-              "
-            >
-              Awaiting data...
-            </div>
-            <div
-              id="off-gps"
-              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
-            >
-              Offset: --
-            </div>
-          </div>
 
-          <!-- TT -->
-          <div
-            style="
-              background: #1e293b;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #334155;
-            "
-          >
-            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
-              TT (Terrestrial Time)
+            <!-- Stage 2 -->
+            <div class="pipeline-stage">
+              <div class="stage-header">
+                <div class="stage-title">
+                  <span class="pill-tag pill-tag-crimson">STAGE 2</span>
+                  <strong>SORT</strong> (Evaluate & Discard)
+                </div>
+                <i class="fa-solid fa-filter" style="color: var(--accent-orange);"></i>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
+                Checking strict utility: Discarding zero-delta duplicate noise.
+              </p>
+              <div id="stream-filter" class="stage-stream-box"></div>
             </div>
-            <div
-              id="val-tt"
-              style="
-                color: #fbbf24;
-                font-family: monospace;
-                font-size: 1.2rem;
-                margin-top: 0.5rem;
-              "
-            >
-              Awaiting data...
-            </div>
-            <div
-              id="val-jd-tt"
-              style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem"
-            >
-              JD: --
-            </div>
-          </div>
 
-          <!-- TDB -->
-          <div
-            style="
-              background: #1e293b;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #334155;
-            "
-          >
-            <div style="color: #94a3b8; font-size: 0.85rem; font-weight: 600">
-              TDB (Barycentric)
-            </div>
-            <div
-              id="val-tdb"
-              style="
-                color: #a78bfa;
-                font-family: monospace;
-                font-size: 1.2rem;
-                margin-top: 0.5rem;
-              "
-            >
-              Awaiting data...
+            <!-- Stage 3 -->
+            <div class="pipeline-stage">
+              <div class="stage-header">
+                <div class="stage-title">
+                  <span class="pill-tag pill-tag-emerald">STAGE 3</span>
+                  <strong>CLASSIFY</strong> (Structure & Index)
+                </div>
+                <i class="fa-solid fa-check-double" style="color: var(--accent-emerald);"></i>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
+                Routing verified high-value records into canonical, audit-ready schemas.
+              </p>
+              <div id="stream-classify" class="stage-stream-box"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="section-divider"></div>
 
-    <section class="orange-section section-padding">
+    <!-- Section 2: The Problem ("Cost of Blind Extraction") -->
+    <section id="problem" class="section-padding">
       <div class="container">
-        <div class="orange-header" style="margin: 0 auto 60px">
-          <span class="tag-label white-tag">The Problem</span>
-          <h2 class="white-text" style="font-size: 2.2rem; margin-top: 15px">
-            Most software treats time as a timestamp and orbital models as
-            utilities. In mission critical environments, this creates structural
-            exposure:
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+          <div class="pill-badge">
+            <span class="badge-dot"></span>
+            The Problem We Solve
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+            The Expensive Fallacy: "Extract Everything Now, Figure It Out Later"
           </h2>
-          <p style="color: rgba(255, 255, 255, 0.8); margin-top: 10px">
-            (Select an exposure to view technical details)
+          <p style="color: var(--text-secondary); font-size: 1.05rem;">
+            Legacy data teams dump raw streams indiscriminately into data lakes. When 70% of that data delivers zero business or operational insight, you inherit three permanent handicaps:
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="problem-icon icon-crimson">
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+            <h3>Ballooning Cloud & Storage Bills</h3>
+            <p>
+              Paying exponentially for BigQuery, Snowflake, and AWS S3 storage filled with duplicate sensor pings, unchanged cache states, and redundant logs. You pay to store it, transform it, and backup what nobody reads.
+            </p>
+          </div>
+
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="problem-icon icon-amber">
+              <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <h3>Wasted Engineering Bandwidth</h3>
+            <p>
+              Your most valuable software and data engineers spend hundreds of hours writing ad-hoc clean-up scripts, debugging noisy pipelines, and waiting on bloated query scans instead of building core product features.
+            </p>
+          </div>
+
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="problem-icon icon-blue">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Silent Drift & Audit Fragility</h3>
+            <p>
+              More data does not equal more truth. Without strict classification at the boundary, disparate services use contradictory timestamp formats and conflicting schemas, breaking historical reconciliation when audited.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Our 3-Step Methodology -->
+    <section id="methodology" class="section-padding bg-subtle-section">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+          <div class="pill-badge">
+            <span class="badge-dot"></span>
+            How We Work
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+            Get &bull; Sort &bull; Classify
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 1.05rem;">
+            We engineer intelligent triage points at your system boundary so your organization stores only defensible, actionable signal.
+          </p>
+        </div>
+
+        <div class="method-grid">
+          <!-- Step 1 -->
+          <div class="method-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="method-step-num">01</div>
+            <h3>GET</h3>
+            <p>
+              <strong>Precision Ingestion.</strong> We audit your operational data interfaces to identify exactly what data is generated, who consumes it, and what tangible decision or compliance rule it supports.
+            </p>
+            <ul class="method-highlights">
+              <li><i class="fa-solid fa-check"></i> Source interface audit</li>
+              <li><i class="fa-solid fa-check"></i> Elimination of blind scrapers</li>
+              <li><i class="fa-solid fa-check"></i> Sovereign boundary capture</li>
+            </ul>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="method-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="method-step-num">02</div>
+            <h3>SORT</h3>
+            <p>
+              <strong>Noise Elimination.</strong> We enforce rigorous triage criteria before persistence. If data is redundant, identical to the previous state, or transient, it is purged at zero storage penalty.
+            </p>
+            <ul class="method-highlights">
+              <li><i class="fa-solid fa-check"></i> Pre-storage deduplication</li>
+              <li><i class="fa-solid fa-check"></i> Zero-delta state filtering</li>
+              <li><i class="fa-solid fa-check"></i> Immediate cloud cost reduction</li>
+            </ul>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="method-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="method-step-num">03</div>
+            <h3>CLASSIFY</h3>
+            <p>
+              <strong>Deterministic Structuring.</strong> The high-value payload that survives is tagged, version-controlled, and mapped into immutable canonical schemas ready for instantaneous querying and audit defence.
+            </p>
+            <ul class="method-highlights">
+              <li><i class="fa-solid fa-check"></i> Canonical schema mapping</li>
+              <li><i class="fa-solid fa-check"></i> Immutable audit indexing</li>
+              <li><i class="fa-solid fa-check"></i> Fast, predictable query replays</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Proof of Extreme Precision (Space-Time Heritage) -->
+    <section id="precision" class="section-padding">
+      <div class="container">
+        <div class="heritage-box" data-aos="fade-up">
+          <div class="heritage-text">
+            <div class="pill-badge" style="margin-bottom: 12px;">
+              <span class="badge-dot"></span>
+              Engineering Heritage
+            </div>
+            <h2>Born in High-Integrity Celestial Mechanics</h2>
+            <p>
+              Our principles were forged in systems where time differences of a few microseconds turn into hundreds of meters of orbital error. Through our internal <strong>ECS Systems</strong> framework, we compute planetary motion, leap-second reconciliation, and astronomical coordinate frames deterministically without external third-party API dependencies.
+            </p>
+            <p>
+              If our engineering can resolve multi-authority atomic time (TAI), terrestrial dynamical time (TT), and Earth orientation wobbles to microsecond certainty, imagine the precision and discipline we bring to sorting and classifying your enterprise data.
+            </p>
+            <div class="heritage-badge-list">
+              <span class="heritage-pill">IERS & IAU Aligned</span>
+              <span class="heritage-pill">SOFA & SPICE Standards</span>
+              <span class="heritage-pill">Deterministic Historical Replay</span>
+              <span class="heritage-pill">Zero Runtime Vendor Lock-in</span>
+            </div>
+          </div>
+
+          <div class="heritage-card-preview">
+            <h4>Live Capability Proof</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
+              Inspect our high-precision developer specifications or view full API models for deterministic time reconciliation:
+            </p>
+            <div style="background-color: var(--bg-muted); padding: 14px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.775rem; margin-bottom: 16px;">
+              <span style="color: var(--accent-orange);">POST</span> /time/compute<br />
+              <span style="color: var(--text-muted);">&rarr; Resolves UTC, TAI, TT, GPS, TDB deterministically</span>
+            </div>
+            <a href="/developers/" class="btn btn-secondary btn-sm" style="width: 100%;">
+              Open Developer Specs <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Applied Areas (Expandable Exposure Cards) -->
+    <section class="section-padding bg-subtle-section">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+          <div class="pill-badge">
+            <span class="badge-dot"></span>
+            Applied Industry Impact
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px;">
+            Where Triage & Classification Save Critical Value
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 1.05rem;">
+            Click to explore how deterministic data sorting eliminates exposure in high-stakes sectors.
           </p>
         </div>
 
         <div class="exposure-grid">
-          <div
-            class="expand-card dark-mode-card"
-            onclick="toggleCard(this)"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
+          <!-- Card 1 -->
+          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="100">
             <div class="card-header">
-              <img
-                src="../assets/brand-logo-white.png"
-                alt="Logo"
-                class="brand-logo-icon"
-              />
-              <h3>
-                Inconsistent transformations between UTC, TAI, TT, and UT1.
-              </h3>
+              <h3>Financial Ledgers & Clearing: Timestamp Defensibility</h3>
               <i class="fa-solid fa-plus toggle-icon"></i>
             </div>
             <div class="card-body">
-              <p class="tech-detail">
-                There is no single universal clock. Different official time
-                scales exist for civil time, atomic time, Earth rotation time,
-                and scientific modelling. <br />
-                <br />
-                UTC, TAI, TT, UT1, and GPS are legitimate but not identical.
-                <br />
-                <br />
-                If systems use different time scales without strict and explicit
-                conversion, timestamps will automatically give different
-                physical moments. This leads to positional errors, incorrect
-                sequencing, and loss of reproducibility.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="expand-card dark-mode-card"
-            onclick="toggleCard(this)"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="card-header">
-              <img
-                src="../assets/brand-logo-white.png"
-                alt="Logo"
-                class="brand-logo-icon"
-              />
-              <h3>
-                Leap second handling divergence across distributed systems.
-              </h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p class="tech-detail">
-                Event order depends on consistent time interpretation. <br />
-                <br />
-                If one system applies leap seconds and another does not, or if
-                distributed nodes rely on different clock assumptions, valid
-                timestamps may appear correct but represent incorrect ordering.
-                <br />
-                <br />
-                Transactions, commands, or computations may execute out of
-                sequence without visible failure.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="expand-card dark-mode-card"
-            onclick="toggleCard(this)"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="card-header">
-              <img
-                src="../assets/brand-logo-white.png"
-                alt="Logo"
-                class="brand-logo-icon"
-              />
-              <h3>
-                Earth orientation is not constant and requires official
-                correction data.
-              </h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p class="tech-detail">
-                Earth does not rotate uniformly. Its axis wobbles and its spin
-                rate changes slightly. <br />
-                <br />
-                Space agencies publish official Earth Orientation Parameters
-                including UT1 corrections and polar motion values. <br />
-                <br />
-                If systems use different versions of this data, or mix predicted
-                and final releases, the same timestamp can produce different
-                spatial results.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="expand-card dark-mode-card"
-            onclick="toggleCard(this)"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="card-header">
-              <img
-                src="../assets/brand-logo-white.png"
-                alt="Logo"
-                class="brand-logo-icon"
-              />
-              <h3>
-                ΔT model mismatches between atomic time and dynamical time.
-              </h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p class="tech-detail">
-                There is more than one way to measure time. <br />
-                <br />
-                Atomic time is based on laboratory clock vibrations. Dynamical
-                time is used to calculate planetary motion and accounts for
-                relativistic effects.
-                <br />
-                <br />
-                These systems are not identical.
-                <br />
-                <br />
-                ΔT represents the difference between Earth rotation time and
-                dynamical time. If different ΔT models are used, long term
-                astronomical and orbital calculations diverge.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="expand-card dark-mode-card"
-            onclick="toggleCard(this)"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div class="card-header">
-              <img
-                src="../assets/brand-logo-white.png"
-                alt="Logo"
-                class="brand-logo-icon"
-              />
-              <h3>
-                Reference frame divergence across ICRS, BCRS, GCRS, CIRS, TIRS,
-                ITRF
-              </h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p class="tech-detail">
-                Positions in space and on Earth depend on coordinate frames.
-                <br />
-                <br />
-                Planetary positions, satellite orbits, spacecraft trajectories,
-                telescope pointing, and ground coordinates all require explicit
-                frame definition.
-                <br />
-                <br />
-                If systems mix frames without precise transformation, the
-                numbers remain mathematically valid but represent the wrong
-                physical location.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="expand-card dark-mode-card"
-            onclick="toggleCard(this)"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <div class="card-header">
-              <img
-                src="../assets/brand-logo-white.png"
-                alt="Logo"
-                class="brand-logo-icon"
-              />
-              <h3>
-                Predicted versus final correction divergence in historical
-                replays.
-              </h3>
-              <i class="fa-solid fa-plus toggle-icon"></i>
-            </div>
-            <div class="card-body">
-              <p class="tech-detail">
-                Official time and Earth rotation adjustments are updated over
-                time. <br />
-                <br />
-                Space agencies publish predicted values for real time use and
-                later release final validated corrections.
-                <br />
-                <br />
-                If systems do not preserve exactly which correction dataset was
-                used, recalculating the same historical date can produce
-                different results.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="exposure-conclusion" data-aos="zoom-in">
-          <p>
-            These issues rarely fail loudly. They accumulate, becoming
-            operational cost, scientific instability, audit exposure, or mission
-            risk.
-          </p>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-    <section class="what-we-do section-padding">
-      <div class="container">
-        <div class="section-header-center" data-aos="fade-up">
-          <span class="tag-label">What We Do</span>
-          <h2 style="max-width: 900px; margin: 0 auto 20px">
-            We design deterministic space time infrastructure for organisations
-            where precision is not optional.
-          </h2>
-          <p
-            style="
-              color: var(--text-secondary);
-              max-width: 700px;
-              margin: 0 auto;
-              font-size: 1.1rem;
-              line-height: 1.6;
-            "
-          >
-            We prevent silent time and orbital computation errors through
-            standards-aligned engineering and reproducible computational design.
-            <br />
-            <span style="font-size: 0.9rem; opacity: 0.7"
-              >(Click a step to expand)</span
-            >
-          </p>
-        </div>
-
-        <div class="timeline-wrapper">
-          <div
-            class="timeline-line"
-            data-aos="zoom-in-right"
-            data-aos-duration="1500"
-          ></div>
-          <div class="timeline-grid-4">
-            <div
-              class="timeline-item expand-card"
-              onclick="toggleCard(this)"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="timeline-marker">1</div>
-              <h3>Deterministic Time Conversion</h3>
-              <div class="card-body">
-                <p>
-                  <strong>The Reality:</strong> We reconcile atomic, Earth,
-                  civil, and satellite time so systems operate on explicit
-                  facts, not assumptions.
-                </p>
-                <p class="tech-detail">
-                  Strict conversions across TAI, UT1, UTC, TT, and GMST.
-                </p>
-              </div>
-              <i class="fa-solid fa-chevron-down timeline-toggle"></i>
-            </div>
-
-            <div
-              class="timeline-item expand-card"
-              onclick="toggleCard(this)"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="timeline-marker">2</div>
-              <h3>Standards-Aligned Modelling</h3>
-              <div class="card-body">
-                <p>
-                  <strong>The Reality:</strong> We implement the rigorous models
-                  mandated by global authorities, ensuring your system is
-                  physically defensible.
-                </p>
-                <p class="tech-detail">
-                  Aligned with IERS, IAU, SOFA, SPICE, and GNSS frameworks.
-                </p>
-              </div>
-              <i class="fa-solid fa-chevron-down timeline-toggle"></i>
-            </div>
-
-            <div
-              class="timeline-item expand-card"
-              onclick="toggleCard(this)"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="timeline-marker">3</div>
-              <h3>Reproducible computational architecture</h3>
-              <div class="card-body">
-                <p>
-                  <strong>The Reality:</strong> Replay calculations from years
-                  ago using the exact data, rules, and conditions from that
-                  precise moment.
-                </p>
-                <p class="tech-detail">
-                  Complete versioning of datasets, ephemerides, and correction
-                  layers.
-                </p>
-              </div>
-              <i class="fa-solid fa-chevron-down timeline-toggle"></i>
-            </div>
-
-            <div
-              class="timeline-item expand-card"
-              onclick="toggleCard(this)"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="timeline-marker">4</div>
-              <h3>Sovereign, dependency-aware system design</h3>
-              <div class="card-body">
-                <p>
-                  <strong>The Reality:</strong> Self-contained systems that run
-                  offline, eliminating fragile external dependencies and
-                  granting you ownership.
-                </p>
-                <p class="tech-detail">
-                  Dependency-aware architecture for long-horizon archival
-                  stability.
-                </p>
-              </div>
-              <i class="fa-solid fa-chevron-down timeline-toggle"></i>
-            </div>
-          </div>
-        </div>
-        <div class="why-post-content" data-aos="fade-up" data-aos-delay="200">
-          <h2>Broader Digital Transformation Capability</h2>
-          <p class="why-lead-text">
-            While our origins are in high Integrity space time engineering, the
-            underlying discipline that defines our work is governance led
-            digital transformation.  We apply structured, standards aligned,
-            risk controlled implementation methodologies to complex digital
-            environments  translating technical change into operational
-            improvement.
-          </p>
-
-          <div class="principles-apply-box">
-            <h4
-              style="
-                margin-bottom: 20px;
-                font-size: 1.1rem;
-                color: var(--accent-orange);
-                font-weight: 500;
-              "
-            >
-              This includes
-            </h4>
-            <div class="industry-pill-list">
-              <span class="pill">Digital maturity assessment</span>
-              <span class="pill">Transformation programme governance</span>
-              <span class="pill">Systems modernisation</span>
-              <span class="pill"
-                >Structured implementation planning across public and private
-                sector organisations.</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-
-    <section class="vision-section section-padding">
-      <div class="container">
-        <div class="vision-content" data-aos="zoom-in">
-          <span class="tag-label">Why It Matters</span>
-          <h2>
-            Errors in time handling and reference modeling do not announce
-            themselves.
-          </h2>
-          <h3>They Propagate</h3>
-          <ul>
-            <li>
-              <i class="fa-solid fa-star"></i>
-              In high velocity systems, microsecond differences become spatial
-              displacement.
-            </li>
-            <li>
-              <i class="fa-solid fa-star"></i>
-              In distributed platforms, invisible time assumptions break replay
-              integrity.
-            </li>
-            <li>
-              <i class="fa-solid fa-star"></i>
-              In scientific environments, revision drift compromises
-              reproducibility.
-            </li>
-          </ul>
-          <br />
-          <br />
-          <h3>In Our World, Precision Is Perfection</h3>
-          <ul>
-            <li>
-              <i class="fa-solid fa-star"></i> We make assumptions explicit.
-            </li>
-            <li>
-              <i class="fa-solid fa-star"></i> We make uncertainty visible.
-            </li>
-            <li>
-              <i class="fa-solid fa-star"></i> We make computation reproducible.
-            </li>
-            <li>
-              <i class="fa-solid fa-star"></i>
-              We design systems that remain stable across decades, not just
-              development cycles.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-
-    <section class="orange-section section-padding">
-      <div class="container">
-        <div class="orange-header">
-          <span class="tag-label white-tag">Engineering Implementation</span>
-          <h2 class="white-text">
-            Beyond audit, we design deterministic infrastructure in three
-            domains:
-          </h2>
-        </div>
-
-        <div class="expertise-grid">
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="100">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Space-Time Systems Engineering</p>
-            <ul>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Time scale
-                transformations (UTC, TAI, TT, UT1, GNSS)
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Atomic and rotational
-                time reconciliation
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Earth Orientation
-                Parameter integration
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Leap second authority
-                modelling
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Long-horizon
-                reproducibility architecture
-              </li>
-            </ul>
-          </div>
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="200">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Celestial Mechanics Infrastructure</p>
-            <ul>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Analytical ephemeris
-                implementation (VSOP87, DE-series, SPICE)
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Deterministic orbital
-                propagation
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Standards aligned
-                coordinate transformations
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Validation against
-                established astronomical reference datasets
-              </li>
-            </ul>
-          </div>
-          <div class="glass-card-dark" data-aos="fade-up" data-aos-delay="300">
-            <img
-              src="../assets/brand-logo-white.png"
-              alt="A-Gold Resourcing Logo"
-              class="card-icon-corner brand-logo-icon"
-            />
-            <p>Computational Integrity Architecture</p>
-            <ul>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Reference frame
-                consistency enforcement
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Explicit uncertainty
-                modelling
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Version-controlled
-                correction layers
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right"></i> Audit-ready
-                computational pipelines
-              </li>
-            </ul>
-          </div>
-        </div>
-        <p class="text">
-          Our implementations align with IERS, IAU, SOFA, SPICE, and GNSS
-          standards. We do not redefine standards. We implement them
-          deterministically and transparently.
-        </p>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-
-    <section class="focus-areas section-padding">
-      <div class="container focus-grid">
-        <div class="focus-header">
-          <span class="tag-label">ECS Systems</span>
-          <h2>
-            ECS Systems is our internal deterministic computational framework
-            for celestial mechanics and space time infrastructure.
-          </h2>
-        </div>
-
-        <div class="focus-list">
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="100">
-            <div class="focus-number">1</div>
-            <div class="focus-text">
               <p>
-                Computes planetary motion without reliance on third-party
-                runtime APIs (computational sovereignty).
+                Financial platforms waste massive compute replaying unindexed transaction streams. We design timestamp defensibility frameworks that eliminate settlement ambiguity and ensure transactional replay integrity under regulatory scrutiny.
               </p>
             </div>
           </div>
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="200">
-            <div class="focus-number">2</div>
-            <div class="focus-text">
+
+          <!-- Card 2 -->
+          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-header">
+              <h3>Healthcare Interoperability: FHIR, TEFCA & NHS Spine</h3>
+              <i class="fa-solid fa-plus toggle-icon"></i>
+            </div>
+            <div class="card-body">
               <p>
-                No runtime dependency on external web services for ephemeris,
-                time scale, or Earth orientation calculations.
+                Patient data streams are rife with duplicate demographic and sensor pings. We enforce canonical schema mapping, authority-traceable data exchange, and version-locked API governance across GP Connect, Epic, and NHS Spine architectures.
               </p>
             </div>
           </div>
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="300">
-            <div class="focus-number">3</div>
-            <div class="focus-text">
+
+          <!-- Card 3 -->
+          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-header">
+              <h3>Public Sector & Councils: Defensible Statutory Reporting</h3>
+              <i class="fa-solid fa-plus toggle-icon"></i>
+            </div>
+            <div class="card-body">
               <p>
-                Enables deterministic historical replay, operational resilience
-                in air-gapped environments, stability across vendor/API changes,
-                long-horizon archival reproducibility, and explicit standards
-                control.
+                We implement governance-aligned data transformation models that prevent drift between policy intent and IT implementation, ensuring statutory data reporting remains auditable and defensible.
               </p>
             </div>
           </div>
-          <div class="focus-item" data-aos="fade-left" data-aos-delay="400">
-            <div class="focus-number">4</div>
-            <div class="focus-text">
+
+          <!-- Card 4 -->
+          <div class="expand-card" onclick="toggleCard(this)" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-header">
+              <h3>Critical Infrastructure & Energy Grids: Sub-Cycle Sync</h3>
+              <i class="fa-solid fa-plus toggle-icon"></i>
+            </div>
+            <div class="card-body">
               <p>
-                ECS Systems is a standards-aligned, deterministic implementation
-                layer designed for continuity and auditability.
+                Smart meters and distributed substation monitors generate terabytes of uninformative status pings. We discard the noise at the edge while preserving sub-cycle phase variance records for safety investigations.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="section-divider"></div>
 
-    <section class="history-section section-padding">
-      <div class="container">
-        <div class="history-header" data-aos="zoom-in">
-          <span class="tag-label"
-            >Our Flagship Service: Time Integrity Audit</span
-          >
-          <h2>
-            A structured technical assessment of your system's temporal and
-            orbital architecture.
-          </h2>
-        </div>
-
-        <div class="history-flex">
-          <div class="history-content" data-aos="fade-right">
-            <p>We evaluate:</p>
-            <ul>
-              <li>
-                <i class="fa-solid fa-star"></i> Time scale transformation
-                pathways
-              </li>
-              <li>
-                <i class="fa-solid fa-star"></i> Leap second authority alignment
-              </li>
-              <li>
-                <i class="fa-solid fa-star"></i> Earth Orientation Parameter
-                integration and revision handling
-              </li>
-              <li><i class="fa-solid fa-star"></i> ΔT model consistency</li>
-              <li>
-                <i class="fa-solid fa-star"></i> Reference frame coherence
-              </li>
-              <li>
-                <i class="fa-solid fa-star"></i> Predicted versus final data
-                reconciliation
-              </li>
-              <li>
-                <i class="fa-solid fa-star"></i> Reproducibility stability
-                across revisions
-              </li>
-            </ul>
-          </div>
-
-          <div class="history-content" data-aos="fade-left">
-            <p>Deliverables:</p>
-            <ul>
-              <li>
-                <i class="fa-solid fa-star"></i> Formal technical risk
-                assessment
-              </li>
-              <li>
-                <i class="fa-solid fa-star"></i> Standards alignment gap
-                analysis
-              </li>
-              <li>
-                <i class="fa-solid fa-star"></i> Identified exposure points
-              </li>
-              <li><i class="fa-solid fa-star"></i> Remediation roadmap</li>
-              <li>
-                <i class="fa-solid fa-star"></i> Executive summary for
-                leadership
-              </li>
-            </ul>
-          </div>
-        </div>
-        <p class="text text-center mt-4">
-          Typical engagement: 2-4 weeks depending on system complexity.
-        </p>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-
-    <section id="api" class="section modern-api-section" data-aos="fade-up">
-      <div class="api-header-centered">
-        <h2 class="section-title">API Documentation</h2>
-        <p class="section-subtitle">
-          RESTful APIs with comprehensive documentation, code examples,<br />
-          and interactive testing.
-        </p>
-      </div>
-
-      <div class="modern-tabs-container">
-        <div class="modern-tabs-pill">
-          <button
-            class="modern-tab active"
-            onclick="switchModernTab('ephemeris', this)"
-          >
-            Compute Time
-          </button>
-          <button class="modern-tab" onclick="switchModernTab('catalog', this)">
-            Full Scientific Date
-          </button>
-          <button class="modern-tab" onclick="switchModernTab('time', this)">
-            Validate Dataset
-          </button>
-        </div>
-      </div>
-
-      <div class="api-card-modern">
-        <div
-          id="content-ephemeris"
-          class="modern-tab-content"
-          style="display: block"
-        >
-          <div class="api-card-header">
-            <h3>Compute Time <span class="badge-get">POST</span></h3>
-            <!-- <p>Get real-time planetary positions and velocities</p> -->
-          </div>
-          <div class="api-code-group">
-            <div class="code-label-row">
-              <span class="code-label">Request</span>
-              <button
-                class="icon-copy-btn"
-                onclick="copyCode(this)"
-                aria-label="Copy code"
-              >
-                <i class="fa-regular fa-copy"></i>
-              </button>
-            </div>
-            <div class="modern-code-block single-line">
-              <code
-                >curl -X POST
-                "https://www.ecssys.com/docs#/default/compute_time_time_compute_post"
-                \ -H "A...</code
-              >
-            </div>
-          </div>
-          <div class="api-code-group">
-            <div class="code-label-row">
-              <span class="code-label">Response</span>
-            </div>
-            <div class="modern-code-block multi-line">
-              <pre><code>{
-  "input": "2026-01-01T00:00:00Z",
-  "utc": "2026-01-01T00:00:00+00:00",
-  "tai": "2026-01-01T00:00:37+00:00",
-  "tt": "2026-01-01T00:01:09.184000+00:00",
-  "tdb": "2026-01-01T00:01:09.183919+00:00",
-  "gps": "2026-01-01T00:00:18+00:00",
-  "jd_utc": 2461041.5,
-  "jd_tt": 2461041.500800741,
-  "tai_minus_utc": 37
-}
-</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <div
-          id="content-catalog"
-          class="modern-tab-content"
-          style="display: none"
-        >
-          <div class="api-card-header">
-            <h3>Full Scientific Date <span class="badge-get">POST</span></h3>
-            <!-- <p>Access comprehensive star catalog data</p> -->
-          </div>
-          <div class="api-code-group">
-            <div class="code-label-row">
-              <span class="code-label">Request</span>
-              <button
-                class="icon-copy-btn"
-                onclick="copyCode(this)"
-                aria-label="Copy code"
-              >
-                <i class="fa-regular fa-copy"></i>
-              </button>
-            </div>
-            <div class="modern-code-block single-line">
-              <code
-                >curl -X POST "https://www.ecssys.com/docs/time/state/full" \ -H
-                "Content-Type: application/json" \ -d '{ "timestamp":
-                "2026-01-01T00:00:00Z" }'</code
-              >
-            </div>
-          </div>
-          <div class="api-code-group">
-            <div class="code-label-row">
-              <span class="code-label">Response</span>
-            </div>
-            <div class="modern-code-block multi-line">
-              <pre><code>{
-  "input": "2026-01-01T00:00:00Z",
-  "source": {
-    "dataset": "TAI_UTC_RECONCILED",
-    "model": "time_state_aware",
-    "data_product": "ECS_UNIFIED_LEAP_SECOND_TIME_AUTHORITY",
-    "method": "mathematical_time_engine_reconciled_with_dataset",
-    "source_authorities": [
-      "IERS_BULLETIN_C",
-      "IANA_TZDB_LEAPSECONDS",
-      "USNO_TAI_UTC"
-    ],
-    "as_of": "2026-04-24T11:49:09.383871Z",
-    "generated_at": "2026-04-24T11:49:09.501860Z",
-    "status": "ok",
-    "dataset_id": "ecs.time.leap_seconds.authority.v1",
-    "dataset_version": null,
-    "content_hash": null,
-    "canonical_schema": null,
-    "source_policy": null,
-    "traceability_endpoint": "/time/leapseconds/report"
-  },
-  "scales": {
-    "utc": "2026-01-01T00:00:00+00:00",
-    "tai": "2026-01-01T00:00:37+00:00",
-    "tt": "2026-01-01T00:01:09.184000+00:00",
-    "tdb": "2026-01-01T00:01:09.183919+00:00",
-    "gps": "2026-01-01T00:00:18+00:00"
-  },
-  "julian": {
-    "jd_utc": 2461041.5,
-    "jd_tt": 2461041.500800741
-  },
-  "offsets": {
-    "tai_minus_utc": 37,
-    "tt_minus_tai": 32.184,
-    "gps_minus_tai": -19
-  },
-  "derived": {
-    "t_tt_centuries": 0.2600000219230912,
-    "seconds_since_j2000": 820497669.1840142
-  }
-}
-</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <div id="content-time" class="modern-tab-content" style="display: none">
-          <div class="api-card-header">
-            <h3>Validate Dataset <span class="badge-get">GET</span></h3>
-            <!-- <p>Convert between different time standards</p> -->
-          </div>
-          <div class="api-code-group">
-            <div class="code-label-row">
-              <span class="code-label">Request</span>
-              <button
-                class="icon-copy-btn"
-                onclick="copyCode(this)"
-                aria-label="Copy code"
-              >
-                <i class="fa-regular fa-copy"></i>
-              </button>
-            </div>
-            <div class="modern-code-block single-line">
-              <code
-                >curl -X GET
-                "https://www.ecssys.com/docs#/default/validate_dataset_time_validate_get"</code
-              >
-            </div>
-          </div>
-          <div class="api-code-group">
-            <div class="code-label-row">
-              <span class="code-label">Response</span>
-            </div>
-            <div class="modern-code-block multi-line">
-              <pre><code>{
-  "timestamp": "2026-01-01T00:00:00Z",
-  "dataset": "TAI_UTC_RECONCILED",
-  "valid": true,
-  "active_segment": {
-    "effective_from": "2017-01-01T00:00:00Z",
-    "tai_minus_utc": 37,
-    "segment_type": "step",
-    "source": "IANA"
-  },
-  "computed": {
-    "tai_minus_utc": 37,
-    "utc": "2026-01-01T00:00:00+00:00",
-    "tai": "2026-01-01T00:00:37+00:00"
-  },
-  "coverage": {
-    "covered_by_dataset": true,
-    "is_future": false,
-    "uses_announced_event": false
-  },
-  "traceability_endpoint": "/time/leapseconds/query"
-}
-</code></pre>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="api-bottom-cta">
-        <button
-          class="btn-provenance-contract"
-          onclick="scrollToSection('provenance')"
-        >
-          Read the Data Provenance Contract
-          <span class="icon-circle-arrow"
-            ><i class="fa-solid fa-arrow-up-right"></i
-          ></span>
-        </button>
-      </div>
-    </section>
-
-    <section class="orange-section section-padding">
+    <!-- Section 6: Consultation Call to Action -->
+    <section class="section-padding cta-section">
       <div class="container">
         <div class="cta-banner" data-aos="zoom-in">
-          <span class="tag-label white-tag">Engagement</span>
-          <h2 style="margin-top: 20px">
-            If your systems depend on time precision or orbital computation,
-            they already depend on layered standards. Book a Meeting.
-          </h2>
+          <div class="pill-badge" style="margin-bottom: 16px;">
+            <span class="badge-dot"></span>
+            Stop Wasting Resources
+          </div>
+          <h2>Ready to Stop Paying to Extract and Store Useless Data?</h2>
+          <p>
+            Book a 30-minute discovery assessment with our senior architecture team. We will review your current ingestion pipelines and identify where triage can save direct infrastructure budget and unlock engineering velocity.
+          </p>
           <a
-            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/edit"
+            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
             target="_blank"
-            class="btn-cta-dark"
-            >Book a meeting &rarr;</a
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-lg"
           >
+            Book Your Assessment <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
-    <div class="section-divider"></div>
 
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-content">
-        <div class="footer-left">
-          <div class="footer-logo-container">
-            <a href="/"
-              ><img
-                src="./AGOLD RESOURCING BRANDING png 1.png"
-                alt="A Gold Resourcing Logo"
-                class="footer-logo logo-dark"
-            /></a>
-            <a href="/"
-              ><img
-                src="./AGOLD RESOURCING BRANDING 1 1.png"
-                alt="A Gold Resourcing Logo"
-                class="footer-logo logo-light"
-            /></a>
-          </div>
+        <div>
+          <a href="/" class="logo-link">
+            <img
+              src="./AGOLD RESOURCING BRANDING 1 1.png"
+              alt="A-Gold Resourcing Logo"
+              class="nav-logo logo-light"
+            />
+            <img
+              src="./AGOLD RESOURCING BRANDING png 1.png"
+              alt="A-Gold Resourcing Logo"
+              class="nav-logo logo-dark"
+            />
+          </a>
           <p class="footer-desc">
-            A Gold Resourcing builds deterministic computational foundations for
-            celestial mechanics, time systems, and reference frameworks in
-            mission-critical engineering environments.
+            A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and ensure deterministic system integrity in mission-critical environments.
           </p>
         </div>
 
-        <div class="footer-right">
-          <h4>Quick Links</h4>
+        <div class="footer-col">
+          <h4>Navigation</h4>
           <ul>
-            <li><a href="/about">About</a></li>
-            <!-- <li><a href="#">What We do</a></li>
-            <li><a href="#">Vision</a></li> -->
-            <li><a href="/team">Team</a></li>
+            <li><a href="#simulator">Simulator</a></li>
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#methodology">How We Work</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/team/">Team & Values</a></li>
+            <li><a href="/developers/">Developer Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Consultation</h4>
+          <ul>
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Book an Assessment</a
+              >
+            </li>
+            <li><a href="mailto:info@agoldresourcing.co.uk">info@agoldresourcing.co.uk</a></li>
           </ul>
         </div>
       </div>
 
       <div class="container footer-bottom">
         <p>
-          &copy; <span id="current-year"></span> A-Gold Resourcing. All rights
-          reserved.
+          &copy; <span id="current-year"></span> A-Gold Resourcing Ltd. All rights reserved.
         </p>
         <div class="social-icons">
-          <a
-            href="https://www.instagram.com/agoldresourcing?igsh=MW4yMnBxYWgyNWZmbQ%3D%3D&utm_source=qr"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/share/1DiniyiZ8G/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.tiktok.com/@agoldresourcing?_r=1&_t=ZS-92HGCXK4ZdM"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fa-brands fa-tiktok"></i
-          ></a>
           <a
             href="https://www.linkedin.com/company/a-gold-resourcing/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/agoldresourcing"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/share/1DiniyiZ8G/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@agoldresourcing"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            ><i class="fa-brands fa-tiktok"></i
           ></a>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1000,
+        duration: 800,
         once: true,
-        offset: 100,
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        async function fetchTimeSpineData() {
-          try {
-            const currentTimestamp = new Date().toISOString();
-            const apiUrl = "https://www.ecssys.com/time/compute";
-
-            const response = await fetch(apiUrl, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ timestamp: currentTimestamp }),
-            });
-
-            if (!response.ok) throw new Error("Network Error");
-
-            const data = await response.json();
-            updateUI(data, true);
-          } catch (error) {
-            // FALLBACK: Simulate data if network drops or CORS fails
-            const now = new Date();
-
-            // Calculate mock Julian Date dynamically based on current time
-            const jdUtcBase = now.getTime() / 86400000 + 2440587.5;
-
-            const mockData = {
-              utc: now.toISOString(),
-              tai: new Date(now.getTime() + 37000).toISOString(),
-              gps: new Date(now.getTime() + 18000).toISOString(),
-              tt: new Date(now.getTime() + 69184).toISOString(),
-              tdb: new Date(now.getTime() + 69185).toISOString(),
-              tai_minus_utc: 37,
-              jd_utc: jdUtcBase,
-              jd_tt: jdUtcBase + 69.184 / 86400,
-            };
-
-            updateUI(mockData, false);
-          }
-        }
-
-        function updateUI(data, isLive) {
-          // Helper to strip out everything but the time (HH:MM:SS.sss)
-          const formatTime = (isoStr) => {
-            if (!isoStr) return "--:--:--";
-            return isoStr.split("T")[1].split("+")[0].replace("Z", "");
-          };
-
-          // Update Clocks
-          document.getElementById("val-utc").textContent = formatTime(data.utc);
-          document.getElementById("val-tai").textContent = formatTime(data.tai);
-          document.getElementById("val-gps").textContent = formatTime(data.gps);
-          document.getElementById("val-tt").textContent = formatTime(data.tt);
-          document.getElementById("val-tdb").textContent = formatTime(data.tdb);
-
-          // Update Offsets
-          document.getElementById("off-tai").textContent =
-            `Offset: +${data.tai_minus_utc}s (from UTC)`;
-          document.getElementById("off-gps").textContent =
-            `Offset: -19s (from TAI)`;
-
-          // Update Julian Dates (formatting to 5 decimal places to match your JSON)
-          document.getElementById("val-jd-utc").textContent =
-            `JD: ${data.jd_utc.toFixed(5)}`;
-          document.getElementById("val-jd-tt").textContent =
-            `JD: ${data.jd_tt.toFixed(5)}`;
-
-          // Status Indicator Logic
-          const statusEl = document.getElementById("telemetry-status");
-          if (isLive) {
-            statusEl.innerHTML = `<span style="display: inline-block; width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span> LIVE DATA`;
-            statusEl.style.color = "#10b981";
-          } else {
-            statusEl.innerHTML = `<span style="display: inline-block; width: 8px; height: 8px; background: #fbbf24; border-radius: 50%; box-shadow: 0 0 8px #fbbf24;"></span> SIMULATION MODE`;
-            statusEl.style.color = "#fbbf24";
-          }
-        }
-
-        // Run immediately, then poll every 1 second for a smooth ticking clock
-        fetchTimeSpineData();
-        setInterval(fetchTimeSpineData, 1000);
+        offset: 80,
       });
     </script>
   </body>

@@ -3,51 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - A-Gold Resourcing</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>About Us | A-Gold Resourcing</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../style.css" />
     <link rel="shortcut icon" href="../AGR LOGO PNG.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Learn about A-Gold Resourcing: why not all data is worth extracting, and how our Get, Sort, Classify methodology saves enterprise organisations millions in cloud costs."
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   </head>
   <body data-theme="light">
-    <nav class="navbar solid-nav">
+    <!-- Navbar -->
+    <nav class="navbar">
       <div class="container nav-content">
-        <div class="logo">
-          <a href="/" class="logo-link">
-            <img
-              src="../AGOLD RESOURCING BRANDING 1 1.png"
-              alt="A Gold Resourcing Logo"
-            />
-          </a>
-        </div>
+        <a href="/" class="logo-link">
+          <img
+            src="../AGOLD RESOURCING BRANDING 1 1.png"
+            alt="A-Gold Resourcing Logo"
+            class="nav-logo logo-light"
+          />
+          <img
+            src="../AGOLD RESOURCING BRANDING png 1.png"
+            alt="A-Gold Resourcing Logo"
+            class="nav-logo logo-dark"
+          />
+        </a>
 
         <div class="nav-links desktop-only">
-          <a href="/about/">About</a>
+          <a href="/">Home</a>
+          <a href="/about/" class="active">About</a>
           <a href="/team/">Team</a>
           <a href="/developers/">Developers</a>
         </div>
 
         <div class="nav-actions desktop-only">
-          <button id="theme-toggle" class="theme-btn">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
             <i class="fa-regular fa-sun icon-sun"></i>
             <i class="fa-regular fa-moon icon-moon"></i>
           </button>
-          <!-- <a href="#" class="account-link"
-            ><i class="fa-regular fa-user"></i> Account ▾</a
-          > -->
-                <button class="btn-book">
-                    <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/edit" target="_blank" rel="noopener noreferrer">Book a Meeting <i class="fa-solid fa-arrow-right"></i></a>
-                  
-                </button>
+          <a
+            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
 
         <button class="hamburger" aria-label="Toggle Menu">
@@ -58,19 +67,24 @@
 
       <div class="mobile-menu">
         <div class="mobile-nav-links">
+          <a href="/">Home</a>
           <a href="/about/">About</a>
           <a href="/team/">Team</a>
-          <!-- <a href="#" class="mobile-account">Account</a> -->
+          <a href="/developers/">Developers</a>
         </div>
 
-                <button class="btn-book">
-                    <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/edit" target="_blank" rel="noopener noreferrer">Book a Meeting <i class="fa-solid fa-arrow-right"></i></a>
-                  
-                </button>
+        <a
+          href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
-        <div class="mobile-nav-actions">
-          <span>Switch Theme:</span>
-          <button id="mobile-theme-toggle" class="theme-btn">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border-color);">
+          <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Appearance:</span>
+          <button id="mobile-theme-toggle" class="theme-btn" aria-label="Toggle theme">
             <i class="fa-regular fa-sun icon-sun"></i>
             <i class="fa-regular fa-moon icon-moon"></i>
           </button>
@@ -78,569 +92,197 @@
       </div>
     </nav>
 
-    <header class="about-hero">
-      <div class="hero-bg-overlay"></div>
-      <div class="container hero-text-center">
-        <h1 style="font-size: 2.5rem; margin: 20px 0;" data-aos="zoom-out" data-aos-duration="1200">High Assurance Digital Infrastructure, Transformation & Space Time Systems Engineering
-</h1>
-        <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="300">
-          A Gold Resourcing is a specialist engineering consultancy designing deterministic infrastructure and governance-led digital transformation for organisations where system integrity cannot be compromised.
+    <!-- Subpage Hero -->
+    <header class="subpage-hero">
+      <div class="container">
+        <div class="pill-badge" data-aos="fade-down">
+          <span class="badge-dot"></span>
+          Our Thesis & Philosophy
+        </div>
+        <h1 data-aos="fade-up" data-aos-delay="100">
+          Why Not All Data Is Worth Extracting
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+          The prevailing dogma in tech has been "ingest everything." The result? Bloated data lakes, runaway cloud bills, and engineers buried under noisy logs. We engineer the antidote: high-integrity triage that captures only actionable signal.
         </p>
       </div>
     </header>
 
     <div class="section-divider"></div>
-    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
-    <div class="container">
-        <div class="text-center mb-60" data-aos="fade-up">
-            <h2 style="font-size: 2.5rem; margin: 20px 0;">Beyond Space-Time</h2>
-            <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
-                Our deterministic architecture principles apply directly to:
+
+    <!-- The Economics of Triage -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="heritage-box" style="margin-bottom: 64px;" data-aos="fade-up">
+          <div class="heritage-text">
+            <h2>The Economic Reality of Data</h2>
+            <p>
+              In computing, every byte stored incurs compound costs: network ingress fees, tier-one storage, indexing CPU cycles, backup redundancy, and query scan overheads.
             </p>
-        </div>
-
-        <div class="beyond-grid" data-aos="fade-up" data-aos-delay="200">
-            <div class="beyond-card">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <h3>Financial systems requiring timestamp defensibility</h3>
-            </div>
-            <div class="beyond-card">
-                <i class="fa-solid fa-file-shield"></i>
-                <h3>Regulatory-grade audit systems</h3>
-            </div>
-            <div class="beyond-card">
-                <i class="fa-solid fa-network-wired"></i>
-                <h3>Distributed data reconciliation platforms</h3>
-            </div>
-            <div class="beyond-card">
-                <i class="fa-solid fa-microchip"></i>
-                <h3>High-assurance AI and simulation environments</h3>
-            </div>
-            <div class="beyond-card">
-                <i class="fa-solid fa-database"></i>
-                <h3>Scientific data pipelines</h3>
-            </div>
-            <div class="beyond-card">
-                <i class="fa-solid fa-server"></i>
-                <h3>Sovereign computational environments</h3>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="section-padding" style="border-top: 1px solid var(--border-color);">
-    <div class="container">
-        <div class="text-center mb-60" data-aos="fade-up">
-            <span class="tag-label">Applied Deterministic Architecture</span>
-            <h2 style="font-size: 2.2rem; margin-top: 15px; margin-bottom: 20px;">How Deterministic Architecture Applies Beyond Space-Time</h2>
-            <!-- <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
-                Deterministic architecture applies wherever three conditions exist: Multiple authoritative sources, ongoing correction updates, and severe consequence if outputs cannot be reproduced. If those conditions exist, integrity risk exists.
-            </p> -->
-        </div>
-
-        <div class="unified-rect-grid" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Financial Systems</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <p>We design timestamp defensibility frameworks that ensure transactional replay integrity, version-stable processing and regulatory audit resilience.</p>
-                    <p>We implement deterministic reconciliation controls that prevent settlement ambiguity, eliminate hidden ledger drift and protect institutions from post-event dispute.</p>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Public Sector & Councils</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <p>We implement governance-aligned transformation models that prevent drift between policy intent and system implementation.</p>
-                    <p>We formalise standards mapping, enforce structured change control and stabilise multi-department data flows so reporting remains aligned with statutory obligations.</p>
-                    <div class="rect-footer">Digital estates remain defensible under scrutiny, not fragile under audit.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Regulated Identity & Trust Platforms</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <p>We enforce explicit standards mapping, correction control and version-stable architecture to prevent hidden dependency failures.</p>
-                    <p>We model authority hierarchies and ensure reproducible identity state across distributed services, protecting systems from silent integration breakage.</p>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Healthcare Interoperability</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <p>Across ecosystems such as FHIR and TEFCA, platforms such as Epic Systems, and UK infrastructures including NHS Spine and GP Connect, we implement:</p>
-                    <ul class="rect-list">
-                        <li>Version-locked API governance</li>
-                        <li>Canonical schema registries</li>
-                        <li>Deterministic transformation pipelines</li>
-                        <li>Authority-traceable data exchange</li>
-                    </ul>
-                    <div class="rect-footer">Interoperability remains reproducible, auditable and stable.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Transportation & Infrastructure</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <p>We implement reproducible configuration governance and controlled deployment frameworks across distributed operational nodes.</p>
-                    <p>Traffic, fleet and infrastructure monitoring systems remain synchronised across environments, preventing silent divergence that can cascade into operational instability.</p>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Distributed Cloud & Data Platforms</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <p>We design reproducible computational pipelines that prevent silent divergence across nodes and data revisions.</p>
-                    <p>We enforce environment segregation discipline, controlled release management and dependency visibility, ensuring development, staging and production behave identically.</p>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>SME & Industrial Digital Adoption</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <p>We conduct structured digital maturity assessment, explicit system mapping and controlled implementation staging.</p>
-                    <p>Tool adoption becomes governed transformation rather than uncontrolled experimentation.</p>
-                    <div class="rect-footer">Operational stability is engineered from the outset.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Elections & Democratic Systems</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Version-locked audit logs</li>
-                        <li>Immutable state snapshots</li>
-                        <li>Controlled correction history</li>
-                        <li>Replayable election state</li>
-                    </ul>
-                    <div class="rect-footer">Legitimacy depends on reproducibility.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Banking Core & Clearing Networks</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Immutable transaction ordering</li>
-                        <li>Reproducible ledger states</li>
-                        <li>Controlled reconciliation logic</li>
-                        <li>Explicit timestamp governance</li>
-                    </ul>
-                    <div class="rect-footer">Settlement integrity depends on deterministic chronology.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Energy Grids & Smart Metering</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Version-controlled configuration governance</li>
-                        <li>Reproducible load calculations</li>
-                        <li>Explicit correction tracking</li>
-                        <li>Cross-node synchronisation validation</li>
-                    </ul>
-                    <div class="rect-footer">Distributed infrastructure cannot tolerate silent drift.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Aviation & Air Traffic Systems</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Snapshot state reconstruction</li>
-                        <li>Explicit dependency mapping</li>
-                        <li>Controlled data transformation layers</li>
-                    </ul>
-                    <div class="rect-footer">Safety investigations require exact state replay.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Pharmaceutical & Clinical Trials</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Version-stable trial datasets</li>
-                        <li>Immutable protocol references</li>
-                        <li>Controlled correction updates</li>
-                        <li>Replayable analytical outputs</li>
-                    </ul>
-                    <div class="rect-footer">Regulatory approval depends on reproducibility.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Insurance & Actuarial Platforms</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Rule-version locking</li>
-                        <li>Calculation reproducibility</li>
-                        <li>Authority hierarchy modelling</li>
-                        <li>Traceable correction logic</li>
-                    </ul>
-                    <div class="rect-footer">Premium calculation integrity must survive audit.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>AI Model Governance</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Version-locked model states</li>
-                        <li>Immutable training dataset hashes</li>
-                        <li>Reproducible inference outputs</li>
-                        <li>Controlled deployment promotion</li>
-                    </ul>
-                    <div class="rect-footer">Regulated AI requires decision reproducibility.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Defence & National Security</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Authority precedence modelling</li>
-                        <li>Controlled correction ingestion</li>
-                        <li>Snapshot state replay</li>
-                    </ul>
-                    <div class="rect-footer">Operational accountability requires reconstructable intelligence states.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Supply Chain & Logistics</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Controlled update sequencing</li>
-                        <li>Environment synchronisation</li>
-                        <li>Reproducible inventory states</li>
-                        <li>Version-tracked reconciliation logic</li>
-                    </ul>
-                    <div class="rect-footer">Multi-node logistics systems cannot drift silently.</div>
-                </div>
-            </div>
-
-            <div class="rect-expand-card expand-card">
-                <div class="rect-header">
-                    <h3>Scientific Research Platforms</h3>
-                    <i class="fa-solid fa-plus toggle-icon"></i>
-                </div>
-                <div class="rect-body">
-                    <ul class="rect-list">
-                        <li>Immutable dataset references</li>
-                        <li>Version-controlled computational environments</li>
-                        <li>Identical input → identical output assurance</li>
-                    </ul>
-                    <div class="rect-footer">Credibility depends on reproducibility.</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<div class="section-divider"></div>
-<section class="section-padding" style="border-top: 1px solid var(--border-color);">
-    <div class="container">
-        
-        <div class="text-center mb-60" data-aos="fade-down">
-            <span class="tag-label">Why Space Time Data Engineering</span>
-        </div>
-
-        <div class="why-seamless-grid" data-aos="fade-up" data-aos-delay="100">
-            
-            <div class="why-card">
-                <div class="role-icon-wrapper">
-                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon orange-tint">
-                </div>
-                <h3>Absolute Integrity Requirements</h3>
-                <p>Space-time systems operate under some of the strictest integrity requirements of any digital environment. They must handle multiple official definitions of time, coordinate systems, and correction updates and they must do so accurately and consistently for decades.</p>
-            </div>
-
-            <div class="why-card">
-                <div class="role-icon-wrapper">
-                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon orange-tint">
-                </div>
-                <h3>The Cost of Tiny Inconsistencies</h3>
-                <p>In these systems, even tiny inconsistencies can compound into real world errors. A small timing difference can change a satellite’s position. A hidden mismatch between standards can break historical replay. A silent correction update can alter results without anyone noticing.</p>
-            </div>
-
-            <div class="why-card">
-                <div class="role-icon-wrapper">
-                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon orange-tint">
-                </div>
-                <h3>Where Hidden Errors Surface</h3>
-                <p>Space time environments expose problems that many other industries only discover after something goes wrong: hidden data mismatches, inconsistent standards, unstable revisions, and systems that produce slightly different answers each time they run.</p>
-            </div>
-
-            <div class="why-card">
-                <div class="role-icon-wrapper">
-                    <img src="../assets/brand-logo-white.png" alt="Logo" class="brand-logo-icon orange-tint">
-                </div>
-                <h3>Engineering for Long-Term Dependability</h3>
-                <p>By designing infrastructure that meets space-grade standards, we build systems that are inherently resilient, traceable, and dependable.</p>
-            </div>
-
-        </div>
-        
-        <div class="why-post-content" data-aos="fade-up" data-aos-delay="200">
-            
-            <p class="why-lead-text">
-                The principles required in space time systems making standards explicit, tracking data origins, controlling updates, ensuring repeatable computation, and designing for long-term stability apply directly to other high-assurance environments.
+            <p>
+              When 70% to 80% of generated data consists of identical state pings, uninformative heartbeats, or unindexed noise, businesses are essentially subsidizing digital landfill. We help organisations systematically identify what data creates revenue, defends against audit, or informs operational decisions—and triage away the rest.
             </p>
-
-            <div class="principles-apply-box">
-                <h4 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--accent-orange); font-weight: 500;">
-                    These same principles are essential in:
-                </h4>
-                <div class="industry-pill-list">
-                    <span class="pill">Government & Public Sector</span>
-                    <span class="pill">Financial Services & Fintech</span>
-                    <span class="pill">Insurance</span>
-                    <span class="pill">Healthcare</span>
-                    <span class="pill">Cloud & Infrastructure</span>
-                    <span class="pill">Regulated Digital Identity</span>
-                    <span class="pill">Space-Time Data Infrastructure</span>
-                </div>
-            </div>
-
-            <div class="why-conclusion-quote" data-aos="fade-right" data-aos-delay="300">
-                <p>
-                    Space is not just another sector.
-                    It is one of the most demanding proving grounds for building trustworthy data systems.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-<div class="section-divider"></div>
-    <section class="vision-section section-padding">
-      <div class="container">
-        <div class="vision-content" data-aos="zoom-in">
-          <span class="tag-label">Our Philosophy</span>
-          <ul>
-          <li>
-            <h2><i class="fa-solid fa-arrow-right"></i> 
-              We believe computational infrastructure must be explicit,
-              reproducible, and resilient to revision.
-            </h2>
-          </li>
-          <li>
-            <h2><i class="fa-solid fa-arrow-right"></i> 
-              Standards must be implemented deterministically, not assumed.
-            </h2>
-          </li>
-          <li><h2><i class="fa-solid fa-arrow-right"></i> Systems should remain explainable decades from now.</h2></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-    
-    <section class="collab section-padding">
-      <div class="container">
-        <div class="history-header" data-aos="zoom-in">
-          <span class="tag-label">Collaborations and Ethos</span>
-        </div>
-        <div class="history-grid" data-aos="fade-left" data-aos-delay="200">
-          <div class="history-item">
-            <div class="history-number">1</div>
-            <h3>
-              Modular, integrable, long-lived: Our systems are designed to be
-              reused and relied upon.
-            </h3>
           </div>
-
-          <div class="history-item">
-            <div class="history-number">2</div>
-            <h3>We value rigor over speed, correctness over spectacle.</h3>
-          </div>
-
-          <div class="history-item">
-            <div class="history-number">3</div>
-            <h3>
-              We assume others will build on our work fifty years from now.
-            </h3>
+          <div class="heritage-card-preview">
+            <h4>The Triage Formula</h4>
+            <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem;">
+              <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
+                <strong style="color: var(--accent-orange);">1. Ingest (Get):</strong> Identify true operational triggers.
+              </div>
+              <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
+                <strong style="color: var(--accent-crimson);">2. Filter (Sort):</strong> Drop zero-delta redundancy.
+              </div>
+              <div style="padding: 10px; background: var(--bg-muted); border-radius: 6px;">
+                <strong style="color: var(--accent-emerald);">3. Index (Classify):</strong> Structure canonical value.
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <div class="section-divider"></div>
 
-    <section class="orange-section mission-section section-padding">
-    <div class="container">
-        <div class="mission-container">
-            
-            <div class="mission-left" data-aos="fade-right">
-                <span class="tag-label white-tag">Mission</span>
-                <h2>Our mission is to build and preserve the computational foundations of space science for the global research and operational community.</h2>
-                <p class="mission-sub">Our goal is not speed, or spectacle. Our goal is continuity so that future researchers and operators are never forced to rebuild what should have been preserved.</p>
-            </div>
-
-            <div class="mission-right">
-                <span class="small-label">We Do This By:</span>
-                
-                <div class="mission-grid">
-                    <div class="mission-card" data-aos="zoom-in" data-aos-delay="100">
-                        <p>Developing accurate, long-horizon ephemerides and orbital systems, validated against peer reviewed models and established scientific standards</p>
-                    </div>
-
-                    <div class="mission-card" data-aos="zoom-in" data-aos-delay="200">
-                        <p>Maintaining coherent space time frameworks across civil, atomic, and scientific standards.</p>
-                    </div>
-
-                    <div class="mission-card" data-aos="zoom-in" data-aos-delay="300">
-                        <p>Providing stable reference frames and coordinate infrastructures.</p>
-                    </div>
-
-                    <div class="mission-card" data-aos="zoom-in" data-aos-delay="400">
-                        <p>Documenting all assumptions, uncertainties, and limitations openly and explicitly.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<div class="section-divider"></div>
-<section class="glossary-section section-padding">
-      <div class="container">
-        <div class="glossary-content" data-aos="zoom-in">
-          <span class="tag-label">Glossary</span>
-          <ul>
-          <li>
-            <h2><i class="fa-solid fa-arrow-right"></i> 
-              ΔT: Difference between atomic (TT) and dynamical time; critical
-              for historical and predictive astronomy.
-            </h2>
-          </li>
-          <li>
-            <h2><i class="fa-solid fa-arrow-right"></i> 
-              EOP: Earth Orientation Parameters; corrections for Earth’s
-              irregular rotation.
-            </h2>
-          </li>
-          <li>
-            <h2><i class="fa-solid fa-arrow-right"></i> 
-              Leap second: Occasional one-second adjustment to UTC to keep it in
-              sync with Earth's rotation.
-            </h2>
-          </li>
-          <li>
-            <h2><i class="fa-solid fa-arrow-right"></i> 
-              Reference frame: Mathematical system for defining positions in
-              space (ICRS, BCRS, GCRS, CIRS, TIRS, ITRF).
-            </h2>
-          </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-    
-    <section class="orange-section section-padding">
-        <div class="container">
-            <div class="cta-banner" data-aos="zoom-in">
-                <h2>Request an initial consultation to evaluate your system's temporal integrity.</h2>
-                <a href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/edit" target="_blank" class="btn-cta-dark">Book a meeting &rarr;</a>
-            </div>
-        </div>
-    </section>
-    <div class="section-divider"></div>
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <div class="footer-left">
-          <div class="footer-logo-container">
-            <a href="/"
-              ><img
-                src="../AGOLD RESOURCING BRANDING png 1.png"
-                alt="A Gold Resourcing Logo"
-                class="footer-logo logo-dark"
-            /></a>
-            <a href="/"
-              ><img
-                src="../AGOLD RESOURCING BRANDING 1 1.png"
-                alt="A Gold Resourcing Logo"
-                class="footer-logo logo-light"
-            /></a>
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 48px;" data-aos="fade-up">
+          <div class="pill-badge">
+            <span class="badge-dot"></span>
+            Cross-Sector Triage
           </div>
-          <p class="footer-desc">
-            A Gold Resourcing builds deterministic computational foundations for celestial mechanics, time systems, and reference frameworks in mission-critical engineering environments.
+          <h2 style="font-size: 2.2rem; font-weight: 800;">
+            Where Our Triage Principles Apply
+          </h2>
+          <p style="color: var(--text-secondary);">
+            Whether managing planetary orbital ephemerides or high-volume financial settlement records, the requirement is the same: reproducible clarity at minimum waste.
           </p>
         </div>
-        <div class="footer-right">
-          <h4>Quick Links</h4>
+
+        <!-- 6 Major Sectors Grid -->
+        <div class="beyond-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="beyond-card">
+            <i class="fa-solid fa-landmark"></i>
+            <h3>Financial & Clearing Networks</h3>
+            <p>
+              Eliminate noisy duplicate pings from transaction journals while guaranteeing immutable timestamp defensibility and reconciliation stability for regulatory audits.
+            </p>
+          </div>
+
+          <div class="beyond-card">
+            <i class="fa-solid fa-hospital-user"></i>
+            <h3>Healthcare & Clinical Interoperability</h3>
+            <p>
+              Enforce canonical FHIR schemas and discard repetitive health-check noise across Epic, TEFCA, and NHS Spine gateway integrations.
+            </p>
+          </div>
+
+          <div class="beyond-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Public Sector & Statutory Governance</h3>
+            <p>
+              Align digital platforms with statutory mandates, preventing drift between policy intent and IT implementation while reducing council infrastructure costs.
+            </p>
+          </div>
+
+          <div class="beyond-card">
+            <i class="fa-solid fa-satellite"></i>
+            <h3>Aerospace & Space-Time Infrastructure</h3>
+            <p>
+              Our internal ECS Systems engine computes analytical ephemerides (VSOP87, DE-series) and multi-scale time transformations without fragile runtime third-party API dependencies.
+            </p>
+          </div>
+
+          <div class="beyond-card">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <h3>Energy Grids & Smart Infrastructure</h3>
+            <p>
+              Filter terabytes of routine smart meter pings at the edge while capturing critical sub-cycle phase variance records for grid stability.
+            </p>
+          </div>
+
+          <div class="beyond-card">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Sovereign & High-Assurance AI</h3>
+            <p>
+              Clean, reproducible data inputs are the prerequisite for defensible AI models. We ensure training sets are free of duplicate bias and drift.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="section-padding cta-section bg-subtle-section">
+      <div class="container">
+        <div class="cta-banner" data-aos="zoom-in">
+          <div class="pill-badge" style="margin-bottom: 16px;">
+            <span class="badge-dot"></span>
+            Take Action
+          </div>
+          <h2>Ready to Audit Your Ingestion Architecture?</h2>
+          <p>
+            Schedule a confidential 30-minute consultation with our engineering team to evaluate your current data spend and discover where triage can immediately reduce overhead.
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-lg"
+          >
+            Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div>
+          <a href="/" class="logo-link">
+            <img
+              src="../AGOLD RESOURCING BRANDING 1 1.png"
+              alt="A-Gold Resourcing Logo"
+              class="nav-logo logo-light"
+            />
+            <img
+              src="../AGOLD RESOURCING BRANDING png 1.png"
+              alt="A-Gold Resourcing Logo"
+              class="nav-logo logo-dark"
+            />
+          </a>
+          <p class="footer-desc">
+            A-Gold Resourcing helps organisations get, sort, and classify data to save money, maximize time, and ensure deterministic system integrity.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
           <ul>
-            <li><a href="/about">About</a></li>
-            <!-- <li><a href="#">What We do</a></li>
-            <li><a href="#">Vision</a></li> -->
-            <li><a href="/team">Team</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/team/">Team & Values</a></li>
+            <li><a href="/developers/">Developer Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/1t2-EL_Pph_35l6bFsprSDC00YTWyONWpHXze1Lw2104/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Book an Assessment</a
+              >
+            </li>
+            <li><a href="mailto:info@agoldresourcing.co.uk">info@agoldresourcing.co.uk</a></li>
           </ul>
         </div>
       </div>
+
       <div class="container footer-bottom">
-        <p>
-          &copy; <span id="current-year"></span> A-Gold Resourcing. All rights
-          reserved.
-        </p>
+        <p>&copy; <span id="current-year"></span> A-Gold Resourcing Ltd. All rights reserved.</p>
         <div class="social-icons">
-          <a
-            href="https://www.instagram.com/agoldresourcing?igsh=MW4yMnBxYWgyNWZmbQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="https://www.facebook.com/share/1DiniyiZ8G/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-          <a href="https://www.tiktok.com/@agoldresourcing?_r=1&_t=ZS-92HGCXK4ZdM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://www.linkedin.com/company/a-gold-resourcing/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/company/a-gold-resourcing/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/agoldresourcing" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1DiniyiZ8G/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@agoldresourcing" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
       </div>
     </footer>
@@ -648,11 +290,7 @@
     <script src="../script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-      });
+      AOS.init({ duration: 800, once: true, offset: 80 });
     </script>
   </body>
 </html>
